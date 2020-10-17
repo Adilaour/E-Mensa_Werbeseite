@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Aktueller Stand: Aufgabe 4a" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Matrikelnummer einfügen">
+      <change afterPath="$PROJECT_DIR$/beispiele/m1_4d_links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +30,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,10 +52,17 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -58,6 +75,8 @@
       <updated>1602961787468</updated>
       <workItem from="1602961789483" duration="634000" />
       <workItem from="1602962838881" duration="168000" />
+      <workItem from="1602964743799" duration="119000" />
+      <workItem from="1602964890269" duration="372000" />
     </task>
     <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962042724</created>
@@ -80,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602962916852</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Matrikelnummer einfügen">
+      <created>1602963798955</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602963798955</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,11 +122,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Aktueller Stand: Aufgabe 4a" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aktueller Stand: Aufgabe 4a" />
+    <MESSAGE value="Matrikelnummer einfügen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrikelnummer einfügen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1374" y="162" key="Github.ShareDialog" timestamp="1602962147785">
@@ -111,16 +139,17 @@
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="-1473" y="-30" key="Github.UntrackedFilesDialog/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602961883128" />
-    <state x="209" y="53" key="SettingsEditor" timestamp="1602963005814">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1711" y="-103" key="SettingsEditor" timestamp="1602964614260">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602963005814" />
-    <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602962385889" />
-    <state x="300" y="153" key="Vcs.Push.Dialog.v2" timestamp="1602962920759">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
+    <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
+    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2" timestamp="1602963803437">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602962920759" />
-    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602962285496" />
+    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602963803437" />
     <state x="-1441" y="154" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602962103240">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
