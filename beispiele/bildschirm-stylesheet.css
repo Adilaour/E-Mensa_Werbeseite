@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+}
+a {
+    color: orange;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#etabelle{
+    border: 1px solid orange;
+    margin: auto;
+}
+th{background-color: #f8d8a3}
+
+tr:nth-child(even){background-color: #f8d8a3}
+
+ol li{
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+ul{
+    text-align: right;
+}
+ul li{
+    display: inline;
+}
