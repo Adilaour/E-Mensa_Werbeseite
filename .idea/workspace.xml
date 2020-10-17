@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Aktueller Stand: Aufgabe 4a">
-      <change afterPath="$PROJECT_DIR$/beispiele/m1_4b_tabelle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele/m1_4c_bild.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele/res/logo-FH.png" afterDir="false" />
-    </list>
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Matrikelnummer einfügen" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +63,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Aktueller Stand: Aufgabe 4a" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aktueller Stand: Aufgabe 4a" />
+    <MESSAGE value="Matrikelnummer einfügen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrikelnummer einfügen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1374" y="162" key="Github.ShareDialog" timestamp="1602962147785">
