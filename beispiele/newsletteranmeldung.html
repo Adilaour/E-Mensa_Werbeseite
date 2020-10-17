@@ -7,17 +7,39 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Formular</title>
+    <style>p{margin:0;}</style>
 </head>
 <body>
 <form action="beispiele/formdata.html" method="post">
     <fieldset>
-        <legend>Anmeldung</legend>
-        Name: <input type="text" name="input_name"><br>
-        Absender: <input type="email" name="input_email"><br>
-        Ihre Nachricht:
-        <textarea cols="40" row="3"></textarea><br>
-        <input type="reset" value="reset">
+        <legend><b>Anmeldung</b></legend><br>
+        <label>Anrede</label> <br>
+        <label><input type="radio" name="anrede" value="frau"/> Frau <br></label>
+        <label><input type="radio" name="anrede" value="mann"/> Mann <br></label>
+        <br>
+
+        <p>Vorname*</p><label><input style="width:225px" type="text" name="input_name" placeholder="Bitte geben Sie Ihren Vornamen ein"><br></label>
+        <p>Nachname*</p><label><input style="width:225px" type="text" name="input_name" placeholder="Bitte geben Sie Ihren Nachnamen ein"><br></label>
+        <p>E-Mail*</p><label><input style="width:225px" type="email" name="input_email" placeholder="Bitte geben Sie Ihre E-Mail ein"><br></label>
+        <br>
+
+        Benachrichtigungsintervall<br>
+        <label><select name="Benachrichtigungsintervall">
+            <option>Tag</option>
+            <option>Woche</option>
+            <option>Monat</option>
+        </select></label><br>
+        <br>
+
+        <label><input type="checkbox" name="Datenschutzhinweis" value="black"/></label>
+        Datenschutzhinweis gelesen<br>
+
+
+        <button type="submit">Abschicken</button><br>
+        <br>
+        *) Eingaben sind Pflicht
+
 
     </fieldset>
 </form>
