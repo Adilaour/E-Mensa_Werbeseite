@@ -8,8 +8,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Grid - Eine Einführung</title>
+    <style>
+        body{
+        margin:0;
+        }
+        .container{
+            display:grid;
+            grid-template-columns:  20vw 20vw 20vw 20vw 20vw;
+            grid-template-rows:  3em 3em 3em;
+        }
+        .itema{
+            grid-column-start: 3;
+            grid-row-start: 1;
+            background-color: red;
+        }
+        .itemb{
+            grid-column-start: 3;
+            grid-row-start: 2;
+            background-color: blue;
+        }
+        .itemc{
+            grid-column-start: 3;
+            grid-row-start: 3;
+            background-color: green;
+        }
+        .itemd{
+            grid-column-start: 1;
+            grid-row-start:2;
+            background-color: mediumvioletred;
+        }
+        .iteme{
+            grid-column-start: 3;
+            grid-row-start:2;
+            background-color: cadetblue;
+        }
+        .itemf{
+            grid-column-start: 5;
+            grid-row-start:2;
+            background-color: lightseagreen;
+        }
+        .itemg{
+            grid-column-start: 3;
+            grid-row-start: 2;
+            background-color: palevioletred;
+        }
+    </style>
 </head>
 <body>
+<div class="container" style="background: lightblue;">
+    <div class="itema">Test</div>
+    <div class="itemb">Test</div>
+    <div class="itemc">Test</div>
+</div>
+<div class="container" style="background: lightpink;">
+    <div class="itemd">Test</div>
+    <div class="iteme">Test</div>
+    <div class="itemf">Test</div>
+</div>
+<div class="container" style="background: lightyellow;">
+    <div class="itemg">Test</div>
+</div>
+
 
 </body>
 </html>

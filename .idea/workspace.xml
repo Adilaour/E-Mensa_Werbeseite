@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Nach Aufgabe 4d">
-      <change afterPath="$PROJECT_DIR$/beispiele/m1_4e_spandiv.html" afterDir="false" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Aufgabe 4 komplett">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/m1_8b_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_8b_layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,7 @@
       <workItem from="1602961789483" duration="634000" />
       <workItem from="1602962838881" duration="168000" />
       <workItem from="1602964743799" duration="119000" />
-      <workItem from="1602964890269" duration="1091000" />
+      <workItem from="1602964890269" duration="3567000" />
     </task>
     <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962042724</created>
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602965538309</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Aufgabe 4 komplett">
+      <created>1602966179254</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602966179254</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +143,8 @@
     <MESSAGE value="Aktueller Stand: Aufgabe 4a" />
     <MESSAGE value="Matrikelnummer einfügen" />
     <MESSAGE value="Nach Aufgabe 4d" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nach Aufgabe 4d" />
+    <MESSAGE value="Aufgabe 4 komplett" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aufgabe 4 komplett" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1374" y="162" key="Github.ShareDialog" timestamp="1602962147785">
@@ -153,12 +161,16 @@
     <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602963005814" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2" timestamp="1602965540965">
+    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2" timestamp="1602966182877">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602962920759" />
-    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602965540965" />
+    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602966182877" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602963803437" />
+    <state x="-1349" y="271" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602967678972">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
+    </state>
+    <state x="-1349" y="271" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602967678972" />
     <state x="-1441" y="154" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602962103240">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
