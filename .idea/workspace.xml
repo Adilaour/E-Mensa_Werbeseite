@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Aktueller Stand: Aufgabe 4a">
+      <change afterPath="$PROJECT_DIR$/beispiele/m1_4b_tabelle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beispiele/m1_4c_bild.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beispiele/res/logo-FH.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1j1Bb6DbnUStKZVjlEZNZCJJPTU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="" />
+      <created>1602961787468</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602961787468</updated>
+      <workItem from="1602961789483" duration="634000" />
+    </task>
+    <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
+      <created>1602962042724</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602962042725</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Aktueller Stand: Aufgabe 4a">
+      <created>1602962282753</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602962282753</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Aktueller Stand: Aufgabe 4a" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aktueller Stand: Aufgabe 4a" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1374" y="162" key="Github.ShareDialog" timestamp="1602962147785">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
+    </state>
+    <state x="-1374" y="162" key="Github.ShareDialog/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602962147785" />
+    <state x="-1473" y="-30" key="Github.UntrackedFilesDialog" timestamp="1602961883128">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
+    </state>
+    <state x="-1473" y="-30" key="Github.UntrackedFilesDialog/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602961883128" />
+    <state x="-1711" y="-103" key="SettingsEditor" timestamp="1602962385889">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
+    </state>
+    <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602962385889" />
+    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2" timestamp="1602962285496">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
+    </state>
+    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602962285496" />
+    <state x="-1441" y="154" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602962103240">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
+    </state>
+    <state x="-1441" y="154" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602962103240" />
+  </component>
+</project>
