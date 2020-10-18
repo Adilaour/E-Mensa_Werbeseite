@@ -34,7 +34,13 @@
     </div>
     <div id="menu">
         <h2>Köstlichkeiten, die Sie erwarten</h2>
-        <div class="tabelle"></div>
+        <div class="tabelle">
+
+
+
+
+
+        </div>
     </div>
     <div id="zahlen">
         <h2>E-Mensa in Zahlen</h2>
@@ -45,44 +51,39 @@
         </div>
 
     </div>
-
     <div id="contact">
         <h2>Interesse geweckt? Wir informieren Sie!</h2>
-        <form action="newsletteranmeldung.html" method="post" name="newsletteranmeldung_landingpage" id="newsletteranmeldung_landingpage">
-            <label for="fan_name" >Ihr Name
+        <form action="newsletteranmeldung.html" method="post" name="newsletteranmeldung_landingpage" class="newsletteranmeldung_landingpage">
+            <label for="fan_name" id="fan_name_lbl">Ihr Name
                 <input type="text" id="fan_name" placeholder="Vorname">
             </label>
-            <label for="fan_mail">Ihre E-Mail
+            <label for="fan_mail" id="fan_mail_lbl">Ihre E-Mail
                 <input type="email" id="fan_mail">
             </label>
-            <label for="fan_lang">
+            <label for="fan_lang" id="fan_lang_lbl">
                 <select name="fan_lang" id="fan_lang">
                     <option selected>Deutsch</option>
                     <option>English</option>
                     <option>Fran&ccedil;ais</option>
                 </select>
             </label>
-            <label for="fan_data">
+            <label for="fan_data" id="fan_data_lbl">
                 <input type="checkbox" id="fan_data"> Den Datenschutzbestimmungen stimme ich zu.
             </label>
             <button type="submit" name="newsletter_landingpage_submit" id="newsletter_landingpage_submit">Zum Newsletter anmelden</button>
-
         </form>
     </div>
     <div id="wichtig">
         <h2>Das ist uns wichtig</h2>
+        <div id="wichtige_liste">
+            <ul>
+                <li>Beste frische saisonale Zutaten</li>
+                <li>Ausgewogene abwechslungsreiche Gerichte</li>
+                <li>Sauberkeit</li>
+            </ul>
+        </div>
     </div>
-    <h2 id="goodbye">Wir freuen uns auf Ihren Besuch</h2>
-
-
-
-
-
-
-
-
-
-
+    <h2 id="goodbye">Wir freuen uns auf Ihren Besuch!</h2>
 </main>
 
 <footer>

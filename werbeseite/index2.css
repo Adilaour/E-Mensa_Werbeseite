@@ -37,7 +37,6 @@ header{
     padding-right: 5%;
 
 }
-
 main{
     grid-area: main;
     display:grid;
@@ -63,43 +62,61 @@ main ~ div{
 .stats p{
     font-weight: bold;
 }
-#newsletteranmeldung_landingpage{
+.newsletteranmeldung_landingpage{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 }
-#fan_name{
+#fan_name_lbl{
     grid-column-start: 1;
 }
-#fan_mail{
+#fan_mail_lbl{
     grid-column-start: 2}
-#fan_lang{
+#fan_lang_lbl{
     grid-column-start: 3;
 }
-#fan_data{
-    grid-row-start: 2;
+#fan_data_lbl{
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: span 3;
 }
 #newsletter_landingpage_submit{
     grid-column-start: 4;
-    grid-row-start: 2;
 }
+#wichtige_liste{
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". liste .";
+}
+#wichtige_liste ul{
+    grid-area: liste;
 
-
-
-
-
+}
+#goodbye{
+    text-align:center;
+}
 footer{
     grid-area: footer;
     display:grid;
     place-content:center;
+    padding: 5px;
+    border-top: 2px solid grey;
 }
 .footermenu li{
     display: inline;
+    text-align:center;
+    font-size: 0.75em;
+    padding: 0 5px;
 
 }
+.footermenu li:first-child{
+    border-right: 1px solid black;
+}
+.footermenu li:last-child{
+    border-left: 1px solid black;
+}
 
+
+/*Gernelle Angaben*/
 ul{
     padding:0;
     margin:0;
