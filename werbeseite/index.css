@@ -9,6 +9,7 @@ a{
     color: #00b5ad;
 }
 header{
+    background-color: grey;
     grid-row-start:1;
     grid-column-start:1;
     grid-column-end: span 2;
