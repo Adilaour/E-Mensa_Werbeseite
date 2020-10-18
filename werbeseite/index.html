@@ -12,19 +12,79 @@
 </head>
 <body>
 <header>
-    <div class="sitelogo"><img src="" alt="E-Mensa Logo"></div>
+
+    <div id="sitelogo"><img src="" alt="E-Mensa Logo"></div>
     <nav class="hauptmenu">
         <ul>
-            <li class="topmenu"><a href="#news">Ankündigung</a></li>
-            <li class="topmenu"><a href="#menu">Speisen</a></li>
-            <li class="topmenu"><a href="#zahlen">Zahlen</a></li>
-            <li class="topmenu"><a href="#contact">Kontakt</a></li>
-            <li class="topmenu"><a href="#wichtig">Wichtig für uns</a></li>
+            <li><a href="#news">Ankündigung</a></li>
+            <li><a href="#menu">Speisen</a></li>
+            <li><a href="#zahlen">Zahlen</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#wichtig">Wichtig für uns</a></li>
         </ul>
     </nav>
 </header>
 
-<main>Beispiel</main>
+<main>
+    <h1>E-Mensa der Fachhochschule Aachen</h1>
+    <div><img src="" alt="Bannerbild" class="banner"></div>
+    <div id="news">
+        <h2>Bald gibt es Essen auch online ;)</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div id="menu">
+        <h2>Köstlichkeiten, die Sie erwarten</h2>
+        <div class="tabelle">
+
+
+
+
+
+        </div>
+    </div>
+    <div id="zahlen">
+        <h2>E-Mensa in Zahlen</h2>
+        <div class="stats">
+            <div><p><span>X</span> Besuche</p></div>
+            <div><p><span>Y</span> Anmeldungen zum Newsletter</p></div>
+            <div><p><span>Z</span> Speisen</p></div>
+        </div>
+
+    </div>
+    <div id="contact">
+        <h2>Interesse geweckt? Wir informieren Sie!</h2>
+        <form action="newsletteranmeldung.html" method="post" name="newsletteranmeldung_landingpage" class="newsletteranmeldung_landingpage">
+            <label for="fan_name" id="fan_name_lbl">Ihr Name
+                <input type="text" id="fan_name" placeholder="Vorname">
+            </label>
+            <label for="fan_mail" id="fan_mail_lbl">Ihre E-Mail
+                <input type="email" id="fan_mail">
+            </label>
+            <label for="fan_lang" id="fan_lang_lbl">
+                <select name="fan_lang" id="fan_lang">
+                    <option selected>Deutsch</option>
+                    <option>English</option>
+                    <option>Fran&ccedil;ais</option>
+                </select>
+            </label>
+            <label for="fan_data" id="fan_data_lbl">
+                <input type="checkbox" id="fan_data"> Den Datenschutzbestimmungen stimme ich zu.
+            </label>
+            <button type="submit" name="newsletter_landingpage_submit" id="newsletter_landingpage_submit">Zum Newsletter anmelden</button>
+        </form>
+    </div>
+    <div id="wichtig">
+        <h2>Das ist uns wichtig</h2>
+        <div id="wichtige_liste">
+            <ul>
+                <li>Beste frische saisonale Zutaten</li>
+                <li>Ausgewogene abwechslungsreiche Gerichte</li>
+                <li>Sauberkeit</li>
+            </ul>
+        </div>
+    </div>
+    <h2 id="goodbye">Wir freuen uns auf Ihren Besuch!</h2>
+</main>
 
 <footer>
     <nav class="footermenu">
