@@ -1,15 +1,17 @@
 body {
     font-family: Arial, sans-serif;
+    margin-left:20vw;
+    margin-right:20vw;
 }
 a {
     color: orange;
     font-weight: bold;
     text-decoration: none;
 }
-
 #etabelle{
     border: 1px solid orange;
     margin: auto;
+    width: 50vw;
 }
 th{background-color: #f8d8a3}
 
@@ -27,4 +29,12 @@ ul{
 }
 ul li{
     display: inline;
+    padding-left: 1em;
+    padding-right:1em;
+}
+.Menu{
+    border-left: 1px solid orange;
+}
+footer{
+    border-top: 1px solid orange;
 }
