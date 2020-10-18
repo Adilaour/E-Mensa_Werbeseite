@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Aufgabe 10 geht los, ja">
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Untere Striche hinzugefügt">
+      <change afterPath="$PROJECT_DIR$/werbeseite/impressum.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/werbeseite/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/bildschirm-stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/bildschirm-stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/css_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/css_table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -57,6 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -149,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602973982316</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Untere Striche hinzugefügt">
+      <created>1603008478838</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1603008478838</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Untere Striche hinzugefügt">
+      <created>1603008576648</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1603008576648</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +193,8 @@
     <MESSAGE value="Aufgabe 8a komplett" />
     <MESSAGE value="Aufgabe 5 komplett" />
     <MESSAGE value="Aufgabe 10 geht los, ja" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aufgabe 10 geht los, ja" />
+    <MESSAGE value="Untere Striche hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Untere Striche hinzugefügt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1424" y="104" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602972692409">
@@ -197,10 +215,11 @@
     <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602963005814" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2" timestamp="1602973983700">
+    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2" timestamp="1603008578944">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602962920759" />
+    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008578944" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.803/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602973983700" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602972728023" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602963803437" />
