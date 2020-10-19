@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<!--
-- Praktikum DBWT. Autoren:
-- Adil, Aouragh, 3203789
-- Alexander, List, 3126569
--->
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <title>Ihre E-Mensa</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
-<header>
-
-    <div id="sitelogo"><img src="" alt="E-Mensa Logo"></div>
-    <nav class="hauptmenu">
-        <ul>
+<body class="gridcontainer">
+<header class="headercontainer">
+    <div class="sitelogo bordered headeritems"><img src="" alt="E-Mensa Logo"></div>
+    <nav class="navbar bordered headeritems">
+        <ul class="mainmenu">
             <li><a href="#news">Ankündigung</a></li>
             <li><a href="#menu">Speisen</a></li>
             <li><a href="#zahlen">Zahlen</a></li>
@@ -24,34 +18,52 @@
         </ul>
     </nav>
 </header>
-
 <main>
-    <h1>E-Mensa der Fachhochschule Aachen</h1>
-    <div><img src="" alt="Bannerbild" class="banner"></div>
-    <div id="news">
+    <h1>Ihre E-Mensa</h1>
+    <div class="mainitem"><img src="" alt="Bannerbild" class="banner"></div>
+    <div class="mainitem" id="news">
         <h2>Bald gibt es Essen auch online ;)</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p class="bordered">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     </div>
-    <div id="menu">
+
+
+
+
+
+    <!-- Sieht derbe Scheiße aus -->
+    <div class="mainitem" id="menu">
         <h2>Köstlichkeiten, die Sie erwarten</h2>
         <div class="tabelle">
-
-
-
-
-
+            <div class="preis_intern"><p>Preis intern</p></div>
+            <div class="preis_extern"><p>Preis extern</p></div>
+            <div class="koestlichkeiten"><p>Rindfleisch mit Bambus, Kaiserschoten und rotem Paprika, dazu Mie Nudeln</p></div>
+            <div class="preisi"><p>3,50</p></div>
+            <div class="preise"><p>6,20</p></div>
+            <div class="koestlichkeiten"><p>Spinatrisotto mit kleinen Samosateigecken und gemischter Salat</p></div>
+            <div class="preisi"><p>2,90</p></div>
+            <div class="preise"><p>5,30</p></div>
         </div>
     </div>
-    <div id="zahlen">
+
+
+
+
+
+
+
+
+
+
+    <div class="mainitem" id="zahlen">
         <h2>E-Mensa in Zahlen</h2>
         <div class="stats">
-            <div><p><span>X</span> Besuche</p></div>
-            <div><p><span>Y</span> Anmeldungen zum Newsletter</p></div>
-            <div><p><span>Z</span> Speisen</p></div>
+            <div><p class="zahlenwerte">X</p><p>&nbsp;Besuche</p></div>
+            <div><p class="zahlenwerte">Y</p><p>&nbsp;Anmeldungen zum Newsletter</p></div>
+            <div><p class="zahlenwerte">Z</p><p>&nbsp;Speisen</p></div>
         </div>
 
     </div>
-    <div id="contact">
+    <div class="mainitem" id="contact">
         <h2>Interesse geweckt? Wir informieren Sie!</h2>
         <form action="newsletteranmeldung.html" method="post" name="newsletteranmeldung_landingpage" class="newsletteranmeldung_landingpage">
             <label for="fan_name" id="fan_name_lbl">Ihr Name
@@ -73,10 +85,10 @@
             <button type="submit" name="newsletter_landingpage_submit" id="newsletter_landingpage_submit">Zum Newsletter anmelden</button>
         </form>
     </div>
-    <div id="wichtig">
+    <div class="mainitem" id="wichtig">
         <h2>Das ist uns wichtig</h2>
-        <div id="wichtige_liste">
-            <ul>
+        <div class="wichtige">
+            <ul class="wichtige_liste">
                 <li>Beste frische saisonale Zutaten</li>
                 <li>Ausgewogene abwechslungsreiche Gerichte</li>
                 <li>Sauberkeit</li>
@@ -84,17 +96,16 @@
         </div>
     </div>
     <h2 id="goodbye">Wir freuen uns auf Ihren Besuch!</h2>
-</main>
 
+</main>
 <footer>
-    <nav class="footermenu">
-        <ul>
+    <nav class="navbar">
+        <ul class="footermenu">
             <li>(c) E-Mensa GmbH</li>
             <li>Adil Aouragh & Alexander List</li>
             <li><a href="impressum.html" target="_blank">Impressum</a></li>
         </ul>
     </nav>
 </footer>
-
 </body>
 </html>

@@ -1,112 +1,152 @@
 body{
+    margin: 0;
     font-family: Helvetica Arial Geneva, sans-serif;
-    margin:auto;
     display: grid;
-    grid-template-columns: 20% 60% 20% ;
-    grid-template-rows: 5vw auto 5vw;
-    grid-template-areas:
-        "header header header"
-        ". main ."
-        "footer footer footer";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr auto 1fr;
 }
 header{
-    grid-area: header;
+    padding: 2rem 0.5rem 0.5rem;
+    grid-column: span 5;
     display:grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    gap: 5px;
-    align-content: end;
-    padding: 5px;
-    border-bottom: 2px solid grey;
-}
-#sitelogo{
-    display: grid;
-    grid-column-start: 1;
-    justify-self: stretch;
-    padding: 2%;
-    border: 1px solid black;
-}
-.hauptmenu{
-    display: grid;
-    grid-column-start: 2;
-    align-content: end;
-    border: 1px solid black;
-}
-.hauptmenu li{
-    display: inline;
-    padding-left: 2.5%;
-    padding-right: 5%;
-
+    grid-template-columns: repeat(5, 1fr);
+    border-bottom: 2px solid black;
 }
 main{
-    grid-area: main;
+    grid-row-start: 2;
+    grid-column: 2 / span 3;
     display:grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-main ~ div{
-    display: grid;
-
-}
-#news p{
-    border: 1px solid black;
-    padding: 10px 5px;
-}
-.stats{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-}
-.stats div{
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
-.stats p{
-    font-weight: bold;
-}
-.newsletteranmeldung_landingpage{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-#fan_name_lbl{
-    grid-column-start: 1;
-}
-#fan_mail_lbl{
-    grid-column-start: 2}
-#fan_lang_lbl{
-    grid-column-start: 3;
-}
-#fan_data_lbl{
-    grid-column-start: 1;
-    grid-column-end: span 3;
-}
-#newsletter_landingpage_submit{
-    grid-column-start: 4;
-}
-#wichtige_liste{
-    display:grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: ". liste .";
-}
-#wichtige_liste ul{
-    grid-area: liste;
-
-}
-#goodbye{
-    text-align:center;
+    grid-template-rows: repeat(6, 1fr);
+    place-content: center stretch;
 }
 footer{
-    grid-area: footer;
-    display:grid;
-    place-content:center;
-    padding: 5px;
-    border-top: 2px solid grey;
+    padding: 0.5rem;
+    grid-column: span 5;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    border-top: 2px solid black;
 }
-.footermenu li{
+h1{
+    display: none;
+}
+h2{}
+h3{}
+h4{}
+a{
+    color: #00b5ad;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
     display: inline;
-    text-align:center;
-    font-size: 0.75em;
-    padding: 0 5px;
+    padding:0.5rem;
 
+}
+.gridcontainer{}
+.headercontainer{}
+.bordered {
+    border: 1px solid black;
+}
+#news p{
+    padding: 1rem 0.5rem;
+}
+.headeritems{
+    padding-top: 1rem;
+}
+.sitelogo{
+    text-align:center;
+    margin-right: 1rem;
+}
+.navbar{
+    grid-column: 2 / span 3;
+}
+.mainmenu{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 1rem;
+    justify-items: center;
+}
+.banner{
+    text-align: center;
+    border: 1px solid grey;
+}
+.mainitem{}
+
+
+
+
+
+
+/* ggf. überflüssig - nur für die Tabelle im Grid--> aber wenn table gefordert ... */
+.tabelle{
+    display: grid;
+    grid-template-columns: 11fr 3fr 3fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+    text-align: center;
+    border: 1px solid black;
+}
+.preis_intern{
+    grid-column: 2;
+}
+.preis_extern{
+    grid-column: 3;
+}
+.koestlichkeiten{
+    grid-column: 1;
+    text-align: initial;
+}
+.preisi{
+    grid-column:2;
+}
+.preise{
+    grid-column: 3;
+}
+/* bis hier*/
+
+
+
+
+.stats{
+    padding-left: 1rem;
+    padding-right:1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.stats div{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-weight: bold;
+}
+.zahlenwerte{}
+.newsletteranmeldung_landingpage{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr;
+    place-items: end stretch;
+}
+.wichtige{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+.wichtige_liste{
+    grid-column: 2;
+}
+.wichtige_liste li{
+    display: list-item;
+}
+.footermenu{
+    grid-column: 2 / span 3;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
+}
+.footermenu li {
+    place-self: center stretch;
+    text-align: center;
 }
 .footermenu li:first-child{
     border-right: 1px solid black;
@@ -115,18 +155,9 @@ footer{
     border-left: 1px solid black;
 }
 
-
-/*Gernelle Angaben*/
-ul{
-    padding:0;
-    margin:0;
+#fan_data_lbl{
+    grid-column: 1 / span 3;
 }
-h1{
-    display:none;
-}
-h2{
-    display:block;
-}
-a{
-    color: #00b5ad;
+#goodbye{
+    text-align: center;
 }
