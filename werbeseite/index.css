@@ -135,3 +135,16 @@ ul li{
 #goodbye{
     text-align: center;
 }
+
+#koestlichkeitent{
+    border: 1px solid #00b5ad;
+    margin: auto;
+    width: 70vw;
+    height: 11vw;
+}
+th{background-color: white;
+    margin: auto;
+    text-align: center;}
+
+tr:nth-child(even){background-color: lightgrey; margin: auto; text-align: center;}
+tr:nth-child(odd){background-color: white; margin: auto; text-align: center;}
