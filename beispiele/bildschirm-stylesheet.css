@@ -19,6 +19,7 @@ tr:nth-child(even){background-color: #f8d8a3}
 
 ol li{
     margin: auto;
+    padding-top: 1rem;
 }
 
 .center {
@@ -29,11 +30,15 @@ ul{
 }
 ul li{
     display: inline;
-    padding-left: 1em;
-    padding-right:1em;
 }
-.Menu{
-    border-left: 1px solid orange;
+ul li:after{
+    content: "|";
+    color: orange;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+ul li:nth-child(4)::after{
+    content: "";
 }
 footer{
     border-top: 1px solid orange;

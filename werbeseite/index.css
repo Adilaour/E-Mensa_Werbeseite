@@ -79,32 +79,6 @@ ul li{
 
 
 
-/* ggf. überflüssig - nur für die Tabelle im Grid--> aber wenn table gefordert ... */
-.tabelle{
-    display: grid;
-    grid-template-columns: 11fr 3fr 3fr;
-    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
-    text-align: center;
-    border: 1px solid black;
-}
-.preis_intern{
-    grid-column: 2;
-}
-.preis_extern{
-    grid-column: 3;
-}
-.koestlichkeiten{
-    grid-column: 1;
-    text-align: initial;
-}
-.preisi{
-    grid-column:2;
-}
-.preise{
-    grid-column: 3;
-}
-/* bis hier*/
-
 
 
 
