@@ -10,44 +10,39 @@
     <title>Formular</title>
     <style>
         p{margin:0;}
-        fieldset{
-            margin: auto;
-            width: 400px;}
     </style>
 </head>
 <body>
 <form action="formdata.html" method="post">
-    <fieldset>
+    <fieldset style="margin: auto; width: 400px;">
         <legend><b>Anmeldung</b></legend><br>
-        <label>Anrede</label> <br>
-        <label><input type="radio" name="anrede" value="frau"/> Frau <br></label>
-        <label><input type="radio" name="anrede" value="mann"/> Mann <br></label>
-        <br>
-        <p>Vorname*</p><label><input style="width:225px" type="text" name="input_name" placeholder="Bitte geben Sie Ihren Vornamen ein"><br></label>
-        <p>Nachname*</p><label><input style="width:225px" type="text" name="input_name" placeholder="Bitte geben Sie Ihren Nachnamen ein"><br></label>
-        <p>E-Mail*</p><label><input style="width:225px" type="email" name="input_email" placeholder="Bitte geben Sie Ihre E-Mail ein"><br></label>
-        <br>
-
-        <p>Benachrichtigungsintervall</p>
-        <label><select name="Benachrichtigungsintervall">
+        <label for="anrede">Anrede</label>
+        <fieldset id="anrede" style="border: none;">
+        <label for="weibl"><input type="radio" name="anrede" value="frau" id="weibl"> Frau <br></label>
+        <label for="maennl"><input type="radio" name="anrede" value="mann" id="maennl"> Mann <br></label>
+        </fieldset>
+        <label for="vorname">Vorname*</label><br>
+        <input style="width:225px" type="text" name="input_name" placeholder="Bitte geben Sie Ihren Vornamen ein" required id="vorname"><br>
+        <label for="nachname">Nachname*</label><br>
+        <input style="width:225px" type="text" name="input_name" placeholder="Bitte geben Sie Ihren Nachnamen ein" required id="nachname"><br>
+        <label for="mail">E-Mail*</label><br>
+        <input style="width:225px" type="email" name="input_email" placeholder="Bitte geben Sie Ihre E-Mail ein" required id="mail">
+        <br><br>
+        <label for="intervall">Benachrichtigungsintervall</label><br>
+        <select name="Benachrichtigungsintervall" id="intervall">
             <option>Tag</option>
             <option>Woche</option>
             <option>Monat</option>
-        </select></label><br>
+        </select>
         <br>
-
-        <label><input type="checkbox" name="Datenschutzhinweis" value="black" style="margin:0;"></label>
-        <p style="display: inline;">Datenschutzhinweis gelesen</p><br>
-
-
+        <br>
+        <input type="checkbox" name="Datenschutzhinweis" value="black" required id="dataprotection">
+        <label for="dataprotection">*Datenschutzhinweis gelesen</label>
+        <br>
         <button type="submit">Abschicken</button><br>
         <br>
         <p><sup>*)</sup> Eingaben sind Pflicht</p>
-
-
     </fieldset>
 </form>
-
-
 </body>
 </html>

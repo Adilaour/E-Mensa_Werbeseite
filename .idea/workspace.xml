@@ -24,6 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Tabelle WIEDER drin - SoRRy!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/m1_4a_textauszeichnung.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4a_textauszeichnung.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/m1_4b_tabelle.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4b_tabelle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/m1_4c_bild.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4c_bild.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/m1_4d_links.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4d_links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/m1_4e_spandiv.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4e_spandiv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/m1_8a_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_8a_layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
@@ -230,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603213565065</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Tabelle WIEDER drin - SoRRy!">
+      <created>1603293657418</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1603293657418</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,10 +312,11 @@
     <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602963005814" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="225" y="132" key="Vcs.Push.Dialog.v2" timestamp="1603213566569">
+    <state x="225" y="132" key="Vcs.Push.Dialog.v2" timestamp="1603293659494">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603055789111" />
+    <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602962920759" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008578944" />

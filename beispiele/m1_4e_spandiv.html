@@ -8,16 +8,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Unterschied zwischen &lt;span&gt; &amp; &lt;div&gt;</title>
+    <style>
+        code{
+            background-color: gray;
+            color: lawngreen;
+        }
+    </style>
 </head>
 <body>
 <h1>Unterschied zwischen &lt;span&gt; &amp; &lt;div&gt;</h1>
 <div style="display: block; margin:auto; background: lightblue;">
-    <h2>Das <code>div</code>-Tag</h2>
+    <h2>Das <code>&lt;div&gt;</code>-Tag</h2>
     <p>Eignet sich gut um Elemente zu rahmen und diese mit CSS zu gestalten. Das <code>&lt;div&gt;</code>-Tag ist kein sog. <i>semantisches</i> Tag und gibt dem Browser von sich aus keine weiteren Informationen mit.</p>
 </div>
 <div style="display: block; margin:auto; background: aquamarine; color: red;">
-    <h2>Das <code>span</code>-Tag</h2>
-    <p>Mit dem <code>span</code>-Tag lassen sich beispielsweise sehr gut einzelne <span style="color: black; font-size: 2em;">Wörter</span> innerhalb eines Paragraphen ansprechen und gestalten. Diese Tag ist ebenso nicht <i>semantisch</i>.</p>
+    <h2>Das <code>&lt;span&gt;</code>-Tag</h2>
+    <p>Mit dem <code>&lt;span&gt;</code>-Tag lassen sich beispielsweise sehr gut einzelne <span style="color: black; font-size: 2em;">Wörter</span> innerhalb eines Paragraphen ansprechen und gestalten. Diese Tag ist, <code>&lt;div&gt;</code>-Tag nicht <i>semantisch</i>.</p>
 </div>
 </body>
 </html>
