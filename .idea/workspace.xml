@@ -22,8 +22,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Aufgabe 10 zu 90% komplett">
-      <change beforePath="$PROJECT_DIR$/beispiele/css_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/css_table.html" afterDir="false" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Tabelle WIEDER drin - SoRRy!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603055784534</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Aufgabe 9 überarbeitet - Striche anders gelöst">
+      <created>1603213360687</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1603213360687</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Tabelle WIEDER drin - SoRRy!">
+      <created>1603213565065</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1603213565065</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +274,9 @@
     <MESSAGE value="Grid will nicht recht." />
     <MESSAGE value="Header &quot;sitzt&quot; *hust*" />
     <MESSAGE value="Aufgabe 10 zu 90% komplett" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aufgabe 10 zu 90% komplett" />
+    <MESSAGE value="Aufgabe 9 überarbeitet - Striche anders gelöst" />
+    <MESSAGE value="Tabelle WIEDER drin - SoRRy!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tabelle WIEDER drin - SoRRy!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1424" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603055730567">
@@ -280,10 +299,11 @@
     <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602963005814" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1603055789111">
-      <screen x="-1920" y="-180" width="1920" height="1080" />
+    <state x="225" y="132" key="Vcs.Push.Dialog.v2" timestamp="1603213566569">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603055789111" />
+    <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602962920759" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008578944" />
     <state x="225" y="140" key="Vcs.Push.Dialog.v2/0.23.1440.800@0.23.1440.800" timestamp="1603033595794" />
