@@ -1,3 +1,4 @@
+/*Elemente*/
 body{
     margin: 0;
     font-family: Helvetica Arial Geneva, sans-serif;
@@ -6,7 +7,8 @@ body{
     grid-template-rows: 1fr auto 1fr;
 }
 header{
-    padding: 2rem 0.5rem 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
     grid-column: span 5;
     display:grid;
     grid-template-columns: repeat(5, 1fr);
@@ -17,7 +19,6 @@ main{
     grid-column: 2 / span 3;
     display:grid;
     grid-template-rows: repeat(5, 1fr);
-    place-content: center stretch;
 }
 footer{
     padding: 0.5rem;
@@ -35,6 +36,9 @@ h4{}
 a{
     color: #00b5ad;
 }
+img{
+    max-width:100%;
+}
 ul{
     margin: 0;
     padding: 0;
@@ -44,18 +48,31 @@ ul li{
     padding:0.5rem;
 
 }
+select{
+    width: 70%;
+}
+th{
+    background-color: white;
+    margin: auto;
+    text-align: center;}
+table {
+    font-size: 20px;
+}
+tr:nth-child(even){background-color: lightgrey; margin: auto; text-align: center;}
+tr:nth-child(odd){background-color: white; margin: auto; text-align: center;}
+
+
+/*Klassen*/
 .gridcontainer{}
 .headercontainer{}
 .bordered {
     border: 1px solid black;
 }
-#news p{
-    padding: 1rem 0.5rem;
-}
 .headeritems{
     padding-top: 1rem;
 }
 .sitelogo{
+    margin-left: 0.5rem;
     text-align:center;
     margin-right: 1rem;
 }
@@ -72,14 +89,9 @@ ul li{
     text-align: center;
     border: 1px solid grey;
 }
-.mainitem{}
-
-
-
-
-
-
-
+.mainitem{
+    max-width: 100%;
+}
 
 
 .stats{
@@ -128,7 +140,16 @@ ul li{
 .footermenu li:last-child{
     border-left: 1px solid black;
 }
+.alignleft{
+    text-align: left;
+    height: 3em;
+}
 
+
+/*ID's*/
+#news p{
+    padding: 1rem 0.5rem;
+}
 #fan_data_lbl{
     grid-column: 1 / span 3;
 }
@@ -139,15 +160,6 @@ ul li{
 #koestlichkeitent{
     border: 1px solid #00b5ad;
     margin: auto;
-    width: 70vw;
-    height: 11vw;
+    width: 100%;
 }
-th{background-color: white;
-    margin: auto;
-    text-align: center;}
 
-tr:nth-child(even){background-color: lightgrey; margin: auto; text-align: center;}
-tr:nth-child(odd){background-color: white; margin: auto; text-align: center;}
-.alignleft{
-    text-align: left;
-}

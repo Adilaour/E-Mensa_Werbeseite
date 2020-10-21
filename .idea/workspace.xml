@@ -22,15 +22,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Tabelle WIEDER drin - SoRRy!">
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Abschlusstest">
+      <change afterPath="$PROJECT_DIR$/werbeseite/Banner.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_4a_textauszeichnung.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4a_textauszeichnung.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_4b_tabelle.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4b_tabelle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_4c_bild.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4c_bild.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_4d_links.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4d_links.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_4e_spandiv.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4e_spandiv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_8a_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_8a_layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
     </list>
@@ -243,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603293657418</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Abschlusstest">
+      <created>1603303936226</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1603303936226</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +290,8 @@
     <MESSAGE value="Aufgabe 10 zu 90% komplett" />
     <MESSAGE value="Aufgabe 9 überarbeitet - Striche anders gelöst" />
     <MESSAGE value="Tabelle WIEDER drin - SoRRy!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tabelle WIEDER drin - SoRRy!" />
+    <MESSAGE value="Abschlusstest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Abschlusstest" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1424" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603055730567">
@@ -312,10 +314,10 @@
     <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602963005814" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="225" y="132" key="Vcs.Push.Dialog.v2" timestamp="1603293659494">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1603303938161">
+      <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603055789111" />
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603303938161" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602962920759" />
