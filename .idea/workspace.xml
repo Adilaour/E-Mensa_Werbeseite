@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="FERTIG">
-      <change afterPath="$PROJECT_DIR$/beispiele/erstesPhp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/werbeseite/meal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/meal.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <workItem from="1603898556135" duration="415000" />
       <workItem from="1604359272463" duration="157000" />
       <workItem from="1604509566488" duration="47000" />
-      <workItem from="1604591703713" duration="1301000" />
+      <workItem from="1604591703713" duration="1518000" />
     </task>
     <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962042724</created>
@@ -273,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603309537998</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="FERTIG">
+      <created>1604593727700</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1604593727700</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,10 +379,10 @@
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.803/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1604591761858" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2" timestamp="1603309540249">
-      <screen x="-1920" y="-157" width="1920" height="1057" />
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1604593728729">
+      <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603308594430" />
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604593728729" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602962920759" />
