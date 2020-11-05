@@ -1,7 +1,7 @@
 <?php
 const GET_PARAM_MIN_STARS = 'search_min_stars';
 const GET_PARAM_SEARCH_TEXT = 'search_text';
-const GET_PARAM_SHOW_DESCRIPTION = 'show_description';
+
 
 /**
  * Liste aller möglichen Allergene.
@@ -62,14 +62,6 @@ $states = array(
     'visible' => 'hidden' ,
     'hidden' => 'visible' ,
 );
-$show_description = 'visible';
-if (!empty($_GET[GET_PARAM_SHOW_DESCRIPTION])) {
-    if(in_array ($_GET[GET_PARAM_SHOW_DESCRIPTION] , $states)) {
-        $display = $_GET[GET_PARAM_SHOW_DESCRIPTION];
-    }
-}
-$link = '?display=' . $states[GET_PARAM_SHOW_DESCRIPTION];
-
 
 function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgabewert vom Typ "float" ist
     $sum = 0;
