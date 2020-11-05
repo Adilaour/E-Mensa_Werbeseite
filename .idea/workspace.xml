@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beispiele/erstesPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/erstesPHP.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beispiele/meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/meal.php" afterDir="false" />
     </list>
@@ -256,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604612575306</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Test">
+      <created>1604615021163</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1604615021163</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +319,10 @@
     </state>
     <state x="-1424" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603055730567" />
     <state x="-1424" y="104" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602972692409" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1604615447205">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604615447205" />
     <state x="-1374" y="162" key="Github.ShareDialog" timestamp="1602962147785">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
@@ -336,13 +346,13 @@
     <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602963005814" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="300" y="153" key="Vcs.Push.Dialog.v2" timestamp="1604612580105">
+    <state x="300" y="153" key="Vcs.Push.Dialog.v2" timestamp="1604615027269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603308594430" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
-    <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604612580105" />
+    <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604615027269" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008578944" />
     <state x="225" y="140" key="Vcs.Push.Dialog.v2/0.23.1440.800@0.23.1440.800" timestamp="1603033595794" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.803/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602973983700" />

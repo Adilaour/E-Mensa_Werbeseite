@@ -86,8 +86,8 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
     <body>
         <h1>Gericht: <?php echo $meal['name']; ?></h1>
         <p><?php echo $meal['description']; ?></p>
-        <p><?php echo $meal['price_intern']; ?></p>
-        <p><?php echo $meal['price_extern']; ?></p>
+        <p>Preise intern:<?php echo number_format($meal['price_intern'] , $decimals = 2, "," , "."); ?>€</p>
+        <p>Preise extern:<?php echo number_format($meal['price_extern'] , $decimals = 2, "," , "."); ?>€</p>
         <p><?php if (empty($meal['allergens'])) {
         echo("Keine Alergene.\n");
         } else {
