@@ -1,7 +1,7 @@
 <?php
 const GET_PARAM_MIN_STARS = 'search_min_stars';
 const GET_PARAM_SEARCH_TEXT = 'search_text';
-
+const GET_SHOW_DESCRIPTION = 'show_descpription';
 
 /**
  * Liste aller möglichen Allergene.
@@ -85,7 +85,14 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
     </head>
     <body>
         <h1>Gericht: <?php echo $meal['name']; ?></h1>
-        <p><?php echo $meal['description']; ?></p>
+        <?php
+            if(!empty($_GET[GET_SHOW_DESCRIPTION])){
+                if($_GET[GET_SHOW_DESCRIPTION] == '1'){
+                    echo "<p>{$meal['description']}</p>";
+                    }
+                }
+            ?>
+
         <p>Preise intern:<?php echo number_format($meal['price_intern'] , $decimals = 2, "," , "."); ?>€</p>
         <p>Preise extern:<?php echo number_format($meal['price_extern'] , $decimals = 2, "," , "."); ?>€</p>
         <p><?php if (empty($meal['allergens'])) {
