@@ -42,7 +42,7 @@ $showRatings = [];
 if (!empty($_GET[GET_PARAM_SEARCH_TEXT])) {
     $searchTerm = $_GET[GET_PARAM_SEARCH_TEXT];
     foreach ($ratings as $rating) {
-        if (strpos($rating['text'], $searchTerm) !== false) {
+        if (strpos($rating['text'], strtolower($searchTerm)) !== false) {
             $showRatings[] = $rating;
         }
     }
@@ -57,11 +57,6 @@ if (!empty($_GET[GET_PARAM_SEARCH_TEXT])) {
     $showRatings = $ratings;
 }
 
-
-$states = array(
-    'visible' => 'hidden' ,
-    'hidden' => 'visible' ,
-);
 
 function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgabewert vom Typ "float" ist
     $sum = 0;
@@ -91,6 +86,8 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
     <body>
         <h1>Gericht: <?php echo $meal['name']; ?></h1>
         <p><?php echo $meal['description']; ?></p>
+        <p><?php echo $meal['price_intern']; ?></p>
+        <p><?php echo $meal['price_extern']; ?></p>
         <p><?php if (empty($meal['allergens'])) {
         echo("Keine Alergene.\n");
         } else {
@@ -107,6 +104,12 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
         <form method="get">
             <label for="search_text">Filter:</label>
             <input id="search_text" type="text" name="search_text">
+            <?php
+            if(!empty($_GET[GET_PARAM_SEARCH_TEXT])){
+                $searchstr = $_GET[GET_PARAM_SEARCH_TEXT];
+                echo "value\"$searchstr\"";
+            }
+            ?>
             <input type="submit" value="Suchen">
         </form>
         <table class="rating">
@@ -115,8 +118,6 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
                 <td>Text</td>
                 <td>Sterne</td>
                 <td>Autoren</td>
-                <td>Preis intern</td>
-                <td>Preis extern</td>
             </tr>
             </thead>
             <tbody>
@@ -125,8 +126,7 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
             echo "<tr><td class='rating_text'>{$rating['text']}</td>
                       <td class='rating_stars'>{$rating['stars']}</td>
                       <td class='rating_author'>{$rating['author']}</td>
-                      <td class='price_intern'>{$meal['price_intern']}</td>
-                      <td class='price_extern'>{$meal['price_extern']}</td>
+
                   </tr>";
         }
         ?>
