@@ -4,10 +4,6 @@
     <expand>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
@@ -16,13 +12,19 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Header &quot;sitzt&quot; *hust*">
-      <change afterPath="$PROJECT_DIR$/beispiele/erstesPHP.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele/meal.php" afterDir="false" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="FERTIG">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +45,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1j1Bb6DbnUStKZVjlEZNZCJJPTU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -58,8 +58,8 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -67,13 +67,8 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\alexa\PhpstormProjects\E-Mensa_Werbeseite\beispiele" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,18 +82,12 @@
       <workItem from="1602962838881" duration="168000" />
       <workItem from="1602964743799" duration="119000" />
       <workItem from="1602964890269" duration="3567000" />
-      <workItem from="1603417559517" duration="612000" />
-      <workItem from="1603893310602" duration="834000" />
-      <workItem from="1603894400283" duration="4428000" />
-      <workItem from="1604179269594" duration="18000" />
-      <workItem from="1604311961320" duration="4752000" />
-      <workItem from="1604321800841" duration="10000" />
-      <workItem from="1604321933775" duration="21000" />
-      <workItem from="1604322033436" duration="8000" />
-      <workItem from="1604322690957" duration="107000" />
-      <workItem from="1604394164497" duration="1759000" />
-      <workItem from="1604516778416" duration="5386000" />
-      <workItem from="1604600043811" duration="6297000" />
+      <workItem from="1603092527497" duration="48000" />
+      <workItem from="1603092706285" duration="7233000" />
+      <workItem from="1603127424016" duration="667000" />
+      <workItem from="1603133213449" duration="965000" />
+      <workItem from="1603144863598" duration="339000" />
+      <workItem from="1603309127094" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962042724</created>
@@ -212,7 +201,56 @@
       <option name="project" value="LOCAL" />
       <updated>1603052982065</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Header &quot;sitzt&quot; *hust*">
+      <created>1603055688232</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1603055688232</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Aufgabe 10 zu 90% komplett">
+      <created>1603055784534</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1603055784534</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Aufgabe 9 überarbeitet - Striche anders gelöst">
+      <created>1603213360687</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1603213360687</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Tabelle WIEDER drin - SoRRy!">
+      <created>1603213565065</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1603213565065</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Tabelle WIEDER drin - SoRRy!">
+      <created>1603293657418</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1603293657418</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Abschlusstest">
+      <created>1603303936226</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1603303936226</updated>
+    </task>
+    <task id="LOCAL-00023" summary="FERTIG">
+      <created>1603308592486</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1603308592486</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,29 +293,19 @@
     <MESSAGE value="Grid will nicht recht..." />
     <MESSAGE value="Grid will nicht recht." />
     <MESSAGE value="Header &quot;sitzt&quot; *hust*" />
-    <option name="LAST_COMMIT_MESSAGE" value="Header &quot;sitzt&quot; *hust*" />
+    <MESSAGE value="Aufgabe 10 zu 90% komplett" />
+    <MESSAGE value="Aufgabe 9 überarbeitet - Striche anders gelöst" />
+    <MESSAGE value="Tabelle WIEDER drin - SoRRy!" />
+    <MESSAGE value="Abschlusstest" />
+    <MESSAGE value="FERTIG" />
+    <option name="LAST_COMMIT_MESSAGE" value="FERTIG" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="547" y="203" key="#CLI_Interpreters" timestamp="1604316624543">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1424" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603055730567">
+      <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state x="547" y="203" key="#CLI_Interpreters/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604316624543" />
-    <state x="761" y="27" width="942" height="985" key="#HTML" timestamp="1603894527242">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="761" y="27" width="942" height="985" key="#HTML/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603894527242" />
-    <state x="667" y="163" key="#PHP" timestamp="1604316629290">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="163" key="#PHP/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604316629290" />
-    <state x="-1424" y="104" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602972692409">
-      <screen x="-1920" y="-157" width="1920" height="1057" />
-    </state>
+    <state x="-1424" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603055730567" />
     <state x="-1424" y="104" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602972692409" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604316540847">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604316540847" />
     <state x="-1374" y="162" key="Github.ShareDialog" timestamp="1602962147785">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
@@ -286,31 +314,29 @@
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="-1473" y="-30" key="Github.UntrackedFilesDialog/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602961883128" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604312054575">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604312054575" />
-    <state x="209" y="53" key="SettingsEditor" timestamp="1604316745669">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1711" y="-125" key="SettingsEditor/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603041458276" />
-    <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604316745669" />
-    <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
-    <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1603052983513">
+    <state x="-1711" y="-125" key="SettingsEditor" timestamp="1603041458276">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603052983513" />
+    <state x="-1711" y="-125" key="SettingsEditor/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603041458276" />
+    <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602963005814" />
+    <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
+    <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1603308594430">
+      <screen x="-1920" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603308594430" />
+    <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
+    <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602962920759" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008578944" />
     <state x="225" y="140" key="Vcs.Push.Dialog.v2/0.23.1440.800@0.23.1440.800" timestamp="1603033595794" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.803/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602973983700" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602972728023" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602963803437" />
-    <state x="-1349" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603052972779">
+    <state x="-1349" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603120000629">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state x="-1349" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603052972779" />
+    <state x="-1349" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603120000629" />
     <state x="428" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1603036336846" />
     <state x="-1349" y="271" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008208987" />
     <state x="-1349" y="271" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602967678972" />
@@ -318,11 +344,10 @@
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="-1441" y="154" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602962103240" />
-    <state x="119" y="173" width="672" height="666" key="search.everywhere.popup" timestamp="1604516941959">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1497" y="49" width="670" height="691" key="search.everywhere.popup" timestamp="1603046007115">
+      <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
     <state x="-1497" y="49" width="670" height="691" key="search.everywhere.popup/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603046007115" />
-    <state x="119" y="173" width="672" height="666" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604516941959" />
     <state x="-1497" y="67" width="670" height="676" key="search.everywhere.popup/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602965834219" />
   </component>
 </project>
