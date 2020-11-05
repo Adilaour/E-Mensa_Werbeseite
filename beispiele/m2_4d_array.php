@@ -20,7 +20,7 @@ $famousMeals = [
 <html lang="de">
 <head>
     <meta charset="UTF-8"/>
-    <title>Bester Gerichte</title>
+    <title>Beste Gerichte</title>
 </head>
 <body>
 <ol>

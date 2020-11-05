@@ -108,7 +108,7 @@
       <workItem from="1603898556135" duration="415000" />
       <workItem from="1604359272463" duration="157000" />
       <workItem from="1604509566488" duration="47000" />
-      <workItem from="1604591703713" duration="13448000" />
+      <workItem from="1604591703713" duration="15921000" />
     </task>
     <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962042724</created>
@@ -299,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604600487136</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Aufgabe5 zwischenspeichern">
+      <created>1604611797011</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1604611797011</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,12 +418,12 @@
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.803/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1604591761858" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1604600491382">
-      <screen x="-1920" y="-180" width="1920" height="1080" />
+    <state x="225" y="132" key="Vcs.Push.Dialog.v2" timestamp="1604611799859">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604600491382" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
-    <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
+    <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604611799859" />
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602962920759" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008578944" />
     <state x="225" y="140" key="Vcs.Push.Dialog.v2/0.23.1440.800@0.23.1440.800" timestamp="1603033595794" />
@@ -424,11 +431,11 @@
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602972728023" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602963803437" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.810/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603309540249" />
-    <state x="-1349" y="271" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604591713117">
-      <screen x="-1920" y="-157" width="1920" height="1057" />
+    <state x="428" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604611807390">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="-1349" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603120000629" />
-    <state x="428" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1603036336846" />
+    <state x="428" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1604611807390" />
     <state x="-1349" y="271" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008208987" />
     <state x="-1349" y="271" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.803/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1604591713117" />
     <state x="-1349" y="271" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603894205298" />
