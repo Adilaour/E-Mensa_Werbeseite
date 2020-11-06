@@ -604,6 +604,7 @@ zoaxe.com
 zoemail.org");
             if(!empty($_POST)){
                 $allesok = 0;
+                $emailok = 0;
                 // trim entfernt Leerzeichen dann prüfen
                 $vorname = trim($_POST['Vorname']);
                 if(!isset($vorname) || $vorname==''){
@@ -626,19 +627,21 @@ zoemail.org");
                     foreach ($trashmails as $trashy) {
                         if (strpos($trashy, $emailarray[1])) {
                             echo 'Email nicht gültig' . '<br>';
+                            $emailok = false;
                             break;
                         } else {
                             $email = $_POST['email'];
-                            $allesok++;
+                            $emailok = true;
                         }
                     }
                 } else{
                     echo 'Email nicht gültig' . '<br>';
+                    $emailok = false;
                     $email = false;
                 }
                 // Sprache des Newsletters speichern
                 $lang = $_POST['fan_lang'];
-                if($allesok>=3){
+                if($allesok>=2&&$emailok){
                     $newline = 'Name: '.$vorname.'| Mail: '.$email.'| Sprache: '.$lang.'| Datenschutz: '.$datasec."\n";
                     // Datei wird zum Schreiben geöffnet
                     $newsletterlog = fopen ( "emails.txt", "a" );

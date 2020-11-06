@@ -22,11 +22,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein 2 fertig">
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein 2 fertig + Meal restored">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beispiele/erstesPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/erstesPHP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/meal.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/werbeseite/meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/meal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/emails.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604690113561</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Meilenstein 2 fertig + Meal restored">
+      <created>1604690991778</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1604690991778</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +346,8 @@
     <MESSAGE value="FERTIG" />
     <MESSAGE value="Test" />
     <MESSAGE value="Meilenstein 2 fertig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meilenstein 2 fertig" />
+    <MESSAGE value="Meilenstein 2 fertig + Meal restored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Meilenstein 2 fertig + Meal restored" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1632" y="-102" key="#CLI_Interpreters" timestamp="1604664658349">
@@ -367,22 +375,22 @@
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="-1473" y="-30" key="Github.UntrackedFilesDialog/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602961883128" />
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1604665818041">
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1604691972901">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604665818041" />
-    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1604665818036">
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604691972901" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1604691972899">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604665818036" />
-    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1604665818029">
+    <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604691972899" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1604691972898">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604665818029" />
-    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1604665818039">
+    <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604691972898" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1604691972900">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604665818039" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604691972900" />
     <state x="184" y="86" key="MergeDialog" timestamp="1604611866176">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -391,6 +399,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604611862336" />
+    <state x="-1137" y="290" key="NewPhpFileDialog" timestamp="1604691547701">
+      <screen x="-1920" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="-1137" y="290" key="NewPhpFileDialog/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604691547701" />
     <state x="-1711" y="-125" key="SettingsEditor" timestamp="1604664662758">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
@@ -398,10 +410,10 @@
     <state x="209" y="53" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602963005814" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1604690123565">
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1604690993453">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604690123565" />
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1604690993453" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604615496590" />
