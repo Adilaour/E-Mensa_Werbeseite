@@ -47,7 +47,7 @@ $showRatings = [];
 if (!empty($_GET[GET_PARAM_SEARCH_TEXT])) {
     $searchTerm = $_GET[GET_PARAM_SEARCH_TEXT];
     foreach ($ratings as $rating) {
-        if (strpos($rating['text'], $searchTerm) !== false) {
+        if (strpos($rating['text'], strtolower($searchTerm)) !== false) {
             $showRatings[] = $rating;
         }
     }
@@ -91,7 +91,7 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
         <h1>Gericht: <?php echo $meal['name']; ?></h1>
         <p><?php echo $meal['description']; ?></p>
         <h1>Bewertungen (Insgesamt: <?php echo calcMeanStars($ratings); ?>)</h1>
-        <form method="get">
+        <form action="meal.php" method="get">
             <label for="search_text">Filter:</label>
             <input id="search_text" type="text" name="search_text">
             <input type="submit" value="Suchen">
