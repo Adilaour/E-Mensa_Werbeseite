@@ -104,7 +104,7 @@
     </div>
     <div class="mainitem" id="contact">
         <h2>Interesse geweckt? Wir informieren Sie!</h2>
-        <form action="newsletteranmeldung.html" method="post" name="newsletteranmeldung_landingpage" class="newsletteranmeldung_landingpage">
+        <form action="index.php" method="post" name="newsletteranmeldung_landingpage" class="newsletteranmeldung_landingpage">
             <label for="fan_name" id="fan_name_lbl">Ihr Name
                 <input type="text" id="fan_name" placeholder="Vorname">
             </label>
@@ -121,7 +121,7 @@
             <label for="fan_data" id="fan_data_lbl">
                 <input type="checkbox" id="fan_data"> Den Datenschutzbestimmungen stimme ich zu.
             </label>
-            <button type="submit" name="newsletter_landingpage_submit" id="newsletter_landingpage_submit" disabled>Zum Newsletter anmelden</button>
+            <button type="submit" name="newsletter_landingpage_submit" id="newsletter_landingpage_submit" >Zum Newsletter anmelden</button>
         </form>
     </div>
     <div class="mainitem" id="wichtig">
@@ -148,3 +148,22 @@
 </footer>
 </body>
 </html>
+
+
+<?php
+if ( $_GET['email'] <> "newsletter_landingpage_submit" )
+{
+    // und nun die Daten in eine Datei schreiben
+    // Datei wird zum Schreiben geöffnet
+    $handle = fopen ( "emails.txt", "w" );
+    // schreiben des Inhaltes von email
+    fwrite ( $handle, $_GET['fan_mail'] );
+    // Trennzeichen einfügen, damit Auswertung möglich wird
+    fwrite ( $handle, "|" );
+    // schreiben des Inhalts von name
+    fwrite ( $handle, $_GET['fan_name'] );
+    // Datei schließen
+    fclose ( $handle );
+    exit;
+}
+?>
