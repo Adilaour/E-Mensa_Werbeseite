@@ -16,7 +16,7 @@
     <nav class="navbar bordered headeritems">
         <ul class="mainmenu">
             <li><a href="#news">Ankündigung</a></li>
-            <li><a href="#menu">Speisen</a></li>
+            <li><a href="#meals">Speisen</a></li>
             <li><a href="#zahlen">Zahlen</a></li>
             <li><a href="#contact">Kontakt</a></li>
             <li><a href="#wichtig">Wichtig für uns</a></li>
@@ -25,14 +25,15 @@
 </header>
 <main>
     <h1>Ihre E-Mensa</h1>
-    <div class="mainitem"><img src="Banner.jpeg" alt="Bannerbild" class="banner"></div>
+    <div class="mainitem"><img src="img/Banner.jpeg" alt="Bannerbild" class="banner"></div>
     <div class="mainitem" id="news">
         <h2>Bald gibt es Essen auch online ;)</h2>
         <!--im folgenden paragraph sprache auch zxx geändert-->
         <p class="bordered" lang="zxx">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     </div>
-    <div class="mainitem" id="menu">
+    <div class="mainitem" id="meals">
         <h2>Köstlichkeiten, die Sie erwarten</h2>
+        <!-- Alte Tabelle
         <table id="koestlichkeitent">
             <tr>
                 <th></th>
@@ -54,7 +55,43 @@
                 <td>...</td>
                 <td>...</td>
             </tr>
+        </table>-->
+        <?php $gerichte=[];
+        include('gerichte.php');
+        ?>
+        <table id="koestlichkeitent">
+            <tr>
+                <th>Bild</th>
+                <th>Bezeichnung</th>
+                <th>Preis intern</th>
+                <th>Preis extern</th>
+            </tr>
+            <tr>
+                <td><img src="img/rindfleischnudeln.jpg" alt="Nicht gefunden"></td>
+                <td class="alignleft"><?php print_r($gerichte[1]['name'])?></td>
+                <td><?php print_r($gerichte[1]['preisintern'])?></td>
+                <td><?php print_r($gerichte[1]['preisextern'])?></td>
+            </tr>
+            <tr>
+                <td><img src="img/risotto.jpg" alt="Nicht gefunden"></td>
+                <td class="alignleft"><?php print_r($gerichte[2]['name'])?></td>
+                <td><?php print_r($gerichte[2]['preisintern'])?></td>
+                <td><?php print_r($gerichte[2]['preisextern'])?></td>
+            </tr>
+            <tr>
+                <td><img src="img/bolognese.jpg" alt="Nicht gefunden"></td>
+                <td class="alignleft"><?php print_r($gerichte[3]['name'])?></td>
+                <td><?php print_r($gerichte[3]['preisintern'])?></td>
+                <td><?php print_r($gerichte[3]['preisextern'])?></td>
+            </tr>
+            <tr>
+                <td><img src="img/jaegerschnitzel.jpg" alt="Nicht gefunden"></td>
+                <td class="alignleft"><?php print_r($gerichte[4]['name'])?></td>
+                <td><?php print_r($gerichte[4]['preisintern'])?></td>
+                <td><?php print_r($gerichte[4]['preisextern'])?></td>
+            </tr>
         </table>
+
     </div>
     <div class="mainitem" id="zahlen">
         <h2>E-Mensa in Zahlen</h2>
