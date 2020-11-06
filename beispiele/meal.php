@@ -1,7 +1,7 @@
 <?php
 const GET_PARAM_MIN_STARS = 'search_min_stars';
 const GET_PARAM_SEARCH_TEXT = 'search_text';
-const GET_SHOW_DESCRIPTION = 'show_descpription';
+const GET_SHOW_DESCRIPTION = 'show_description';
 
 /**
  * Liste aller möglichen Allergene.
