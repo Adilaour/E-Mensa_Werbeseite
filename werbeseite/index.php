@@ -66,30 +66,12 @@
                 <th>Preis intern</th>
                 <th>Preis extern</th>
             </tr>
-            <tr>
-                <td><img src="img/rindfleischnudeln.jpg" alt="Nicht gefunden"></td>
-                <td class="alignleft"><?php print_r($gerichte[1]['name'])?></td>
-                <td><?php print_r($gerichte[1]['preisintern'])?></td>
-                <td><?php print_r($gerichte[1]['preisextern'])?></td>
-            </tr>
-            <tr>
-                <td><img src="img/risotto.jpg" alt="Nicht gefunden"></td>
-                <td class="alignleft"><?php print_r($gerichte[2]['name'])?></td>
-                <td><?php print_r($gerichte[2]['preisintern'])?></td>
-                <td><?php print_r($gerichte[2]['preisextern'])?></td>
-            </tr>
-            <tr>
-                <td><img src="img/bolognese.jpg" alt="Nicht gefunden"></td>
-                <td class="alignleft"><?php print_r($gerichte[3]['name'])?></td>
-                <td><?php print_r($gerichte[3]['preisintern'])?></td>
-                <td><?php print_r($gerichte[3]['preisextern'])?></td>
-            </tr>
-            <tr>
-                <td><img src="img/jaegerschnitzel.jpg" alt="Nicht gefunden"></td>
-                <td class="alignleft"><?php print_r($gerichte[4]['name'])?></td>
-                <td><?php print_r($gerichte[4]['preisintern'])?></td>
-                <td><?php print_r($gerichte[4]['preisextern'])?></td>
-            </tr>
+            <?php
+            foreach($gerichte as $value){
+                echo "<tr><td><img src='img/$value[bildname]' alt='Speisebild nicht gefunden.'></td><td class='alignleft'>$value[name]</td><td>$value[preisintern]</td><td>$value[preisextern]</td></tr>";
+            }
+
+            ?>
         </table>
 
     </div>
@@ -620,7 +602,7 @@ zoemail.org");
                     $datasec = $_POST['datasec'];
                     $allesok++;
                 }
-                // explode trennt Email an dieser Stelle und speichert sie in einem Array. Das 2. Element enthält die Domain ohne @zeichne
+                // explode trennt Email an dieser Stelle und speichert sie in einem Array. Das 2. Element enthält die Domain ohne @-Zeichen
                 if(isset($_POST['email']) && $_POST['email'] != '') {
                     $emailarray = explode('@', $_POST['email']);
                     // Alle Trashdomains mit dem 2.Arrayelement vergleichen, wenn nichts gefunden wird email setzen
