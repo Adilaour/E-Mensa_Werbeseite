@@ -3,18 +3,14 @@ const GET_PARAM_MIN_STARS = 'search_min_stars';
 const GET_PARAM_SEARCH_TEXT = 'search_text';
 const GET_SHOW_DESCRIPTION = 'show_description';
 const GET_SELECTED_LANGUAGE = 'language';
-
-/**
- * Liste aller möglichen Allergene.
- */
+// Liste aller möglichen Allergene.
 $allergens = array(
     11 => 'Gluten',
     12 => 'Krebstiere',
     13 => 'Eier',
     14 => 'Fisch',
     17 => 'Milch',);
-
-
+// Liste aller möglichen Gerichte.
 $meal = [ // Kurzschreibweise für ein Array (entspricht = array())
     'name' => 'Süßkartoffeltaschen mit Frischkäse und Kräutern gefüllt',
     'description' => 'Die Süßkartoffeln werden vorsichtig aufgeschnitten und der Frischkäse eingefüllt.',
@@ -23,7 +19,7 @@ $meal = [ // Kurzschreibweise für ein Array (entspricht = array())
     'allergens' => [11, 13],
     'amount' => 42   // Anzahl der verfügbaren Gerichte.
 ];
-
+// Liste aller Bewertungen.
 $ratings = [
     [   'text' => 'Die Kartoffel ist einfach klasse. Nur die Fischstäbchen schmecken nach Käse. ',
         'author' => 'Ute U.',
@@ -38,8 +34,9 @@ $ratings = [
         'author' => 'Marta M.',
         'stars' => 3 ]
 ];
-
+// Arraydefinition
 $showRatings = [];
+
 if (!empty($_GET[GET_PARAM_SEARCH_TEXT])) {
     $searchTerm = $_GET[GET_PARAM_SEARCH_TEXT];
     foreach ($ratings as $rating) {

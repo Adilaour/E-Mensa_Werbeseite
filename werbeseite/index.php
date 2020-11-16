@@ -9,6 +9,24 @@
     <meta charset="UTF-8">
     <title>Ihre E-Mensa</title>
     <link rel="stylesheet" href="index.css">
+    <?php
+    // Besucherzähler
+    if(!file_exists("besucherlog.txt")){
+        $besucherlog = fopen("besucherlog.txt", 'w');
+        fwrite($besucherlog, "1");
+        fclose($besucherlog);
+    } else {
+        $besucherlog = fopen("besucherlog.txt",'r');
+        $aktuellerstand = (int)fgets($besucherlog);
+        fclose($besucherlog);
+        $aktuellerstand++;
+        $besucherlog = fopen("besucherlog.txt",'w');
+        fwrite($besucherlog, $aktuellerstand);
+        fclose($besucherlog);
+    }
+
+
+    ?>
 </head>
 <body class="gridcontainer">
 <header class="headercontainer">
@@ -67,8 +85,10 @@
                 <th>Preis extern</th>
             </tr>
             <?php
+            $gerichtanzahl = 0;
             foreach($gerichte as $value){
                 echo "<tr><td><img src='img/$value[bildname]' alt='Speisebild nicht gefunden.'></td><td class='alignleft'>$value[name]</td><td>$value[preisintern]</td><td>$value[preisextern]</td></tr>";
+                $gerichtanzahl++;
             }
 
             ?>
@@ -78,9 +98,25 @@
     <div class="mainitem" id="zahlen">
         <h2>E-Mensa in Zahlen</h2>
         <div class="stats">
-            <div><p class="zahlenwerte">X</p><p>&nbsp;Besuche</p></div>
-            <div><p class="zahlenwerte">Y</p><p>&nbsp;Anmeldungen zum Newsletter</p></div>
-            <div><p class="zahlenwerte">Z</p><p>&nbsp;Speisen</p></div>
+            <div><p class="zahlenwerte"><?php
+                    $besucherlog= fopen("besucherlog.txt",'r');
+                    $aktuellerstand = (int)fgets($besucherlog);
+                    fclose($besucherlog);
+                    echo "$aktuellerstand";
+                    ?></p><p>&nbsp;Besuche</p></div>
+            <div><p class="zahlenwerte"><?php
+                    if(file_exists("emails.txt")) {
+                        $anmeldungen = count(file("emails.txt"));
+                        echo "$anmeldungen";
+                    } else{
+                        echo "0";
+                    }
+
+
+                    ?></p><p>&nbsp;Anmeldungen zum Newsletter</p></div>
+            <div><p class="zahlenwerte"><?php
+                    echo"$gerichtanzahl";
+                    ?></p><p>&nbsp;Speisen</p></div>
         </div>
 
     </div>
@@ -104,6 +140,7 @@
                 <input type="checkbox" id="fan_data" name="datasec"> Den Datenschutzbestimmungen stimme ich zu.
             </label>
             <button type="submit" name="newsletter_landingpage_submit" id="newsletter_landingpage_submit" value="1" >Zum Newsletter anmelden</button>
+            <!-- Newsletterlogik Meilenstein2 -->
             <?php
             $trashmails = explode("\n","0-mail.com
 0815.ru
@@ -624,7 +661,7 @@ zoemail.org");
                 // Sprache des Newsletters speichern
                 $lang = $_POST['fan_lang'];
                 if($allesok>=2&&$emailok){
-                    $newline = 'Name: '.$vorname.'| Mail: '.$email.'| Sprache: '.$lang.'| Datenschutz: '.$datasec."\n";
+                    $newline = $vorname.' | '.$email.' | '.$lang.' | '.$datasec."\n";
                     // Datei wird zum Schreiben geöffnet
                     $newsletterlog = fopen ( "emails.txt", "a" );
                     // schreiben des Inhaltes von email
@@ -633,6 +670,8 @@ zoemail.org");
                     echo "Mashalla! Eingabe erfolgreich";
                 }
             }
+
+
             ?>
 
 
