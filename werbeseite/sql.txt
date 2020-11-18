@@ -3,7 +3,7 @@ CHARACTER SET UTF8mb4
 COLLATE utf8mb4_unicode_ci;
 USE emensawerbeseite;
 CREATE TABLE gericht(
-    id              INTEGER PRIMARY KEY,
+    id              INTEGER PRIMARY KEY AUTO_INCREMENT,
     name            VARCHAR(80) NOT NULL UNIQUE,
     beschreibung    VARCHAR(800) NOT NULL,
     erfasst_am      DATE NOT NULL,
@@ -149,18 +149,20 @@ SELECT id, name FROM gericht WHERE name LIKE '%suppe%';
 -- Aufgabe 5.9
 SELECT * FROM kategorie WHERE eltern_id IS NULL;
 -- Aufgabe 5.10
-SELECT g.name AS Gerichtname, GROUP_CONCAT(a.name) AS Allergen FROM gericht g JOIN gericht_hat_allergen gha on g.id = gha.gericht_id JOIN allergen a ON a.code = gha.code GROUP BY g.name;
+SELECT g.name AS Gerichtname, GROUP_CONCAT(a.name) AS Allergen FROM gericht g JOIN gericht_hat_allergen gha ON g.id = gha.gericht_id JOIN allergen a ON a.code = gha.code GROUP BY g.name;
+SELECT g.name AS Gerichtname, GROUP_CONCAT(a.name) AS Allergen FROM gericht g, allergen a, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code GROUP BY g.name;
 -- Aufgabe 5.11
 SELECT g.name AS Gerichtname, GROUP_CONCAT(a.name) AS Allergen FROM gericht g LEFT JOIN gericht_hat_allergen gha ON gha.gericht_id = g.id LEFT JOIN allergen a ON gha.code = a.code GROUP BY g.name;
 -- Aufgabe 5.12
 SELECT a.name AS Allergen, GROUP_CONCAT(g.name) AS Gerichtname FROM gericht g LEFT JOIN gericht_hat_allergen gha ON gha.gericht_id = g.id RIGHT JOIN allergen a ON gha.code = a.code GROUP BY a.name;
 -- Aufgabe 5.13
-
+SELECT k.name AS Kategoriename,count(ghk.gericht_id) AS Anzahl FROM kategorie k LEFT JOIN gericht_hat_kategorie ghk ON k.id = ghk.kategorie_id GROUP BY k.name ORDER BY Anzahl ASC;
 -- Aufgabe 5.14
-
+SELECT k.name AS Kategoriename,count(ghk.gericht_id) AS Anzahl FROM kategorie k LEFT JOIN gericht_hat_kategorie ghk ON k.id = ghk.kategorie_id GROUP BY k.name HAVING Anzahl > 2 ORDER BY Anzahl ASC;
 -- Aufgabe 5.15
-
+UPDATE allergen SET name = 'Kamut' WHERE code = 'a6';
 -- Aufgabe 5.16
-
+INSERT INTO gericht (name, beschreibung, erfasst_am, vegetarisch, vegan, preis_intern, preis_extern) VALUES ('Currywurst Pommes', '', '2020-11-18', 0, 0,2.5, 3.5);
+INSERT INTO gericht_hat_kategorie (gericht_id, kategorie_id) VALUES (21,3);
 -- Aufgabe 5.17
-
+SELECT g.name, count(gha.gericht_id) AS Anzahl_der_Allergene FROM gericht g, gericht_hat_allergen gha WHERE g.id = gha.gericht_id GROUP BY g.name HAVING Anzahl_der_Allergene >3 ORDER BY Anzahl_der_Allergene ASC;
