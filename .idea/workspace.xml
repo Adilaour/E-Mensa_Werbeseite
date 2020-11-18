@@ -22,13 +22,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein 3 Aufgabe 5 komplett">
-      <change afterPath="$PROJECT_DIR$/beispiele/info.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele/m3_8a_testdatenbank.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein 3 Aufgabe 6 fertig">
       <change beforePath="$PROJECT_DIR$/beispiele/erstesPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/erstesPHP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/werbeseite/besucherlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/besucherlog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/werbeseite/gerichte.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/gerichte.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +115,7 @@
       <workItem from="1605372456874" duration="459000" />
       <workItem from="1605373262189" duration="2123000" />
       <workItem from="1605387302929" duration="28166000" />
-      <workItem from="1605646016413" duration="9618000" />
+      <workItem from="1605646016413" duration="9656000" />
     </task>
     <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962042724</created>
@@ -353,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605699188582</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Meilenstein 3 Aufgabe 6 fertig">
+      <created>1605714210338</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1605714210338</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +411,8 @@
     <MESSAGE value="M3 Aufgaben 1+2 fertig" />
     <MESSAGE value="Meilenstein 3 bis Aufgabe 5.11 fertig" />
     <MESSAGE value="Meilenstein 3 Aufgabe 5 komplett" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meilenstein 3 Aufgabe 5 komplett" />
+    <MESSAGE value="Meilenstein 3 Aufgabe 6 fertig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Meilenstein 3 Aufgabe 6 fertig" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1632" y="-102" key="#CLI_Interpreters" timestamp="1605705206327">
@@ -417,10 +420,10 @@
     </state>
     <state x="-1632" y="-102" key="#CLI_Interpreters/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605705206327" />
     <state x="-1632" y="-76" key="#CLI_Interpreters/0.25.1440.793/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605374942440" />
-    <state x="-1595" y="207" key="#SQL_Dialects" timestamp="1605535317237">
+    <state x="-1595" y="207" key="#SQL_Dialects" timestamp="1605714233013">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state x="-1595" y="207" key="#SQL_Dialects/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605535317237" />
+    <state x="-1595" y="207" key="#SQL_Dialects/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605714233013" />
     <state x="-1714" y="1" width="1071" height="748" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605705729900">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
@@ -501,10 +504,10 @@
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964614260" />
     <state x="-1711" y="-103" key="SettingsEditor/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602964557376" />
     <state x="-1711" y="-101" key="SettingsEditor/0.25.1440.793/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605374943047" />
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1605699191795">
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2" timestamp="1605714212042">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605699191795" />
+    <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605714212042" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
     <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604615496590" />
