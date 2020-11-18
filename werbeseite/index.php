@@ -91,14 +91,14 @@
                 echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
                 exit();
             }
-            $sql="SELECT name, preis_intern, preis_extern FROM gericht ORDER BY name LIMIT 5";
+            $sql="SELECT g.name AS Gerichtname, g.preis_intern AS preisintern, g.preis_extern AS preisextern, GROUP_CONCAT(a.code) AS Allergen FROM gericht g, allergen a, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code GROUP BY g.name LIMIT 5;";
             $result = mysqli_query($link, $sql);
             if(!$result){
                 echo "Fehler bei der Abfrage: ", mysqli_error($link);
                 exit();
             }
-            while($row = mysqli_fetch_assoc($result)){
-                echo '<tr><td><img src="img/" alt="Speisebild nicht gefunden.">'.'</td><td class="alignleft">'.$row['name'].'</td><td>'.$row['preis_intern'].'</td><td>'.$row['preis_extern'].'</td></tr>';
+            while($row = mysqli_fetch_assoc($result)) {
+                echo '<tr><td><img src="" alt="Speisebild nicht gefunden.">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
                 $gerichtanzahl++;
             }
             mysqli_free_result($result);
@@ -111,6 +111,30 @@
 
             ?>
         </table>
+        <div>
+            <h3>Liste der verwendeten Allergene</h3>
+            <?php
+            $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
+            if (!$link) {
+                echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
+                exit();
+            }
+            $sql = "SELECT DISTINCT a.name AS Allergene FROM allergen a, gericht g, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code";
+            $result =mysqli_query($link, $sql);
+            if(!$result){
+                echo "Fehler bei der Abfrage: ", mysqli_error($link);
+                exit();
+            }
+            echo "<ul>";
+            while($row = mysqli_fetch_assoc($result)){
+                echo '<li>'.$row['Allergene'].'</li><br>';
+            }
+            echo "</ul>";
+            mysqli_free_result($result);
+            mysqli_close($link);
+
+            ?>
+        </div>
 
     </div>
     <div class="mainitem" id="zahlen">
