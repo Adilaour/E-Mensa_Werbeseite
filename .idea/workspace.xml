@@ -23,7 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein 3 Aufgabe 6 fertig">
+      <change afterPath="$PROJECT_DIR$/werbeseite/tabelle_new_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beispiele/erstesPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/erstesPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/besucherlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/besucherlog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +119,7 @@
       <workItem from="1605372456874" duration="459000" />
       <workItem from="1605373262189" duration="2123000" />
       <workItem from="1605387302929" duration="28166000" />
-      <workItem from="1605646016413" duration="9656000" />
+      <workItem from="1605646016413" duration="11255000" />
     </task>
     <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962042724</created>
@@ -355,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605714210338</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Meilenstein 3 Aufgabe 6 fertig">
+      <created>1605714244690</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1605714244690</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,10 +502,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604611862336" />
-    <state x="-1137" y="290" key="NewPhpFileDialog" timestamp="1605711284023">
+    <state x="-1137" y="290" key="NewPhpFileDialog" timestamp="1605714380770">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
-    <state x="-1137" y="290" key="NewPhpFileDialog/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605711284023" />
+    <state x="-1137" y="290" key="NewPhpFileDialog/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605714380770" />
     <state x="-1137" y="304" key="NewPhpFileDialog/0.25.1440.798/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605480562072" />
     <state x="-1711" y="-125" key="SettingsEditor" timestamp="1605705207282">
       <screen x="-1920" y="-180" width="1920" height="1080" />
