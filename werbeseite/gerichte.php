@@ -21,9 +21,12 @@ $gerichte = [
         'name'        => 'Spaghetti Bolognese',
         'preisintern' => '1,50',
         'preisextern' => '6,20'],
-    /*4 => [
+    /*
+       4 => [
         'bildname'    => 'jaegerschnitzel.jpg',
         'name'        => 'Jägerschnitzel mit Pommes',
         'preisintern' => '1,50',
-        'preisextern' => '6,20']*/
+        'preisextern' => '6,20']
+    */
+
 ];

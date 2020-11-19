@@ -1,14 +1,11 @@
 <?php
 const GET_PARAM_SORTIERUNG = 'sortierung';
 const GET_PARAM_SUCHTEXT = 'suche';
-
-
 $zaehler = 1;
 $ganzedatei = file("emails.txt");
 $sortierarray = [];
 $sortierarray2 = [];
 $suchergebnis = [];
-
 // Sortiereinstellung abfragen bzw. festlegen
 if(empty($_GET[GET_PARAM_SORTIERUNG])){
     $sortafter = "standard";
@@ -19,6 +16,7 @@ if(empty($_GET[GET_PARAM_SORTIERUNG])){
 }
 // Sortierung durchführen
 if($sortafter=='Name'){
+    // Sortierung nach Namen direkt durchführbar
     foreach($ganzedatei as $zeile){
         $zeilenarray = explode(" | ", $zeile);
         array_push($sortierarray, $zeilenarray);
@@ -35,7 +33,7 @@ if($sortafter=='Name'){
     }
     // Sortierung mit sort()
     sort($sortierarray);
-    // Zurücktauschen
+    // Zurücktauschen von Mail und Name innerhalb des Arrays
     foreach($sortierarray as $zeile){
         $mailhalter = $zeile[0];
         $zeile[0] = $zeile[1];
@@ -43,16 +41,17 @@ if($sortafter=='Name'){
         array_push($sortierarray2, $zeile);
     }
     $sortierarray = $sortierarray2;
-}else {
+} else {
     // Keine Sortierung durchführen, aber Array erstellen (Reihenfolge aus der Datei)
     foreach($ganzedatei as $zeile){
         $zeilenarray = explode(" | ", $zeile);
         array_push($sortierarray, $zeilenarray);
     }
 }
-// Suchtext abfragen & Auswahl durchführen
+// Suchtext in allen Array suchen und ggf. zu Ausgabe suchen hinzufügen
 if(!empty($_GET[GET_PARAM_SUCHTEXT])){
     $suchanfrage = $_GET[GET_PARAM_SUCHTEXT];
+    // Schleifenweise Abfrage durch strpos() macht Abfrage wieder case-insensitive
     foreach($sortierarray as $zeile){
         if(strpos(strtolower($zeile[0]),strtolower($suchanfrage)) !== false){
             array_push($suchergebnis, $zeile);
@@ -62,7 +61,6 @@ if(!empty($_GET[GET_PARAM_SUCHTEXT])){
 
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -76,7 +74,9 @@ if(!empty($_GET[GET_PARAM_SUCHTEXT])){
             grid-template-rows: auto 1fr;
         }
         form{
-
+            grid-column: 1 / span 2;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
         }
         table{
             grid-row-start: 2;
@@ -86,6 +86,7 @@ if(!empty($_GET[GET_PARAM_SUCHTEXT])){
     </style>
 </head>
 <body>
+<!--Such- und Sortierformular-->
 <form action="nl-admin.php" method="get">
     <label for="sortierung">
         <select id="sortierung" name="sortierung" size="1">
@@ -94,9 +95,8 @@ if(!empty($_GET[GET_PARAM_SUCHTEXT])){
         </select>
         <button>Sortieren</button>
     </label>
-</form>
-<form action="nl-admin.php" method="get">
     <label for="suche">
+        <!--Logik zur Speicherung der Suchanfrage-->
         <?php
         if(!empty($_GET[GET_PARAM_SUCHTEXT])){
             $suchanfrage = $_GET[GET_PARAM_SUCHTEXT];
@@ -114,6 +114,7 @@ if(!empty($_GET[GET_PARAM_SUCHTEXT])){
         <th>Sprache</th>
         <th>Datenschutz</th>
     </tr>
+    <!--Ausgabe der Arrayinhalte-->
     <?php
     foreach($sortierarray as $zeile){
         echo "<tr>
@@ -125,6 +126,5 @@ if(!empty($_GET[GET_PARAM_SUCHTEXT])){
     }
     ?>
 </table>
-
 </body>
 </html>

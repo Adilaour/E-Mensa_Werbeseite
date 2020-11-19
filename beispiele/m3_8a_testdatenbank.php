@@ -1,9 +1,14 @@
 <?php
+/**
+ * Praktikum DBWT Autoren:
+ * Adil, Aouragh, 3203789
+ * Alexander, List, 3126569
+ */
 
 $link=mysqli_connect("localhost",      // Host der Datenbank
     "root",                            // Benutzername zur Anmeldung
     "abc123",                      // Passwort
-    "emensawerbeseite"            // Auswahl der Datenbanken (bzw. des Schemas)
+    "emensawerbeseite",            // Auswahl der Datenbanken (bzw. des Schemas)
 // optional port der Datenbank
 );
 if (!$link) {

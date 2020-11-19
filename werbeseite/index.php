@@ -9,27 +9,28 @@
     <meta charset="UTF-8">
     <title>Ihre E-Mensa</title>
     <link rel="stylesheet" href="index.css">
+    <!--Besucherzähler(Bei Newsletternameldung erneute Zählung...)-->
     <?php
-    // Besucherzähler
     if(!file_exists("besucherlog.txt")){
+        // Beim ersten Besuch auf der Seite existiert die Daten noch nicht.
         $besucherlog = fopen("besucherlog.txt", 'w');
         fwrite($besucherlog, "1");
         fclose($besucherlog);
     } else {
+        // Wenn Datei existiert wird sie ausgelesen, wobei der gelesene string in (int) umgecastet und in var $aktuellerstand gespeichert wird. Anschließend Datei schließen, um Modus zu wechseln.
         $besucherlog = fopen("besucherlog.txt",'r');
         $aktuellerstand = (int)fgets($besucherlog);
         fclose($besucherlog);
+        // $aktuellerstand hochzählen und in Datei schreiben
         $aktuellerstand++;
         $besucherlog = fopen("besucherlog.txt",'w');
         fwrite($besucherlog, $aktuellerstand);
         fclose($besucherlog);
     }
-
-
     ?>
 </head>
-<body class="gridcontainer">
-<header class="headercontainer">
+<body>
+<header>
     <div class="sitelogo bordered headeritems"><img src="" alt="E-Mensa Logo"></div>
     <nav class="navbar bordered headeritems">
         <ul class="mainmenu">
@@ -51,32 +52,6 @@
     </div>
     <div class="mainitem" id="meals">
         <h2>Köstlichkeiten, die Sie erwarten</h2>
-        <!-- Alte Tabelle
-        <table id="koestlichkeitent">
-            <tr>
-                <th></th>
-                <th>Preis intern</th>
-                <th>Preis extern</th>
-            </tr>
-            <tr>
-                <td class="alignleft">Rindfleisch mit Bambus, Kaiserschoten und rotem Paprika, dazu Mie Nudeln</td>
-                <td>3,50</td>
-                <td>6,20</td>
-            </tr>
-            <tr>
-                <td class="alignleft">Spinatrisotto mit kleinen Samsosateigecken und gemischter Salat</td>
-                <td>2,90</td>
-                <td>5,30</td>
-            </tr>
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-            </tr>
-        </table>-->
-        <?php $gerichte=[];
-        include('gerichte.php');
-        ?>
         <table id="koestlichkeitent">
             <tr>
                 <th>Bild</th>
@@ -84,52 +59,57 @@
                 <th>Preis intern</th>
                 <th>Preis extern</th>
             </tr>
+            <!--Datenbankenabfrage zur Darstellung von Gerichten-->
             <?php
             $gerichtanzahl = 0;
             $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
+            // Überprüfung, ob Verbindung erfolgreich war
             if (!$link) {
                 echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
                 exit();
             }
+            // SQL Query (noch nicht dynamisch)
             $sql="SELECT g.name AS Gerichtname, g.preis_intern AS preisintern, g.preis_extern AS preisextern, GROUP_CONCAT(a.code) AS Allergen FROM gericht g, allergen a, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code GROUP BY g.name LIMIT 5;";
             $result = mysqli_query($link, $sql);
+            // Prüfung, ob Abfrage korrekt ist
             if(!$result){
                 echo "Fehler bei der Abfrage: ", mysqli_error($link);
                 exit();
             }
+            // Ausgabe der abgefragten Daten
             while($row = mysqli_fetch_assoc($result)) {
                 echo '<tr><td><img src="" alt="Speisebild nicht gefunden.">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
                 $gerichtanzahl++;
             }
+            // Schließen der Datenbankverbindun
             mysqli_free_result($result);
             mysqli_close($link);
-            /*
-            foreach($gerichte as $value){
-                echo "<tr><td><img src='img/$value[bildname]' alt='Speisebild nicht gefunden.'></td><td class='alignleft'>$value[name]</td><td>$value[preisintern]</td><td>$value[preisextern]</td></tr>";
-                $gerichtanzahl++;
-            }*/
-
             ?>
         </table>
         <div>
-            <h3>Liste der verwendeten Allergene</h3>
+            <h3>Legende der verwendeten Allergene</h3>
             <?php
+            // Erneuter Verbindungsaufbau
             $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
+            // Prüfung des erfolgreichen Verbindungsaufbaus
             if (!$link) {
                 echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
                 exit();
             }
-            $sql = "SELECT DISTINCT a.name AS Allergene FROM allergen a, gericht g, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code";
+            // Datenabfrage der Allergene + Prüfung der Korrektheit
+            $sql = "SELECT DISTINCT a.name AS Allergene, a.code AS Allergencode FROM allergen a, gericht g, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code";
             $result =mysqli_query($link, $sql);
             if(!$result){
                 echo "Fehler bei der Abfrage: ", mysqli_error($link);
                 exit();
             }
-            echo "<ul>";
+            // Ausgabe der Allergene in einer Tabelle mit Code
+            echo "<table>";
             while($row = mysqli_fetch_assoc($result)){
-                echo '<li>'.$row['Allergene'].'</li><br>';
+                echo '<tr><td>'.$row['Allergene'].'</td><td>'.$row['Allergencode'].'</td></tr>';
             }
-            echo "</ul>";
+            echo "</table>";
+            // Verbindung schließen
             mysqli_free_result($result);
             mysqli_close($link);
 
@@ -140,27 +120,36 @@
     <div class="mainitem" id="zahlen">
         <h2>E-Mensa in Zahlen</h2>
         <div class="stats">
-            <div><p class="zahlenwerte"><?php
+            <div>
+                <p><?php
+                    // Auslesen und Ausgabe der Besucherlogdatei
                     $besucherlog= fopen("besucherlog.txt",'r');
                     $aktuellerstand = (int)fgets($besucherlog);
                     fclose($besucherlog);
                     echo "$aktuellerstand";
-                    ?></p><p>&nbsp;Besuche</p></div>
-            <div><p class="zahlenwerte"><?php
+                    ?></p>
+                <p>&nbsp;Besuche</p>
+            </div>
+            <div>
+                <p><?php
+                    // Zählen der Zeilen in der Newsletterlog-Datei
                     if(file_exists("emails.txt")) {
                         $anmeldungen = count(file("emails.txt"));
                         echo "$anmeldungen";
                     } else{
                         echo "0";
                     }
-
-
-                    ?></p><p>&nbsp;Anmeldungen zum Newsletter</p></div>
-            <div><p class="zahlenwerte"><?php
+                    ?></p>
+                <p>&nbsp;Anmeldungen zum Newsletter</p>
+            </div>
+            <div>
+                <p><?php
+                    // Bisher Ausgabe der Tabellenzeilen in #meals - Später Summe der Gerichte in Datenbank
                     echo"$gerichtanzahl";
-                    ?></p><p>&nbsp;Speisen</p></div>
+                    ?></p>
+                <p>&nbsp;Speisen</p>
+            </div>
         </div>
-
     </div>
     <div class="mainitem" id="contact">
         <h2>Interesse geweckt? Wir informieren Sie!</h2>
@@ -184,6 +173,7 @@
             <button type="submit" name="newsletter_landingpage_submit" id="newsletter_landingpage_submit" value="1" >Zum Newsletter anmelden</button>
             <!-- Newsletterlogik Meilenstein2 -->
             <?php
+            // Festlegung der unqualifizierten E-Mail Hoster
             $trashmails = explode("\n","0-mail.com
 0815.ru
 0clickemail.com
@@ -663,17 +653,20 @@ zehnminutenmail.de
 zippymail.info
 zoaxe.com
 zoemail.org");
+            // Kontrolle aller Eingaben in der Newsletteranmeldung + Ausgabe aller Fehler
             if(!empty($_POST)){
                 $allesok = 0;
                 $emailok = 0;
                 // trim entfernt Leerzeichen dann prüfen
                 $vorname = trim($_POST['Vorname']);
+                // Prüfung der korrekten Namensangabe
                 if(!isset($vorname) || $vorname==''){
                     echo "Geben Sie Ihren vollständigen Namen an!".'<br>';
                 } else{
                     $vorname = $_POST['Vorname'];
                     $allesok++;
                 }
+                // Prüfung auf Zustimmung der Datenschutzbestimmungen
                 if(!isset($_POST['datasec'])){
                     echo "Datenschutzbestimmungen akzeptieren!".'<br>';
                     $datasec = false;
@@ -681,8 +674,9 @@ zoemail.org");
                     $datasec = $_POST['datasec'];
                     $allesok++;
                 }
-                // explode trennt Email an dieser Stelle und speichert sie in einem Array. Das 2. Element enthält die Domain ohne @-Zeichen
+                // Prüfung der E-Mail
                 if(isset($_POST['email']) && $_POST['email'] != '') {
+                    // explode trennt Email an dieser Stelle und speichert sie in einem Array. Das 2. Element enthält die Domain ohne @-Zeichen
                     $emailarray = explode('@', $_POST['email']);
                     // Alle Trashdomains mit dem 2.Arrayelement vergleichen, wenn nichts gefunden wird email setzen
                     foreach ($trashmails as $trashy) {
@@ -702,6 +696,7 @@ zoemail.org");
                 }
                 // Sprache des Newsletters speichern
                 $lang = $_POST['fan_lang'];
+                // Abspeicherung aller Daten, wenn alles in Ordnung ist
                 if($allesok>=2&&$emailok){
                     $newline = $vorname.' | '.$email.' | '.$lang.' | '.$datasec."\n";
                     // Datei wird zum Schreiben geöffnet
@@ -712,11 +707,7 @@ zoemail.org");
                     echo "Mashalla! Eingabe erfolgreich";
                 }
             }
-
-
             ?>
-
-
         </form>
     </div>
     <div class="mainitem" id="wichtig">
@@ -730,7 +721,6 @@ zoemail.org");
         </div>
     </div>
     <h2 id="goodbye">Wir freuen uns auf Ihren Besuch!</h2>
-
 </main>
 <footer>
     <nav class="navbar">
