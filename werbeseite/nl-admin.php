@@ -1,4 +1,9 @@
 <?php
+/**
+ * Praktikum DBWT Autoren:
+ * Adil, Aouragh, 3203789
+ * Alexander, List, 3126569
+ */
 const GET_PARAM_SORTIERUNG = 'sortierung';
 const GET_PARAM_SUCHTEXT = 'suche';
 $zaehler = 1;

@@ -78,7 +78,7 @@
             }
             // Ausgabe der abgefragten Daten
             while($row = mysqli_fetch_assoc($result)) {
-                echo '<tr><td><img src="" alt="Speisebild nicht gefunden.">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
+                echo '<tr><td><img src="img/bild" alt="Speisebild nicht gefunden">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
                 $gerichtanzahl++;
             }
             // Schließen der Datenbankverbindun
