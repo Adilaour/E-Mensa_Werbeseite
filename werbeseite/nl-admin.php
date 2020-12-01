@@ -104,7 +104,7 @@ if(!empty($_GET[GET_PARAM_SUCHTEXT])){
         <?php
         if(!empty($_GET[GET_PARAM_SUCHTEXT])){
             $suchanfrage = $_GET[GET_PARAM_SUCHTEXT];
-            echo '<input id="suche" type="text" name="suche"'."value=\"$suchanfrage\"".">";
+            echo '<input id="suche" type="text" name="suche"'."value=\"".htmlspecialchars($suchanfrage)."\"".">";
         } else{
             echo '<input id="suche" type="text" name="suche">';
         }?>
