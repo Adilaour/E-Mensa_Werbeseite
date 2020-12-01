@@ -41,11 +41,23 @@ if(!$result){
     echo "Fehler bei der Abfrage: ", mysqli_error($link);
     exit();
 }
-echo '<h5>OBEN: Übung</h5><h1>UNTEN: Aufgabe 6</h1>'.'<ul>';
+echo '<h5>OBEN: Übung</h5><h1>UNTEN: Aufgabe 6</h1>';
+echo '<p>Abgabe enthält Liste mit Allergenen und Gerichten</p>';
+/*
+echo '<ul>';
 while($row = mysqli_fetch_assoc($result)){
     echo '<li>'.$row['Allergen'].'<br>'.$row['Gerichtname'].'</li>';
 }
 echo '</ul>';
+*/
+
+echo '<h2>Aufgabe 6 korrigiert, als Tabelle</h2>';
+echo '<table><tr><th>Allergen</th><th>Gerichtname</th></tr>';
+while($row = mysqli_fetch_assoc($result)){
+    echo '<tr><td>'.$row['Allergen'].'</td><td>'.$row['Gerichtname'].'</td></tr>';
+}
+echo '</table>';
+
 mysqli_free_result($result);
 mysqli_close($link);
 

@@ -63,7 +63,6 @@ if(!empty($_GET[GET_PARAM_SUCHTEXT])){
         }
     }
     $sortierarray = $suchergebnis;
-
 }
 ?>
 <!DOCTYPE html>
