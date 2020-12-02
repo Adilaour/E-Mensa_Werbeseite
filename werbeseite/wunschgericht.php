@@ -9,7 +9,8 @@ if(isset($_POST["beschreibung"])){
     $beschreibung = htmlspecialchars($_POST["beschreibung"]);
 }
 if(isset($_POST["name"])){
-    $name = htmlspecialchars($_POST["name"]);
+    $name = trim($_POST["name"]);
+    $name = htmlspecialchars($name);
 }
 if(isset($_POST["email"])){
     $email = htmlspecialchars($_POST["email"]);
@@ -27,17 +28,11 @@ if(isset($_POST["wunschgericht_name"]) && isset($_POST["beschreibung"]) && isset
     $email = mysqli_real_escape_string($link, $email);
     $beschreibung = mysqli_real_escape_string($link, $beschreibung);
     $wunschgericht_name= mysqli_real_escape_string($link, $wunschgericht_name);
-    $name = mysqli_real_escape_string($link, $name);
+
     // Statement 1 vorbereiten
     $statement = mysqli_stmt_init($link);
-    if(isset($name)){
-        mysqli_stmt_prepare($statement, "INSERT INTO erstellerInnen (email,name) VALUES (?, ?)");
-        mysqli_stmt_bind_param($statement, 'ss', $email, $name);
-    }else{
-        mysqli_stmt_prepare($statement, "INSERT INTO erstellerInnen (email) VALUES (?)");
-        mysqli_stmt_bind_param($statement, 'ss', $email);
-    }
-
+    mysqli_stmt_prepare($statement, "INSERT INTO erstellerInnen (email) VALUES (?)");
+    mysqli_stmt_bind_param($statement, 's', $email);
     // Erstellung ErstellerIn
     mysqli_stmt_execute($statement);
     // Statement 2 vorbereiten
@@ -46,8 +41,18 @@ if(isset($_POST["wunschgericht_name"]) && isset($_POST["beschreibung"]) && isset
     mysqli_stmt_bind_param($statement2, 'ssss', $wunschgericht_name, $beschreibung, $date, $email);
     // Erstellung Wunschgericht
     mysqli_stmt_execute($statement2);
+
+    // Nachträgliches Einfügen des Namens
+    if($name != ""){
+        $statement3 = mysqli_stmt_init($link);
+        $name = mysqli_real_escape_string($link, $name);
+        mysqli_stmt_prepare($statement3, "INSERT INTO erstellerInnen (name) VALUES (?) WHERE email = ?");
+        mysqli_stmt_bind_param($statement3, 'ss', $name, $email);
+        mysqli_stmt_execute($statement3);
+    }
     // Datenbankverbindung wird geschlossen
     mysqli_close($link);
+
 }
 
 ?>
