@@ -31,10 +31,13 @@ if(isset($_POST["wunschgericht_name"]) && isset($_POST["beschreibung"]) && isset
     // Statement 1 vorbereiten
     $statement = mysqli_stmt_init($link);
     if(isset($name)){
-
+        mysqli_stmt_prepare($statement, "INSERT INTO erstellerInnen (email,name) VALUES (?, ?)");
+        mysqli_stmt_bind_param($statement, 'ss', $email, $name);
+    }else{
+        mysqli_stmt_prepare($statement, "INSERT INTO erstellerInnen (email) VALUES (?)");
+        mysqli_stmt_bind_param($statement, 'ss', $email);
     }
-    mysqli_stmt_prepare($statement, "INSERT INTO erstellerInnen (email,name) VALUES (?, ?)");
-    mysqli_stmt_bind_param($statement, 'ss', $email, $name);
+
     // Erstellung ErstellerIn
     mysqli_stmt_execute($statement);
     // Statement 2 vorbereiten
