@@ -1,14 +1,9 @@
 <?php
-/**
- * Praktikum DBWT Autoren:
- * Adil, Aouragh, 3203789
- * Alexander, List, 3126569
- */
 
 $link=mysqli_connect("localhost",      // Host der Datenbank
     "root",                            // Benutzername zur Anmeldung
-    "abc123",                      // Passwort
-    "emensawerbeseite",            // Auswahl der Datenbanken (bzw. des Schemas)
+    "DBwt",                      // Passwort
+    "emensawerbeseite"            // Auswahl der Datenbanken (bzw. des Schemas)
 // optional port der Datenbank
 );
 if (!$link) {
@@ -30,7 +25,7 @@ echo '</ul>';
 mysqli_free_result($result);
 mysqli_close($link);
 
-$link = mysqli_connect("localhost","root", "abc123", "emensawerbeseite");
+$link = mysqli_connect("localhost","root", "DBwt", "emensawerbeseite");
 if (!$link) {
     echo "Verbindung fehlgeschlagen: ", mysqli_connect_error();
     exit();

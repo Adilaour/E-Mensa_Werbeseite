@@ -81,46 +81,39 @@
                 echo '<tr><td><img src="img/bild" alt="Speisebild nicht gefunden">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
                 $gerichtanzahl++;
             }
-            // Schließen der Datenbankverbindung
+            // Schließen der Datenbankverbindun
             mysqli_free_result($result);
             mysqli_close($link);
             ?>
         </table>
-        <div class="container">
-            <div>
-                <h3>Legende der verwendeten Allergene</h3>
-                <?php
-                // Erneuter Verbindungsaufbau
-                $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
-                // Prüfung des erfolgreichen Verbindungsaufbaus
-                if (!$link) {
-                    echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
-                    exit();
-                }
-                // Datenabfrage der Allergene + Prüfung der Korrektheit
-                $sql = "SELECT DISTINCT a.name AS Allergene, a.code AS Allergencode FROM allergen a, gericht g, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code";
-                $result =mysqli_query($link, $sql);
-                if(!$result){
-                    echo "Fehler bei der Abfrage: ", mysqli_error($link);
-                    exit();
-                }
-                // Ausgabe der Allergene in einer Tabelle mit Code
-                echo "<table>";
-                while($row = mysqli_fetch_assoc($result)){
-                    echo '<tr><td>'.$row['Allergene'].'</td><td>'.$row['Allergencode'].'</td></tr>';
-                }
-                echo "</table>";
-                // Verbindung schließen
-                mysqli_free_result($result);
-                mysqli_close($link);
+        <div>
+            <h3>Legende der verwendeten Allergene</h3>
+            <?php
+            // Erneuter Verbindungsaufbau
+            $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
+            // Prüfung des erfolgreichen Verbindungsaufbaus
+            if (!$link) {
+                echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
+                exit();
+            }
+            // Datenabfrage der Allergene + Prüfung der Korrektheit
+            $sql = "SELECT DISTINCT a.name AS Allergene, a.code AS Allergencode FROM allergen a, gericht g, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code";
+            $result =mysqli_query($link, $sql);
+            if(!$result){
+                echo "Fehler bei der Abfrage: ", mysqli_error($link);
+                exit();
+            }
+            // Ausgabe der Allergene in einer Tabelle mit Code
+            echo "<table>";
+            while($row = mysqli_fetch_assoc($result)){
+                echo '<tr><td>'.$row['Allergene'].'</td><td>'.$row['Allergencode'].'</td></tr>';
+            }
+            echo "</table>";
+            // Verbindung schließen
+            mysqli_free_result($result);
+            mysqli_close($link);
 
-                ?>
-            </div>
-            <div>
-                <h3>Deine Wunschgerichte</h3>
-                <p>In unserer Küche findest du sicher auch dein <a href="wunschgericht.php">Wunschgericht</a>. Aus einer Vielzahl köstlicher Mahlzeiten kannst du hier deine Liebsten auswählen. So können wir dich frühzeitig darauf aufmerksam machen, wenn deine Leibspeisen wieder in der Mensa serviert werden.</p>
-                <p style="background-color: #00b5ad; border-radius: 5px; text-align: center; padding: 1em;"><a href="wunschgericht.php" style="color:white;">Wunschgerichte auswählen</a></p>
-            </div>
+            ?>
         </div>
 
     </div>
@@ -129,7 +122,7 @@
         <div class="stats">
             <div>
                 <p><?php
-                    // Auslesen und Ausgabe der Besucherlogdatei@localhost
+                    // Auslesen und Ausgabe der Besucherlogdatei
                     $besucherlog= fopen("besucherlog.txt",'r');
                     $aktuellerstand = (int)fgets($besucherlog);
                     fclose($besucherlog);
