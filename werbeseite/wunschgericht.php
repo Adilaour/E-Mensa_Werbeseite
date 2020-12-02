@@ -1,33 +1,23 @@
 <?php
 $gerichtanzahl = 0;
+$date = date('Y-m-d H:i:s');
 // Variablen werden gesetzt
 if(isset($_POST["wunschgericht_name"])){
-    $wunschgericht_name = $_POST["wunschgericht_name"];
+    $wunschgericht_name = htmlspecialchars($_POST["wunschgericht_name"]);
 }
 if(isset($_POST["beschreibung"])){
-    $beschreibung = $_POST["beschreibung"];
+    $beschreibung = htmlspecialchars($_POST["beschreibung"]);
 }
 if(isset($_POST["name"])){
-    $name = $_POST["name"];
-}else{
-    $name= "";
+    $name = htmlspecialchars($_POST["name"]);
+} else{
+  $name = "Anonym";
 }
 if(isset($_POST["email"])){
-    $email = $_POST["email"];
+    $email = htmlspecialchars($_POST["email"]);
 }
-
 // Datenbank Abfrage
 if(isset($_POST["wunschgericht_name"]) && isset($_POST["beschreibung"]) && isset($_POST["email"])){
-    // SQL Statement zusammenbasteln
-    $sql = "INSERT INTO wunschgerichte (name, beschreibung, erstellungsdatum, erstellerInnen) VALUE '$wunschgericht_name', '$beschreibung', '$name','$email'";
-
-
-
-
-
-
-
-
 
     // Verbindung zur Datenbank aufbauen und überprüfen
     $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
@@ -35,12 +25,23 @@ if(isset($_POST["wunschgericht_name"]) && isset($_POST["beschreibung"]) && isset
         echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
         exit();
     }
-    // Datenbank abfragen & Ergebnis prüfen
-    $result = mysqli_query($link,$sql);
-    if(!$result){
-        echo "Fehler bei der Abfrage: ", mysqli_error($link);
-        exit();
-    }
+    // Eingabemaskierung
+    $email = mysqli_real_escape_string($link, $email);
+    $beschreibung = mysqli_real_escape_string($link, $beschreibung);
+    $wunschgericht_name= mysqli_real_escape_string($link, $wunschgericht_name);
+    $name = mysqli_real_escape_string($link, $name);
+    // Statement 1 vorbereiten
+    $statement = mysqli_stmt_init($link);
+    mysqli_stmt_prepare($statement, "INSERT INTO erstellerInnen (email,name) VALUES (?, ?)");
+    mysqli_stmt_bind_param($statement, 'ss', $email, $name);
+    // Erstellung ErstellerIn
+    mysqli_stmt_execute($statement);
+    // Statement 2 vorbereiten
+    $statement2 = mysqli_stmt_init($link);
+    mysqli_stmt_prepare($statement2, "INSERT INTO wunschgerichte (name, beschreibung, erstellungsdatum, erstellerInnen) VALUES (?, ?, ?, ?)");
+    mysqli_stmt_bind_param($statement2, 'ssss', $wunschgericht_name, $beschreibung, $date, $email);
+    // Erstellung Wunschgericht
+    mysqli_stmt_execute($statement2);
     // Datenbankverbindung wird geschlossen
     mysqli_close($link);
 }
