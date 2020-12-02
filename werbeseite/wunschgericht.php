@@ -46,7 +46,7 @@ if(isset($_POST["wunschgericht_name"]) && isset($_POST["beschreibung"]) && isset
     if($name != ""){
         $statement3 = mysqli_stmt_init($link);
         $name = mysqli_real_escape_string($link, $name);
-        mysqli_stmt_prepare($statement3, "INSERT INTO erstellerInnen (name) VALUES (?) WHERE email = ?");
+        mysqli_stmt_prepare($statement3, "UPDATE erstellerInnen SET name = ? WHERE email = ?;");
         mysqli_stmt_bind_param($statement3, 'ss', $name, $email);
         mysqli_stmt_execute($statement3);
     }
