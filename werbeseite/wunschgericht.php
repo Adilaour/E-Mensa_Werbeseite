@@ -10,8 +10,6 @@ if(isset($_POST["beschreibung"])){
 }
 if(isset($_POST["name"])){
     $name = htmlspecialchars($_POST["name"]);
-} else{
-  $name = "Anonym";
 }
 if(isset($_POST["email"])){
     $email = htmlspecialchars($_POST["email"]);
@@ -32,6 +30,9 @@ if(isset($_POST["wunschgericht_name"]) && isset($_POST["beschreibung"]) && isset
     $name = mysqli_real_escape_string($link, $name);
     // Statement 1 vorbereiten
     $statement = mysqli_stmt_init($link);
+    if(isset($name)){
+
+    }
     mysqli_stmt_prepare($statement, "INSERT INTO erstellerInnen (email,name) VALUES (?, ?)");
     mysqli_stmt_bind_param($statement, 'ss', $email, $name);
     // Erstellung ErstellerIn
