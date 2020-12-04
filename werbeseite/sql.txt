@@ -190,3 +190,25 @@ CREATE TABLE wunschgerichte(
 );
 
 SELECT wg.name AS Wunschgericht, wg.beschreibung AS Beschreibung, eI.name AS ErstellerIn, eI.email AS EMail FROM wunschgerichte wg LEFT JOIN erstellerInnen eI on eI.erstellerInnen_id = wg.erstellerInnen ORDER BY wg.erstellungsdatum DESC LIMIT 5;
+
+-- M4.8.1
+ALTER TABLE gericht_hat_kategorie ADD CONSTRAINT uq_gericht_id_kategorie_id UNIQUE (gericht_id, kategorie_id);
+-- M4.8.2
+ALTER TABLE gericht ADD INDEX id_gericht_name (name);
+-- M4.8.3
+alter table gericht_hat_allergen
+drop foreign key gericht_hat_allergen_ibfk_2;
+alter table gericht_hat_allergen
+add constraint gericht_hat_allergen_ibfk_2 foreign key (gericht_id) references gericht(id) ON DElETE CASCADE;
+alter table gericht_hat_kategorie
+drop foreign key gericht_hat_kategorie_ibfk_1;
+alter table gericht_hat_kategorie
+add constraint gericht_hat_kategorie_ibfk_1 foreign key (gericht_id) references gericht(id) ON DELETE CASCADE;
+-- M4.8.5
+alter table gericht_hat_allergen
+drop foreign key gericht_hat_allergen_ibfk_1;
+alter table gericht_hat_allergen
+add constraint gericht_hat_allergen_ibfk_1 foreign key (code) references allergen(code) ON UPDATE CASCADE;
+-- M4.8.6
+alter table gericht_hat_kategorie
+add primary key(gericht_id, kategorie_id)

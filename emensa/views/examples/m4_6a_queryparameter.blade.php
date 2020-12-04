@@ -1,11 +1,1 @@
-<!doctype html>
-<html>
-<head>
-    <title>{{$title}}</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
+<p>Der Wert von ?name lautet:{{$rd->query['name'] ?? 'kein name parameter wurde gegeben.'}}</p>
