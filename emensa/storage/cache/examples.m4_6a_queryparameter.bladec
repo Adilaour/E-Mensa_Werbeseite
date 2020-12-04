@@ -1,4 +1,1 @@
-<!DOCTYPE html>
-<html lang="de">
-<p><b>Der Wert von ?name lautet:</b> <?php echo \htmlentities($rd->query['name'] ?? 'kein name parameter wurde gegeben.', ENT_QUOTES, 'UTF-8', false); ?></p>
-</html>
+name 
