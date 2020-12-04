@@ -2,6 +2,6 @@
 return [
     'host' => 'localhost',
     'user' => 'root',
-    'password' => 'abc123', // '<yourpassword>',
+    'password' => 'DBwt', // '<yourpassword>',
     'database' => 'emensawerbeseite'
 ];
