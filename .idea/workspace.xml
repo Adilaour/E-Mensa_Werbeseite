@@ -19,23 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein4 Aufgabe 6 noch nicht ganz fertig">
-      <change afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.layout.m4_6d_layout.bladec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.m4_6c_gerichte.bladec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.pages.m4_6d_page_1.bladec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.pages.m4_6d_page_2.bladec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/views/examples/pages/m4_6d_page_1.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/views/examples/pages/m4_6d_page_2.blade.php" afterDir="false" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein4 Aufgabe 6 und 7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/erstesPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/erstesPHP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/config/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/config/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/controllers/ExampleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/controllers/ExampleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/models/gericht.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/models/gericht.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/models/kategorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/models/kategorie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/config/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/public/besucherlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/public/besucherlog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emensa/storage/cache/examples.m4_6a_queryparameter.bladec" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.m4_6a_queryparameter.bladec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/views/examples/layout/m4_6d_layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/examples/layout/m4_6d_layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emensa/views/examples/m4_6a_queryparameter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/examples/m4_6a_queryparameter.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/views/examples/m4_6c_gerichte.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/examples/m4_6c_gerichte.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -461,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607045773345</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Meilenstein4 Aufgabe 6 und 7">
+      <created>1607109806122</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1607109806122</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +489,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Aufgabe 10 geht los, ja" />
     <MESSAGE value="Untere Striche hinzugefügt" />
     <MESSAGE value="Grid will nicht recht..." />
     <MESSAGE value="Grid will nicht recht." />
@@ -518,7 +513,8 @@
     <MESSAGE value="Meilenstein 3 Abgabe" />
     <MESSAGE value="Meilenstein4 Aufgabe1.3/1.5/1.6" />
     <MESSAGE value="Meilenstein4 Aufgabe 6 noch nicht ganz fertig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meilenstein4 Aufgabe 6 noch nicht ganz fertig" />
+    <MESSAGE value="Meilenstein4 Aufgabe 6 und 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Meilenstein4 Aufgabe 6 und 7" />
   </component>
   <component name="WindowStateProjectService">
     <state x="325" y="188" width="824" height="683" key="#CLI_Interpreters" timestamp="1606931011493">
@@ -663,13 +659,13 @@
       <screen x="0" y="25" width="1920" height="973" />
     </state>
     <state width="500" height="445" key="SwitcherDM/1920.205.1440.875/0.25.1920.973@0.25.1920.973" timestamp="1606850164800" />
-    <state x="300" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607045779779">
+    <state x="300" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607109810408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605721424880" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
-    <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607045779779" />
+    <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607109810408" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008578944" />
     <state x="225" y="140" key="Vcs.Push.Dialog.v2/0.23.1440.800@0.23.1440.800" timestamp="1603033595794" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.803/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602973983700" />
