@@ -169,16 +169,24 @@ SELECT g.name, count(gha.gericht_id) AS Anzahl_der_Allergene FROM gericht g, ger
 
 SELECT g.name AS Gerichtname, g.preis_intern AS preisintern, g.preis_extern AS preisextern, GROUP_CONCAT(a.code) AS Allergen FROM gericht g, allergen a, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code GROUP BY g.name LIMIT 5;
 
+
+DROP Table wunschgerichte;
+DROP Table  erstellerInnen;
+
+
 CREATE TABLE erstellerInnen(
-                               email               VARCHAR(50) PRIMARY KEY,
-                               name                VARCHAR(50) DEFAULT 'anonym'
+    erstellerInnen_id   INTEGER AUTO_INCREMENT PRIMARY KEY,
+    email               VARCHAR(50) UNIQUE,
+    name                VARCHAR(50) NOT NULL DEFAULT 'anonym'
 );
 
 CREATE TABLE wunschgerichte(
     nummer              INTEGER AUTO_INCREMENT PRIMARY KEY,
     name                VARCHAR(50) NOT NULL,
     beschreibung        VARCHAR(3000) NOT NULL,
-    erstellungsdatum    DATE NOT NULL,
-    erstellerInnen      VARCHAR(50) NOT NULL,
-    CONSTRAINT erstellerInnen_FK FOREIGN KEY (erstellerInnen) REFERENCES erstellerInnen(email)
+    erstellungsdatum    DATETIME NOT NULL,
+    erstellerInnen      INTEGER NOT NULL,
+    CONSTRAINT erstellerInnen_FK FOREIGN KEY (erstellerInnen) REFERENCES erstellerInnen(erstellerInnen_id)
 );
+
+SELECT wg.name AS Wunschgericht, wg.beschreibung AS Beschreibung, eI.name AS ErstellerIn, eI.email AS EMail FROM wunschgerichte wg LEFT JOIN erstellerInnen eI on eI.erstellerInnen_id = wg.erstellerInnen ORDER BY wg.erstellungsdatum DESC LIMIT 5;

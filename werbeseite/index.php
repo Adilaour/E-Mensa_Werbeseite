@@ -11,19 +11,19 @@
     <link rel="stylesheet" href="index.css">
     <!--Besucherzähler(Bei Newsletternameldung erneute Zählung...)-->
     <?php
-    if(!file_exists("besucherlog.txt")){
+    if (!file_exists("besucherlog.txt")) {
         // Beim ersten Besuch auf der Seite existiert die Daten noch nicht.
         $besucherlog = fopen("besucherlog.txt", 'w');
         fwrite($besucherlog, "1");
         fclose($besucherlog);
     } else {
         // Wenn Datei existiert wird sie ausgelesen, wobei der gelesene string in (int) umgecastet und in var $aktuellerstand gespeichert wird. Anschließend Datei schließen, um Modus zu wechseln.
-        $besucherlog = fopen("besucherlog.txt",'r');
+        $besucherlog = fopen("besucherlog.txt", 'r');
         $aktuellerstand = (int)fgets($besucherlog);
         fclose($besucherlog);
         // $aktuellerstand hochzählen und in Datei schreiben
         $aktuellerstand++;
-        $besucherlog = fopen("besucherlog.txt",'w');
+        $besucherlog = fopen("besucherlog.txt", 'w');
         fwrite($besucherlog, $aktuellerstand);
         fclose($besucherlog);
     }
@@ -48,7 +48,18 @@
     <div class="mainitem" id="news">
         <h2>Bald gibt es Essen auch online ;)</h2>
         <!--im folgenden paragraph sprache auch zxx geändert-->
-        <p class="bordered" lang="zxx">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p class="bordered" lang="zxx">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+            duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+            sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet.</p>
     </div>
     <div class="mainitem" id="meals">
         <h2>Köstlichkeiten, die Sie erwarten</h2>
@@ -62,22 +73,22 @@
             <!--Datenbankenabfrage zur Darstellung von Gerichten-->
             <?php
             $gerichtanzahl = 0;
-            $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
+            $link = mysqli_connect("localhost", "root", "abc123", "emensawerbeseite");
             // Überprüfung, ob Verbindung erfolgreich war
             if (!$link) {
                 echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
                 exit();
             }
             // SQL Query (noch nicht dynamisch)
-            $sql="SELECT g.name AS Gerichtname, g.preis_intern AS preisintern, g.preis_extern AS preisextern, GROUP_CONCAT(a.code) AS Allergen FROM gericht g, allergen a, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code GROUP BY g.name LIMIT 5;";
+            $sql = "SELECT g.name AS Gerichtname, g.preis_intern AS preisintern, g.preis_extern AS preisextern, GROUP_CONCAT(a.code) AS Allergen FROM gericht g, allergen a, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code GROUP BY g.name LIMIT 5;";
             $result = mysqli_query($link, $sql);
             // Prüfung, ob Abfrage korrekt ist
-            if(!$result){
+            if (!$result) {
                 echo "Fehler bei der Abfrage: ", mysqli_error($link);
                 exit();
             }
             // Ausgabe der abgefragten Daten
-            while($row = mysqli_fetch_assoc($result)) {
+            while ($row = mysqli_fetch_assoc($result)) {
                 echo '<tr><td><img src="img/bild" alt="Speisebild nicht gefunden">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
                 $gerichtanzahl++;
             }
@@ -90,7 +101,7 @@
             <h3>Legende der verwendeten Allergene</h3>
             <?php
             // Erneuter Verbindungsaufbau
-            $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
+            $link = mysqli_connect("localhost", "root", "abc123", "emensawerbeseite");
             // Prüfung des erfolgreichen Verbindungsaufbaus
             if (!$link) {
                 echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
@@ -98,15 +109,15 @@
             }
             // Datenabfrage der Allergene + Prüfung der Korrektheit
             $sql = "SELECT DISTINCT a.name AS Allergene, a.code AS Allergencode FROM allergen a, gericht g, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code";
-            $result =mysqli_query($link, $sql);
-            if(!$result){
+            $result = mysqli_query($link, $sql);
+            if (!$result) {
                 echo "Fehler bei der Abfrage: ", mysqli_error($link);
                 exit();
             }
             // Ausgabe der Allergene in einer Tabelle mit Code
             echo "<table>";
-            while($row = mysqli_fetch_assoc($result)){
-                echo '<tr><td>'.$row['Allergene'].'</td><td>'.$row['Allergencode'].'</td></tr>';
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo '<tr><td>' . $row['Allergene'] . '</td><td>' . $row['Allergencode'] . '</td></tr>';
             }
             echo "</table>";
             // Verbindung schließen
@@ -123,7 +134,7 @@
             <div>
                 <p><?php
                     // Auslesen und Ausgabe der Besucherlogdatei
-                    $besucherlog= fopen("besucherlog.txt",'r');
+                    $besucherlog = fopen("besucherlog.txt", 'r');
                     $aktuellerstand = (int)fgets($besucherlog);
                     fclose($besucherlog);
                     echo "$aktuellerstand";
@@ -133,10 +144,10 @@
             <div>
                 <p><?php
                     // Zählen der Zeilen in der Newsletterlog-Datei
-                    if(file_exists("emails.txt")) {
+                    if (file_exists("emails.txt")) {
                         $anmeldungen = count(file("emails.txt"));
                         echo "$anmeldungen";
-                    } else{
+                    } else {
                         echo "0";
                     }
                     ?></p>
@@ -145,7 +156,7 @@
             <div>
                 <p><?php
                     // Bisher Ausgabe der Tabellenzeilen in #meals - Später Summe der Gerichte in Datenbank
-                    echo"$gerichtanzahl";
+                    echo "$gerichtanzahl";
                     ?></p>
                 <p>&nbsp;Speisen</p>
             </div>
@@ -153,7 +164,8 @@
     </div>
     <div class="mainitem" id="contact">
         <h2>Interesse geweckt? Wir informieren Sie!</h2>
-        <form action="index.php" method="post" name="newsletteranmeldung_landingpage" class="newsletteranmeldung_landingpage">
+        <form action="index.php" method="post" name="newsletteranmeldung_landingpage"
+              class="newsletteranmeldung_landingpage">
             <label for="fan_name" id="fan_name_lbl">Ihr Name
                 <input type="text" id="fan_name" placeholder="Vorname" name="Vorname">
             </label>
@@ -170,11 +182,13 @@
             <label for="fan_data" id="fan_data_lbl">
                 <input type="checkbox" id="fan_data" name="datasec"> Den Datenschutzbestimmungen stimme ich zu.
             </label>
-            <button type="submit" name="newsletter_landingpage_submit" id="newsletter_landingpage_submit" value="1" >Zum Newsletter anmelden</button>
+            <button type="submit" name="newsletter_landingpage_submit" id="newsletter_landingpage_submit" value="1">Zum
+                Newsletter anmelden
+            </button>
             <!-- Newsletterlogik Meilenstein2 -->
             <?php
             // Festlegung der unqualifizierten E-Mail Hoster
-            $trashmails = explode("\n","0-mail.com
+            $trashmails = explode("\n", "0-mail.com
 0815.ru
 0clickemail.com
 0wnd.net
@@ -654,28 +668,28 @@ zippymail.info
 zoaxe.com
 zoemail.org");
             // Kontrolle aller Eingaben in der Newsletteranmeldung + Ausgabe aller Fehler
-            if(!empty($_POST)){
+            if (!empty($_POST)) {
                 $allesok = 0;
                 $emailok = 0;
                 // trim entfernt Leerzeichen dann prüfen
                 $vorname = trim($_POST['Vorname']);
                 // Prüfung der korrekten Namensangabe
-                if(!isset($vorname) || $vorname==''){
-                    echo "Geben Sie Ihren vollständigen Namen an!".'<br>';
-                } else{
+                if (!isset($vorname) || $vorname == '') {
+                    echo "Geben Sie Ihren vollständigen Namen an!" . '<br>';
+                } else {
                     $vorname = $_POST['Vorname'];
                     $allesok++;
                 }
                 // Prüfung auf Zustimmung der Datenschutzbestimmungen
-                if(!isset($_POST['datasec'])){
-                    echo "Datenschutzbestimmungen akzeptieren!".'<br>';
+                if (!isset($_POST['datasec'])) {
+                    echo "Datenschutzbestimmungen akzeptieren!" . '<br>';
                     $datasec = false;
-                } else{
+                } else {
                     $datasec = $_POST['datasec'];
                     $allesok++;
                 }
                 // Prüfung der E-Mail
-                if(isset($_POST['email']) && $_POST['email'] != '') {
+                if (isset($_POST['email']) && $_POST['email'] != '') {
                     // explode trennt Email an dieser Stelle und speichert sie in einem Array. Das 2. Element enthält die Domain ohne @-Zeichen
                     $emailarray = explode('@', $_POST['email']);
                     // Alle Trashdomains mit dem 2.Arrayelement vergleichen, wenn nichts gefunden wird email setzen
@@ -689,7 +703,7 @@ zoemail.org");
                             $emailok = true;
                         }
                     }
-                } else{
+                } else {
                     echo 'Email nicht gültig' . '<br>';
                     $emailok = false;
                     $email = false;
@@ -697,13 +711,13 @@ zoemail.org");
                 // Sprache des Newsletters speichern
                 $lang = $_POST['fan_lang'];
                 // Abspeicherung aller Daten, wenn alles in Ordnung ist
-                if($allesok>=2&&$emailok){
-                    $newline = $vorname.' | '.$email.' | '.$lang.' | '.$datasec."\n";
+                if ($allesok >= 2 && $emailok) {
+                    $newline = $vorname . ' | ' . $email . ' | ' . $lang . ' | ' . $datasec . "\n";
                     // Datei wird zum Schreiben geöffnet
-                    $newsletterlog = fopen ( "emails.txt", "a" );
+                    $newsletterlog = fopen("emails.txt", "a");
                     // schreiben des Inhaltes von email
-                    fwrite ( $newsletterlog, $newline );
-                    fclose ( $newsletterlog );
+                    fwrite($newsletterlog, $newline);
+                    fclose($newsletterlog);
                     echo "Mashalla! Eingabe erfolgreich";
                 }
             }
