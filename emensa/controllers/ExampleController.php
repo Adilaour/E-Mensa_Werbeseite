@@ -38,4 +38,18 @@ class ExampleController
             'gerichte'=> $data
         ]);
     }
+    public function m4_6d_page_1(RequestData $rd) {
+        $data = db_gericht_select_all();
+        return view('examples.pages.m4_6d_page_1', [
+            'title' => 'Gerichte',
+            'gerichte'=> $data
+        ]);
+    }
+    public function m4_6d_page_2(RequestData $rd) {
+        $data = db_gericht_select_all();
+        return view('examples.pages.m4_6d_page_2', [
+            'title' => 'Gerichte',
+            'gerichte'=> $data
+        ]);
+    }
 }
