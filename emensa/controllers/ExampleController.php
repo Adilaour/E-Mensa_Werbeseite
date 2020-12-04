@@ -31,12 +31,19 @@ class ExampleController
             'gerichte'=> $data
         ]);
     }
-    public function m4_6d_layout(RequestData $rd) {
-        $data = db_gericht_select_all();
-        return view('examples.m4_6d_layout', [
-            'title' => 'Gerichte',
-            'gerichte'=> $data
-        ]);
+    public function m4_6d_layout(RequestData $rd)
+    {
+        $vars = [
+            'no' => $rd->query['no'] ?? '1',
+            'titel' => $rd->query ['titel'] ?? 'dafault'
+        ];
+
+        if ($vars['no'] == '1') {
+            return view('examples.pages.m4_6d_page_1', $vars);
+        }
+        else {
+            return view ('examples.pages.m4_6d_page_2', $vars);
+        }
     }
     public function m4_6d_page_1(RequestData $rd) {
         $data = db_gericht_select_all();

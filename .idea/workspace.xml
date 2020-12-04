@@ -19,23 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein4 Aufgabe 6 noch nicht ganz fertig">
-      <change afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.layout.m4_6d_layout.bladec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.m4_6c_gerichte.bladec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.pages.m4_6d_page_1.bladec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.pages.m4_6d_page_2.bladec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/views/examples/pages/m4_6d_page_1.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/views/examples/pages/m4_6d_page_2.blade.php" afterDir="false" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein4 Aufgabe 6 Update">
+      <change afterPath="$PROJECT_DIR$/emensa/public/besucherlog.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emensa/public/img/Banner.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emensa/public/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emensa/views/layouts/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emensa/views/layouts/main_layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beispiele/erstesPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/erstesPHP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/config/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/config/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emensa/controllers/ExampleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/controllers/ExampleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/models/gericht.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/models/gericht.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/models/kategorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/models/kategorie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emensa/storage/cache/examples.m4_6a_queryparameter.bladec" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.m4_6a_queryparameter.bladec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/views/examples/layout/m4_6d_layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/examples/layout/m4_6d_layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/storage/cache/examples.pages.m4_6d_page_2.bladec" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.pages.m4_6d_page_2.bladec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/storage/cache/home.bladec" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/storage/cache/home.bladec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emensa/views/examples/m4_6a_queryparameter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/examples/m4_6a_queryparameter.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/views/examples/m4_6c_gerichte.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/examples/m4_6c_gerichte.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/besucherlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/besucherlog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/meal.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="ToolWindowTODO.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/emensa2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -91,6 +90,20 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\PhpstormProjects\E-Mensa_Werbeseite\emensa\public" />
+      <recent name="C:\Users\alexa\PhpstormProjects\E-Mensa_Werbeseite\emensa\public\img" />
+      <recent name="C:\Users\alexa\PhpstormProjects\E-Mensa_Werbeseite\emensa\views" />
+      <recent name="C:\Users\alexa\PhpstormProjects\E-Mensa_Werbeseite\emensa\views\pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\PhpstormProjects\E-Mensa_Werbeseite\emensa\views\layouts" />
+      <recent name="C:\Users\alexa\PhpstormProjects\E-Mensa_Werbeseite\emensa\public\img" />
+      <recent name="C:\Users\alexa\PhpstormProjects\E-Mensa_Werbeseite\emensa\views\css" />
+      <recent name="C:\Users\alexa\PhpstormProjects\E-Mensa_Werbeseite\emensa\views\pages" />
+    </key>
   </component>
   <component name="RunManager" selected="PHP Built-in Web Server.emensa">
     <configuration name="werbeseite_daten.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
@@ -158,7 +171,7 @@
       <workItem from="1606843536795" duration="5408000" />
       <workItem from="1607025041375" duration="2133000" />
       <workItem from="1607028257717" duration="9724000" />
-      <workItem from="1607081482694" duration="4806000" />
+      <workItem from="1607081482694" duration="18708000" />
     </task>
     <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962042724</created>
@@ -461,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607045773345</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Meilenstein4 Aufgabe 6 Update">
+      <created>1607087358502</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1607087358502</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +513,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Aufgabe 10 geht los, ja" />
     <MESSAGE value="Untere Striche hinzugefügt" />
     <MESSAGE value="Grid will nicht recht..." />
     <MESSAGE value="Grid will nicht recht." />
@@ -518,7 +537,8 @@
     <MESSAGE value="Meilenstein 3 Abgabe" />
     <MESSAGE value="Meilenstein4 Aufgabe1.3/1.5/1.6" />
     <MESSAGE value="Meilenstein4 Aufgabe 6 noch nicht ganz fertig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meilenstein4 Aufgabe 6 noch nicht ganz fertig" />
+    <MESSAGE value="Meilenstein4 Aufgabe 6 Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Meilenstein4 Aufgabe 6 Update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="325" y="188" width="824" height="683" key="#CLI_Interpreters" timestamp="1606931011493">
@@ -536,19 +556,20 @@
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>
     <state x="-1595" y="207" key="#SQL_Dialects/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605718021223" />
-    <state x="468" y="201" width="1071" height="827" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607030767895">
+    <state x="468" y="201" width="1071" height="827" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607102379165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1650" y="11" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605724008976" />
-    <state x="468" y="201" width="1071" height="827" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607030767895" />
+    <state x="468" y="201" width="1071" height="827" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607102379165" />
     <state x="-1564" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.793/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605375701280" />
     <state x="-1500" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.875/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605373693595" />
     <state x="0" y="205" width="1409" height="793" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1606767359998" />
     <state x="0" y="210" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.205.1440.875/0.25.1920.973@0.25.1920.973" timestamp="1606843995951" />
-    <state x="-1424" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603055730567">
-      <screen x="-1920" y="-180" width="1920" height="1080" />
+    <state x="496" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607106005790">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1424" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1603055730567" />
+    <state x="496" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607106005790" />
     <state x="-1424" y="104" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.805/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602972692409" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1605717705006">
       <screen x="-1920" y="-180" width="1920" height="1080" />
@@ -559,10 +580,10 @@
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604615447205" />
     <state x="92" y="96" width="1736" height="889" key="DiffContextDialog/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1606929539363" />
-    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1607027990374">
+    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1607109080367">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607027990374" />
+    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607109080367" />
     <state x="-1374" y="162" key="Github.ShareDialog" timestamp="1602962147785">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
@@ -571,12 +592,12 @@
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="-1473" y="-30" key="Github.UntrackedFilesDialog/0.23.1440.807/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602961883128" />
-    <state width="1293" height="156" key="GridCell.Tab.0.bottom" timestamp="1607081516471">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607109094784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1571" height="242" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605726945331" />
     <state width="1163" height="181" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605540301618" />
-    <state width="1293" height="156" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607081516471" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607109094784" />
     <state width="1878" height="286" key="GridCell.Tab.0.bottom/0.25.1440.793/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605375658980" />
     <state width="1571" height="309" key="GridCell.Tab.0.bottom/0.25.1440.798/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605787024832" />
     <state width="1294" height="105" key="GridCell.Tab.0.bottom/0.25.1440.800/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605475639541" />
@@ -585,12 +606,12 @@
     <state width="1693" height="237" key="GridCell.Tab.0.bottom/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1606937833870" />
     <state width="1693" height="237" key="GridCell.Tab.0.bottom/1920.205.1440.875/0.0.1920.1080@0.0.1920.1080" timestamp="1606937470398" />
     <state width="1878" height="258" key="GridCell.Tab.0.bottom/1920.205.1440.875/0.25.1920.973@0.25.1920.973" timestamp="1606844444954" />
-    <state width="1293" height="156" key="GridCell.Tab.0.center" timestamp="1607081516471">
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607109094784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1571" height="242" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605726945328" />
     <state width="1163" height="181" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605540301617" />
-    <state width="1293" height="156" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607081516471" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607109094784" />
     <state width="1878" height="286" key="GridCell.Tab.0.center/0.25.1440.793/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605375658979" />
     <state width="1571" height="309" key="GridCell.Tab.0.center/0.25.1440.798/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605787024831" />
     <state width="1294" height="105" key="GridCell.Tab.0.center/0.25.1440.800/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605475639540" />
@@ -599,12 +620,12 @@
     <state width="1693" height="237" key="GridCell.Tab.0.center/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1606937833868" />
     <state width="1693" height="237" key="GridCell.Tab.0.center/1920.205.1440.875/0.0.1920.1080@0.0.1920.1080" timestamp="1606937470395" />
     <state width="1878" height="258" key="GridCell.Tab.0.center/1920.205.1440.875/0.25.1920.973@0.25.1920.973" timestamp="1606844444953" />
-    <state width="1293" height="156" key="GridCell.Tab.0.left" timestamp="1607081516471">
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607109094784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1571" height="242" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605726945326" />
     <state width="1163" height="181" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605540301616" />
-    <state width="1293" height="156" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607081516471" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607109094784" />
     <state width="1878" height="286" key="GridCell.Tab.0.left/0.25.1440.793/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605375658978" />
     <state width="1571" height="309" key="GridCell.Tab.0.left/0.25.1440.798/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605787024831" />
     <state width="1294" height="105" key="GridCell.Tab.0.left/0.25.1440.800/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605475639540" />
@@ -613,12 +634,12 @@
     <state width="1693" height="237" key="GridCell.Tab.0.left/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1606937833867" />
     <state width="1693" height="237" key="GridCell.Tab.0.left/1920.205.1440.875/0.0.1920.1080@0.0.1920.1080" timestamp="1606937470393" />
     <state width="1878" height="258" key="GridCell.Tab.0.left/1920.205.1440.875/0.25.1920.973@0.25.1920.973" timestamp="1606844444952" />
-    <state width="1293" height="156" key="GridCell.Tab.0.right" timestamp="1607081516471">
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607109094784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1571" height="242" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605726945329" />
     <state width="1163" height="181" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605540301617" />
-    <state width="1293" height="156" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607081516471" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607109094784" />
     <state width="1878" height="286" key="GridCell.Tab.0.right/0.25.1440.793/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605375658979" />
     <state width="1571" height="309" key="GridCell.Tab.0.right/0.25.1440.798/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605787024832" />
     <state width="1294" height="105" key="GridCell.Tab.0.right/0.25.1440.800/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605475639541" />
@@ -663,13 +684,13 @@
       <screen x="0" y="25" width="1920" height="973" />
     </state>
     <state width="500" height="445" key="SwitcherDM/1920.205.1440.875/0.25.1920.973@0.25.1920.973" timestamp="1606850164800" />
-    <state x="300" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607045779779">
+    <state x="300" y="153" key="Vcs.Push.Dialog.v2" timestamp="1607087361938">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605721424880" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
-    <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607045779779" />
+    <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607087361938" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008578944" />
     <state x="225" y="140" key="Vcs.Push.Dialog.v2/0.23.1440.800@0.23.1440.800" timestamp="1603033595794" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.803/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602973983700" />

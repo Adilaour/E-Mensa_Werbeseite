@@ -26,18 +26,18 @@ $meal = [ // Kurzschreibweise für ein Array (entspricht = array())
 ];
 // Liste aller Bewertungen.
 $ratings = [
-    [   'text' => 'Die Kartoffel ist einfach klasse. Nur die Fischstäbchen schmecken nach Käse. ',
+    ['text' => 'Die Kartoffel ist einfach klasse. Nur die Fischstäbchen schmecken nach Käse. ',
         'author' => 'Ute U.',
-        'stars' => 2 ],
-    [   'text' => 'Sehr gut. Immer wieder gerne',
+        'stars' => 2],
+    ['text' => 'Sehr gut. Immer wieder gerne',
         'author' => 'Gustav G.',
-        'stars' => 4 ],
-    [   'text' => 'Der Klassiker für den Wochenstart. Frisch wie immer',
+        'stars' => 4],
+    ['text' => 'Der Klassiker für den Wochenstart. Frisch wie immer',
         'author' => 'Renate R.',
-        'stars' => 4 ],
-    [   'text' => 'Kartoffel ist gut. Das Grüne ist mir suspekt.',
+        'stars' => 4],
+    ['text' => 'Kartoffel ist gut. Das Grüne ist mir suspekt.',
         'author' => 'Marta M.',
-        'stars' => 3 ]
+        'stars' => 3]
 ];
 // Arraydefinition
 $showRatings = [];
@@ -61,7 +61,8 @@ if (!empty($_GET[GET_PARAM_SEARCH_TEXT])) {
     $showRatings = $ratings;
 }
 // Berechnung der Gesamtbewertung
-function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgabewert vom Typ "float" ist
+function calcMeanStars($ratings): float
+{ // : float gibt an, dass der Rückgabewert vom Typ "float" ist
     $sum = 0;
     $i = 0;
     foreach ($ratings as $rating) {
@@ -70,6 +71,7 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
     }
     return $sum / count($ratings);
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -80,6 +82,7 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
         * {
             font-family: Arial, serif;
         }
+
         .rating {
             color: darkgray;
         }
@@ -89,32 +92,32 @@ function calcMeanStars($ratings) : float { // : float gibt an, dass der Rückgab
 <div>
     <!-- Abfrage, ob oder welche Sprache gefordert wurde und entsprechende Ausgabe (Überschrift) -->
     <?php
-    if(empty($_GET[GET_SELECTED_LANGUAGE]) || $_GET[GET_SELECTED_LANGUAGE]=="deutsch"){
-        echo '<h1 style="display: inline;">Gericht: '.$meal['name'].'</h1>';
-    } else if($_GET[GET_SELECTED_LANGUAGE]=="english"){
-        echo '<h1 style="display: inline;">Meal: '.$meal['name'].'</h1>';
+    if (empty($_GET[GET_SELECTED_LANGUAGE]) || $_GET[GET_SELECTED_LANGUAGE] == "deutsch") {
+        echo '<h1 style="display: inline;">Gericht: ' . $meal['name'] . '</h1>';
+    } else if ($_GET[GET_SELECTED_LANGUAGE] == "english") {
+        echo '<h1 style="display: inline;">Meal: ' . $meal['name'] . '</h1>';
     }
     ?>
     <!--Benutzer wählt die Sprache der Webseite aus-->
     <?php
-    echo '<form action="meal.php" method="get" style="display: inline; margin-left:20px;">'.'<label for="language"></label>'.'<select name="language" id="language">'.'<option value="english">English</option>'.'<option value="deutsch">Deutsch</option>'.'</select>'.'<input type="submit" value="Sprache ändern">'.'</form>';
+    echo '<form action="meal.php" method="get" style="display: inline; margin-left:20px;">' . '<label for="language"></label>' . '<select name="language" id="language">' . '<option value="english">English</option>' . '<option value="deutsch">Deutsch</option>' . '</select>' . '<input type="submit" value="Sprache ändern">' . '</form>';
     ?>
 </div>
 <!-- Dynamik bei Beschreibung und Preisangaben -->
 <?php
 // Ein- und Ausblendefunktion der Gerichtbeschreibung
-if(!empty($_GET[GET_SHOW_DESCRIPTION])){
-    if($_GET[GET_SHOW_DESCRIPTION] == '1'){
-        echo "<p>{$meal['description']}</p>".'<form action="meal.php" method="get">'.'<input type="hidden" value="0" name="show_description">'.'<input type="submit" value="Beschreibung ausblenden">'.'</form>';
+if (!empty($_GET[GET_SHOW_DESCRIPTION])) {
+    if ($_GET[GET_SHOW_DESCRIPTION] == '1') {
+        echo "<p>{$meal['description']}</p>" . '<form action="meal.php" method="get">' . '<input type="hidden" value="0" name="show_description">' . '<input type="submit" value="Beschreibung ausblenden">' . '</form>';
     }
 } else {
-    echo '<form action="meal.php" method="get">'.'<input type="hidden" value="1" name="show_description">'.'<input type="submit" value="Beschreibung einblenden">'.'</form>';
+    echo '<form action="meal.php" method="get">' . '<input type="hidden" value="1" name="show_description">' . '<input type="submit" value="Beschreibung einblenden">' . '</form>';
 }
 // Abfrage, ob oder welche Sprache gefordert wurde und entsprechende Ausgabe (Preisangaben)
-if(empty($_GET[GET_SELECTED_LANGUAGE]) || $_GET[GET_SELECTED_LANGUAGE]=="deutsch"){
-    echo '<p>Preise intern: '.number_format($meal['price_intern'] , $decimals = 2, "," , ".").' €</p>'.'<p>Preise extern: '.number_format($meal['price_extern'] , $decimals = 2, "," , ".").' €</p>';
-} else if($_GET[GET_SELECTED_LANGUAGE]=="english"){
-    echo '<p>Price intern: '.number_format($meal['price_intern'] , $decimals = 2, "," , ".").' €</p>'.'<p>Price extern: '.number_format($meal['price_extern'] , $decimals = 2, "," , ".").' €</p>';
+if (empty($_GET[GET_SELECTED_LANGUAGE]) || $_GET[GET_SELECTED_LANGUAGE] == "deutsch") {
+    echo '<p>Preise intern: ' . number_format($meal['price_intern'], $decimals = 2, ",", ".") . ' €</p>' . '<p>Preise extern: ' . number_format($meal['price_extern'], $decimals = 2, ",", ".") . ' €</p>';
+} else if ($_GET[GET_SELECTED_LANGUAGE] == "english") {
+    echo '<p>Price intern: ' . number_format($meal['price_intern'], $decimals = 2, ",", ".") . ' €</p>' . '<p>Price extern: ' . number_format($meal['price_extern'], $decimals = 2, ",", ".") . ' €</p>';
 }
 ?>
 <p>
@@ -134,9 +137,9 @@ if(empty($_GET[GET_SELECTED_LANGUAGE]) || $_GET[GET_SELECTED_LANGUAGE]=="deutsch
     }
     // Abfrage, ob oder welche Sprache gefordert wurde und entsprechende Ausgabe (Bewertungsüberschrift)
     if (empty($_GET[GET_SELECTED_LANGUAGE]) || $_GET[GET_SELECTED_LANGUAGE] == "deutsch") {
-        echo '<h1>Bewertungen (Insgesamt: ' .calcMeanStars($ratings). ')</h1>';
+        echo '<h1>Bewertungen (Insgesamt: ' . calcMeanStars($ratings) . ')</h1>';
     } else if ($_GET[GET_SELECTED_LANGUAGE] == "english") {
-        echo '<h1>Ratings (Summarized: ' .calcMeanStars($ratings). ')</h1>';
+        echo '<h1>Ratings (Summarized: ' . calcMeanStars($ratings) . ')</h1>';
     }
     ?>
     <!-- Formular für den Filter von Bewertungen, mit Speicherung der letzten Filterung -->
@@ -144,21 +147,21 @@ if(empty($_GET[GET_SELECTED_LANGUAGE]) || $_GET[GET_SELECTED_LANGUAGE]=="deutsch
     <label for="search_text">Filter:</label>
     <?php
     // Suchfeld mit Speicherung der letzten Filterung
-    if(!empty($_GET[GET_PARAM_SEARCH_TEXT])){
+    if (!empty($_GET[GET_PARAM_SEARCH_TEXT])) {
         $searchstr = $_GET[GET_PARAM_SEARCH_TEXT];
-        echo '<input id="search_text" type="text" name="search_text"'."value=\"$searchstr\"".">";
-    } else{
+        echo '<input id="search_text" type="text" name="search_text"' . "value=\"$searchstr\"" . ">";
+    } else {
         echo '<input id="search_text" type="text" name="search_text">';
     }
     // Sprachabfrage des Suchbuttons und entsprechende Beschriftung
-    if (empty($_GET[GET_SELECTED_LANGUAGE]) ||$_GET[GET_SELECTED_LANGUAGE] == "deutsch") {
+    if (empty($_GET[GET_SELECTED_LANGUAGE]) || $_GET[GET_SELECTED_LANGUAGE] == "deutsch") {
         echo '<input type="submit" value="Suchen">';
     } else if ($_GET[GET_SELECTED_LANGUAGE] == "english") {
         echo '<input type="submit" value="Search">';
     }
     ?>
 </form>
-    <!-- Wiedergabe der Bewertungstexte -->
+<!-- Wiedergabe der Bewertungstexte -->
 <table class="rating">
     <thead>
     <tr>
