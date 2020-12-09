@@ -1,1 +1,1 @@
-<p>Der Wert von ?name lautet:{{$rd->query['name'] ?? 'kein name parameter wurde gegeben.'}}</p>
+<p>Der Wert von ?name lautet: {{$rd->query['name'] ?? '<name>'}}</p>
