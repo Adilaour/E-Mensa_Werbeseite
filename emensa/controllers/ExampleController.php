@@ -11,11 +11,10 @@ class ExampleController
 
 {
     public function m4_6a_queryparameter(RequestData $rd) {
-        $data = db_gericht_select_all();
-        return view('examples.m4_6a_queryparameter', [
-            'title' => 'Gerichte',
-            'gerichte'=> $data
-            ]);
+        $vars = [
+            'name' => $rd->query['name'] ?? '&lt; kein Name &gt;',
+        ];
+        return view('examples.m4_6a_queryparameter', $vars);
     }
     public function m4_6b_kategorie(RequestData $rd) {
         $data = db_kategorie_select_all();
