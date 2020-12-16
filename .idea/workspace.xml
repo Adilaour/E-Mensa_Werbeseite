@@ -19,8 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein4 Queryparameter">
-      <change beforePath="$PROJECT_DIR$/emensa/controllers/ExampleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/controllers/ExampleController.php" afterDir="false" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="Meilenstein4 Aufgabe 6 und 7">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/config/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/public/besucherlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/public/besucherlog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/storage/cache/examples.m4_6a_queryparameter.bladec" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/storage/cache/examples.m4_6a_queryparameter.bladec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emensa/views/examples/m4_6a_queryparameter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/examples/m4_6a_queryparameter.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

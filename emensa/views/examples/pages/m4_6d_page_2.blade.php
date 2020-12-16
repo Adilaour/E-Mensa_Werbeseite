@@ -1,4 +1,4 @@
 @extends('examples.layout.m4_6d_layout')
 @section('main')
-   TEST2
+   TEST 2
 @endsection

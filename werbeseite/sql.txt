@@ -126,6 +126,10 @@ SELECT COUNT(code) FROM gericht_hat_allergen;
 SELECT COUNT(gericht_id) FROM gericht_hat_kategorie;
 SELECT COUNT(id) FROM kategorie;
 
+
+-- Meilenstein 3
+
+
 -- Aufgabe 5.1
 SELECT * FROM gericht;
 -- Aufgabe 5.2
@@ -166,27 +170,50 @@ INSERT INTO gericht (name, beschreibung, erfasst_am, vegetarisch, vegan, preis_i
 INSERT INTO gericht_hat_kategorie (gericht_id, kategorie_id) VALUES (21,3);
 -- Aufgabe 5.17
 SELECT g.name, count(gha.gericht_id) AS Anzahl_der_Allergene FROM gericht g, gericht_hat_allergen gha WHERE g.id = gha.gericht_id GROUP BY g.name HAVING Anzahl_der_Allergene >3 ORDER BY Anzahl_der_Allergene ASC;
-
 SELECT g.name AS Gerichtname, g.preis_intern AS preisintern, g.preis_extern AS preisextern, GROUP_CONCAT(a.code) AS Allergen FROM gericht g, allergen a, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code GROUP BY g.name LIMIT 5;
 
 
+-- MEILENSTEIN 4 --
+
+
+-- M4.1.2
 DROP Table wunschgerichte;
 DROP Table  erstellerInnen;
-
-
 CREATE TABLE erstellerInnen(
-    erstellerInnen_id   INTEGER AUTO_INCREMENT PRIMARY KEY,
-    email               VARCHAR(50) UNIQUE,
-    name                VARCHAR(50) NOT NULL DEFAULT 'anonym'
+                               erstellerInnen_id   INTEGER AUTO_INCREMENT PRIMARY KEY,
+                               email               VARCHAR(50) UNIQUE,
+                               name                VARCHAR(50) NOT NULL DEFAULT 'anonym'
 );
-
 CREATE TABLE wunschgerichte(
-    nummer              INTEGER AUTO_INCREMENT PRIMARY KEY,
-    name                VARCHAR(50) NOT NULL,
-    beschreibung        VARCHAR(3000) NOT NULL,
-    erstellungsdatum    DATETIME NOT NULL,
-    erstellerInnen      INTEGER NOT NULL,
-    CONSTRAINT erstellerInnen_FK FOREIGN KEY (erstellerInnen) REFERENCES erstellerInnen(erstellerInnen_id)
+                               nummer              INTEGER AUTO_INCREMENT PRIMARY KEY,
+                               bezeichnung         VARCHAR(50) NOT NULL,
+                               beschreibung        VARCHAR(3000) NOT NULL,
+                               erstellungsdatum    DATETIME NOT NULL,
+                               erstellerIn         INTEGER NOT NULL,
+                               CONSTRAINT erstellerInnen_FK FOREIGN KEY (erstellerIn) REFERENCES erstellerInnen(erstellerInnen_id)
 );
+-- M.4.1.6
+SELECT wg.bezeichnung AS Wunschgericht, wg.beschreibung AS Beschreibung, eI.name AS ErstellerIn, eI.email AS EMail FROM wunschgerichte wg LEFT JOIN erstellerInnen eI on eI.erstellerInnen_id = wg.erstellerIn ORDER BY wg.erstellungsdatum DESC LIMIT 5;
 
-SELECT wg.name AS Wunschgericht, wg.beschreibung AS Beschreibung, eI.name AS ErstellerIn, eI.email AS EMail FROM wunschgerichte wg LEFT JOIN erstellerInnen eI on eI.erstellerInnen_id = wg.erstellerInnen ORDER BY wg.erstellungsdatum DESC LIMIT 5;
+-- M4.8.1
+ALTER TABLE gericht_hat_kategorie ADD CONSTRAINT uq_gericht_id_kategorie_id UNIQUE (gericht_id, kategorie_id);
+-- M4.8.2
+ALTER TABLE gericht ADD INDEX id_gericht_name (name);
+-- M4.8.3
+alter table gericht_hat_allergen
+drop foreign key gericht_hat_allergen_ibfk_2;
+alter table gericht_hat_allergen
+add constraint gericht_hat_allergen_ibfk_2 foreign key (gericht_id) references gericht(id) ON DElETE CASCADE;
+alter table gericht_hat_kategorie
+drop foreign key gericht_hat_kategorie_ibfk_1;
+alter table gericht_hat_kategorie
+add constraint gericht_hat_kategorie_ibfk_1 foreign key (gericht_id) references gericht(id) ON DELETE CASCADE;
+-- M4.8.5
+alter table gericht_hat_allergen
+drop foreign key gericht_hat_allergen_ibfk_1;
+alter table gericht_hat_allergen
+add constraint gericht_hat_allergen_ibfk_1 foreign key (code) references allergen(code) ON UPDATE CASCADE;
+-- M4.8.6
+alter table gericht_hat_kategorie
+add primary key(gericht_id, kategorie_id)
+

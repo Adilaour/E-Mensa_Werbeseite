@@ -27,7 +27,7 @@ if(isset($_POST["wunschgericht_name"]) && isset($_POST["beschreibung"]) && isset
     // Eingabemaskierung
     $email = mysqli_real_escape_string($link, $email);
     $beschreibung = mysqli_real_escape_string($link, $beschreibung);
-    $wunschgericht_name= mysqli_real_escape_string($link, $wunschgericht_name);
+    $wunschgericht_name = mysqli_real_escape_string($link, $wunschgericht_name);
 
     // Statement 1 vorbereiten
     $statement = mysqli_stmt_init($link);
@@ -35,10 +35,19 @@ if(isset($_POST["wunschgericht_name"]) && isset($_POST["beschreibung"]) && isset
     mysqli_stmt_bind_param($statement, 's', $email);
     // Erstellung ErstellerIn
     mysqli_stmt_execute($statement);
+    // Abfrage, der soeben erstellen ID
+    $idabfrage = mysqli_stmt_init($link);
+    mysqli_stmt_prepare($idabfrage, "SELECT erstellerInnen_id FROM erstellerInnen WHERE email = ?");
+    mysqli_stmt_bind_param($idabfrage, 's', $email);
+    mysqli_stmt_execute($idabfrage);
+    mysqli_stmt_bind_result($idabfrage, $erstid);
+    mysqli_stmt_fetch($idabfrage);
+    mysqli_stmt_close($idabfrage);
+
     // Statement 2 vorbereiten
     $statement2 = mysqli_stmt_init($link);
-    mysqli_stmt_prepare($statement2, "INSERT INTO wunschgerichte (name, beschreibung, erstellungsdatum, erstellerInnen) VALUES (?, ?, ?, ?)");
-    mysqli_stmt_bind_param($statement2, 'ssss', $wunschgericht_name, $beschreibung, $date, $email);
+    mysqli_stmt_prepare($statement2, "INSERT INTO wunschgerichte ( bezeichnung, beschreibung, erstellungsdatum, erstellerIn) VALUES (?, ?, ?, ?)");
+    mysqli_stmt_bind_param($statement2, 'sssi', $wunschgericht_name, $beschreibung, $date, $erstid);
     // Erstellung Wunschgericht
     mysqli_stmt_execute($statement2);
 
