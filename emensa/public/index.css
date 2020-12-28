@@ -142,6 +142,18 @@ tr:nth-child(odd){
     text-align: left;
     height: 3em;
 }
+.loginformframe{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 2fr 1fr;
+    }
+.loginform{
+    margin: auto;
+    padding: 1px;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 5px #00b5ad;
+}
 /*ID's*/
 #news p{
     padding: 1rem 0.5rem;

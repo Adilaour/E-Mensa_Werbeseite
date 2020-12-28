@@ -3,12 +3,6 @@ require_once('../models/kategorie.php');
 require_once('../models/gericht.php');
 
 class ExampleController
-/*{
-    public function m4_6a_queryparameter(RequestData $rd) {
-        // ...
-    }*/
-
-
 {
     public function m4_6a_queryparameter(RequestData $rd) {
         $vars = [
@@ -34,7 +28,7 @@ class ExampleController
     {
         $vars = [
             'no' => $rd->query['no'] ?? '1',
-            'titel' => $rd->query ['titel'] ?? 'dafault'
+            'titel' => $rd->query['titel'] ?? 'default'
         ];
 
         if ($vars['no'] == '1') {

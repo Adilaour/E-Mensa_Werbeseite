@@ -126,7 +126,6 @@ tr:nth-child(odd){
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-
 }
 .footermenu li {
     place-self: center stretch;

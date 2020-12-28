@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
-<link rel="stylesheet" type="text/css" href="index.css">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>@yield('title')</title>
     <?php
     if(!file_exists("besucherlog.txt")){
