@@ -178,3 +178,8 @@ function view($viewname, $viewargs) {
 
     return $blade->run($viewname, $viewargs);
 }
+
+function logger(){
+
+}
+

@@ -5,39 +5,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="M5.1.4 done">
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/00_image_missing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/01_bratkartoffel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/03_bratkartoffel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/04_tofu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/05_lasagne.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/09_suppe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/10_forelle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/11_soup.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/12_kassler.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/13_reibekuchen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/15_pilze.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/17_broetchen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/19_mousse.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/gerichte/20_suppe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/public/img/logout.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/storage/cache/profil.bladec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emensa/views/profil.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="M5.2 done">
+      <change afterPath="$PROJECT_DIR$/emensa/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emensa/vendor/composer/installed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emensa/vendor/composer/platform_check.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emensa/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/config/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/config/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/models/benutzer.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/models/benutzer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/public/besucherlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/public/besucherlog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/public/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/public/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/storage/cache/anmeldung.bladec" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/storage/cache/anmeldung.bladec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/storage/cache/home.bladec" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/storage/cache/home.bladec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/storage/cache/layouts.main_layout.bladec" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/storage/cache/layouts.main_layout.bladec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/views/anmeldung.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/anmeldung.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/views/layouts/main_layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/layouts/main_layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/werbeseite/sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/sql.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/vendor/eftec/bladeone/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/vendor/eftec/bladeone/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/vendor/eftec/bladeone/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/vendor/eftec/bladeone/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/vendor/eftec/bladeone/lib/BladeOne.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/vendor/eftec/bladeone/lib/BladeOne.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +29,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/emensa/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/emensa/bin/composer.phar" interpreterId="342cf56a-6567-4680-99be-0b1ca3b10b42" />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,6 +49,8 @@
     <include_path>
       <path value="$PROJECT_DIR$/emensa/vendor/eftec/bladeone" />
       <path value="$PROJECT_DIR$/emensa/vendor/composer" />
+      <path value="$PROJECT_DIR$/emensa/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/emensa/vendor/monolog/monolog" />
     </include_path>
   </component>
   <component name="ProjectId" id="1j1Bb6DbnUStKZVjlEZNZCJJPTU" />
@@ -178,7 +165,7 @@
       <workItem from="1608124288599" duration="548000" />
       <workItem from="1609096312719" duration="33022000" />
       <workItem from="1609190145774" duration="9319000" />
-      <workItem from="1609249029065" duration="10165000" />
+      <workItem from="1609249029065" duration="10768000" />
     </task>
     <task id="LOCAL-00001" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962042724</created>
@@ -509,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609243062984</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="M5.2 done">
+      <created>1609261002437</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1609261002438</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Aufgabe 9 überarbeitet - Striche anders gelöst" />
     <MESSAGE value="Tabelle WIEDER drin - SoRRy!" />
     <MESSAGE value="Abschlusstest" />
     <MESSAGE value="FERTIG" />
@@ -566,7 +559,8 @@
     <MESSAGE value="Abgabe 4 komplett scurr" />
     <MESSAGE value="M5.1.3 done" />
     <MESSAGE value="M5.1.4 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="M5.1.4 done" />
+    <MESSAGE value="M5.2 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="M5.2 done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="244" y="157" width="824" height="683" key="#CLI_Interpreters" timestamp="1609189811312">
@@ -611,6 +605,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="633" y="366" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607530291086" />
+    <state x="722" y="456" width="475" height="310" key="ComposerInitDialogKey" timestamp="1609261174442">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="722" y="456" width="475" height="310" key="ComposerInitDialogKey/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1609261174442" />
     <state width="254" height="177" key="DatabaseViewActions_Filter" timestamp="1608124777057">
       <screen x="0" y="25" width="1920" height="975" />
     </state>
@@ -752,7 +750,7 @@
       <screen x="0" y="25" width="1920" height="973" />
     </state>
     <state x="737" y="429" key="VCS.ChangelistChooser/1920.205.1440.875/0.25.1920.973@0.25.1920.973" timestamp="1609165591302" />
-    <state x="300" y="157" key="Vcs.Push.Dialog.v2" timestamp="1609243065625">
+    <state x="300" y="157" key="Vcs.Push.Dialog.v2" timestamp="1609261004325">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605721424880" />
@@ -767,7 +765,7 @@
     <state x="225" y="142" key="Vcs.Push.Dialog.v2/0.25.1440.793@0.25.1440.793" timestamp="1607113000918" />
     <state x="-1620" y="-1" key="Vcs.Push.Dialog.v2/0.25.1440.798/-1920.-155.1920.1055@-1920.-155.1920.1055" timestamp="1605780422153" />
     <state x="225" y="141" key="Vcs.Push.Dialog.v2/0.25.1440.798@0.25.1440.798" timestamp="1605820449059" />
-    <state x="300" y="157" key="Vcs.Push.Dialog.v2/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1609243065625" />
+    <state x="300" y="157" key="Vcs.Push.Dialog.v2/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1609261004325" />
     <state x="300" y="157" key="Vcs.Push.Dialog.v2/1920.205.1440.875/0.0.1920.1080@0.0.1920.1080" timestamp="1606937584516" />
     <state x="793" y="375" width="334" height="238" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607527930602">
       <screen x="0" y="0" width="1920" height="1080" />
