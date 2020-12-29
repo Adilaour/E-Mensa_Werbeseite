@@ -4,11 +4,16 @@ function login_success($user){
     $link = connectdb();
     mysqli_begin_transaction($link, MYSQLI_TRANS_START_READ_WRITE);
 
+    $idabfrage = mysqli_prepare($link, "SELECT id FROM benutzer WHERE email = ?");
+    mysqli_stmt_bind_param($idabfrage, 's', $user);
+    mysqli_stmt_execute($idabfrage);
+    mysqli_stmt_bind_result($idabfrage, $userid);
+    mysqli_stmt_fetch($idabfrage);
+    mysqli_stmt_close($idabfrage);
 
 
-
-    $stmt = mysqli_prepare($link, 'UPDATE benutzer SET anzahlanmeldungen = anzahlanmeldungen +1 WHERE email = ?');
-    mysqli_stmt_bind_param($stmt, 's', $user);
+    $stmt = mysqli_prepare($link, 'CALL anmeldecounter(?);');
+    mysqli_stmt_bind_param($stmt, 'i', $userid);
     mysqli_stmt_execute($stmt);
 
     $stmt2 = mysqli_prepare($link, 'UPDATE benutzer SET letzteanmeldung = current_timestamp() WHERE email = ?');
