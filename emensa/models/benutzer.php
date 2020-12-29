@@ -1,4 +1,41 @@
 <?php
+function login_success($user){
+    // Datenbankeinträge aktualisieren
+    $link = connectdb();
+    mysqli_begin_transaction($link, MYSQLI_TRANS_START_READ_WRITE);
+
+
+
+
+    $stmt = mysqli_prepare($link, 'UPDATE benutzer SET anzahlanmeldungen = anzahlanmeldungen +1 WHERE email = ?');
+    mysqli_stmt_bind_param($stmt, 's', $user);
+    mysqli_stmt_execute($stmt);
+
+    $stmt2 = mysqli_prepare($link, 'UPDATE benutzer SET letzteanmeldung = current_timestamp() WHERE email = ?');
+    mysqli_stmt_bind_param($stmt2, 's', $user);
+    mysqli_stmt_execute($stmt2);
+
+
+    mysqli_commit($link);
+    mysqli_close($link);
+}
+function login_failed($user){
+    $link = connectdb();
+    mysqli_begin_transaction($link, MYSQLI_TRANS_START_READ_WRITE);
+
+    $stmt3 = mysqli_prepare($link, 'UPDATE benutzer SET letzterfehler = current_timestamp() WHERE email = ?');
+    mysqli_stmt_bind_param($stmt3, 's', $user);
+    mysqli_stmt_execute($stmt3);
+
+    $stmt4 = mysqli_prepare($link, 'UPDATE benutzer SET anzahlfehler = anzahlfehler +1 WHERE email = ?');
+    mysqli_stmt_bind_param($stmt4, 's', $user);
+    mysqli_stmt_execute($stmt4);
+
+
+    mysqli_commit($link);
+    mysqli_close($link);
+
+}
 // M5.1.3   | Admin anlegen
 function adminanlegen(){
     if(isset($_POST['kennwort'])){
@@ -28,10 +65,14 @@ function logincheck($user, $code){
         $stmt->execute();
         $stmt->bind_result($count);
         if($stmt->fetch()) {
+            mysqli_close($link);
             return $count > 0;
         }
         $stmt->close();
+
     }
+
     mysqli_close($link);
     return false;
 }
+

@@ -14,6 +14,9 @@
         <input class="loginform" type="submit">
 
     </form>
-    <p>{{$msg}}</p>
-
+    @if (isset($msg))
+        <p>{{$msg}}</p>
+    @else
+        <p></p>
+    @endif
 @endsection

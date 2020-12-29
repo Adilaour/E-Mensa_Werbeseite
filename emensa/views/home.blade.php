@@ -26,7 +26,7 @@
                 exit();
             }
             // SQL Query (noch nicht dynamisch)
-            $sql="SELECT g.name AS Gerichtname, g.preis_intern AS preisintern, g.preis_extern AS preisextern, GROUP_CONCAT(a.code) AS Allergen FROM gericht g, allergen a, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code GROUP BY g.name LIMIT 5;";
+            $sql="SELECT g.name AS Gerichtname, g.preis_intern AS preisintern, g.preis_extern AS preisextern, GROUP_CONCAT(a.code) AS Allergen, g.bildname AS Gerichtbild FROM gericht g, allergen a, gericht_hat_allergen gha WHERE g.id = gha.gericht_id AND a.code = gha.code GROUP BY g.name LIMIT 5;";
             $result = mysqli_query($link, $sql);
             // Prüfung, ob Abfrage korrekt ist
             if(!$result){
@@ -35,8 +35,14 @@
             }
             // Ausgabe der abgefragten Daten
             while($row = mysqli_fetch_assoc($result)) {
-                echo '<tr><td><img src="img/bild" alt="Speisebild nicht gefunden">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
-                $gerichtanzahl++;
+                if($row['Gerichtbild'] == null){
+                    echo '<tr><td><img src="img/gerichte/00_image_missing.jpg" alt="Speisebild nicht gefunden" style="height:75px; width:75px;">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
+                    $gerichtanzahl++;
+                }else{
+                    echo '<tr><td><img src="img/gerichte/' . $row['Gerichtbild']. '" alt="Speisebild nicht gefunden" style="height:75px; width:75px;">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
+                    $gerichtanzahl++;
+                }
+
             }
             // Schließen der Datenbankverbindun
             mysqli_free_result($result);

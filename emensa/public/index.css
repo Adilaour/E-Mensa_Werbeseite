@@ -154,7 +154,33 @@ tr:nth-child(odd){
     border-radius: 0.5em;
     box-shadow: 5px 5px 5px #00b5ad;
 }
+.nutzerbereich{
+    display:grid;
+    grid-template-rows:repeat(1,1em 1fr);
+    grid-template-columns: repeat(1, 1fr 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.nutzerbereich a{
+    grid-row-start:2;
+}
+.tooltip .tooltiptext {
+    display:none;
+}
+.tooltip:hover .tooltiptext {
+    display: inline;
+    grid-row-start:1;
+    font-size: 0.75em;
+    background: lightgrey;
+}
+.logout_btn{
+    height:20px;
+    idth:20px;
+    grid-colum-start:2;
+    grid-row-start:2;
+}
 /*ID's*/
+
 #news p{
     padding: 1rem 0.5rem;
 }

@@ -5,6 +5,6 @@ require_once('../models/gericht.php');
 class HomeController
 {
     public function index(RequestData $request) {
-        return view('home', ['rd' => $request ]);
+        return view('home', ['rd' => $request, 'title' => 'Home' ]);
     }
 }

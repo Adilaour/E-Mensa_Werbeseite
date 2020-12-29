@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <title>@yield('title')</title>
+    <title>{{$title}}</title>
+    <!-- Besucherzähler muss überholt werden! -->
     <?php
     if(!file_exists("besucherlog.txt")){
         // Beim ersten Besuch auf der Seite existiert die Daten noch nicht.
@@ -26,16 +27,29 @@
 <body>
 <header>
     @section('header')
-            <div class="sitelogo bordered headeritems"><img src="" alt="E-Mensa Logo"></div>
-            <nav class="navbar bordered headeritems">
-                <ul class="mainmenu">
-                    <li><a href="#news">Ankündigung</a></li>
-                    <li><a href="#meals">Speisen</a></li>
-                    <li><a href="#zahlen">Zahlen</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                    <li><a href="#wichtig">Wichtig für uns</a></li>
-                </ul>
-            </nav>
+        <div class="sitelogo bordered headeritems"><img src="" alt="E-Mensa Logo"></div>
+        <nav class="navbar bordered headeritems">
+            <ul class="mainmenu">
+                <li><a href="#news">Ankündigung</a></li>
+                <li><a href="#meals">Speisen</a></li>
+                <li><a href="#zahlen">Zahlen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#wichtig">Wichtig für uns</a></li>
+
+            </ul>
+        </nav>
+        @if(isset($_SESSION['login_ok']) && isset($_SESSION['nutzer']))
+            <div class="nutzerbereich tooltip">
+                <p class="tooltiptext">
+                   Angemeldet als:
+                </p>
+                <a class="nutzerlink" href="/profil">{{$_SESSION['nutzer']}}</a>
+                <a href="/abmeldung">
+                    <img class="logout_btn" src="img/logout.svg" alt="Abmeldung">
+                </a>
+            </div>
+
+        @endif
     @show
 </header>
 <main>

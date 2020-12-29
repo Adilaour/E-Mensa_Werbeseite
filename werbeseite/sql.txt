@@ -225,12 +225,31 @@ CREATE TABLE benutzer(
     passwort          VARCHAR(200) NOT NULL,
     admin             BOOLEAN DEFAULT FALSE,
     anzahlfehler      INTEGER NOT NULL DEFAULT 0,
-    anzahlanmeldungen INTEGER NOT NULL,
+    anzahlanmeldungen INTEGER NOT NULL DEFAULT 0,
     letzteanmeldung   DATETIME,
     letzterfehler     DATETIME
 );
+-- M5.1.4
+SELECT * FROM benutzer WHERE email = 'admin@emensa.example' AND passwort = '98bc55f279c04a9d1c723876eb29afb1730a7804';
 
--- M5.2.1
+-- M5.2.1   | Tabelle Gericht anpassen
+ALTER TABLE gericht ADD bildname VARCHAR(200) DEFAULT null;
+-- M5.2.2   | Namen abspeichern
+UPDATE gericht SET bildname  = '01_bratkartoffel.jpg' WHERE id = 1;
+UPDATE gericht SET bildname  = '03_bratkartoffel.jpg' WHERE id = 3;
+UPDATE gericht SET bildname ='04_tofu.jpg' WHERE id = 4;
+UPDATE gericht SET bildname ='05_lasagne.jpg' WHERE id = 5;
+UPDATE gericht SET bildname ='10_forelle.jpg' WHERE id = 10;
+UPDATE gericht SET bildname ='11_soup.jpg' WHERE id = 11;
+UPDATE gericht SET bildname ='12_kassler.jpg' WHERE id = 12;
+UPDATE gericht SET bildname ='09_suppe.jpg' WHERE id = 9;
+UPDATE gericht SET bildname ='13_reibekuchen.jpg' WHERE id = 13;
+UPDATE gericht SET bildname ='15_pilze.jpg' WHERE id = 15;
+UPDATE gericht SET bildname ='17_broetchen.jpg' WHERE id = 17;
+UPDATE gericht SET bildname ='19_mousse.jpg' WHERE id = 19;
+UPDATE gericht SET bildname ='20_suppe.jpg' WHERE id = 20;
+-- M5.2.4
+
 
 -- M5.4.1
 

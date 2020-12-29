@@ -22,4 +22,6 @@ return array(
     '/adminanlegen' => 'LoginController@adminanlegen',
     '/anmeldung' => 'LoginController@anmeldung',
     '/anmeldung_verifizieren' => 'LoginController@anmeldung_verifizieren',
+    '/profil' => 'LoginController@profil',
+    '/abmeldung' => 'LoginController@abmeldung'
 );
