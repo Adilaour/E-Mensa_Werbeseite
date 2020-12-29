@@ -21,17 +21,17 @@ function logincheck($user, $code){
     $salt = "DatenbankenPraktikum";
     $dbrpw = sha1($salt.$code);
     $link = connectdb();
-    $dbrpw =  mysqli_real_escape_string($link, $dbrpw);
-    $statement = mysqli_stmt_init($link);
-    mysqli_stmt_prepare($statement, "SELECT * FROM benutzer WHERE email = ? AND passwort = ?");
-    mysqli_stmt_bind_param($statement, 'ss', $user, $dbrpw);
-
-
-    $success = mysqli_stmt_execute($statement);
-
-
-
-
+    $query = "SELECT count(*) FROM benutzer WHERE email = ? AND passwort = ?";
+    if ($stmt = $link->prepare($query))
+    {
+        $stmt->bind_param("ss", $user, $dbrpw);
+        $stmt->execute();
+        $stmt->bind_result($count);
+        if($stmt->fetch()) {
+            return $count > 0;
+        }
+        $stmt->close();
+    }
     mysqli_close($link);
-    return $success;
+    return false;
 }

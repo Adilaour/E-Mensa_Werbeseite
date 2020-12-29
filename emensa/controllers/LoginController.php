@@ -13,22 +13,19 @@ class LoginController
         $msg = $_SESSION['login_result_message'] ?? null;
         return view('anmeldung', ['rd' => $request, 'msg' => $msg]);
     }
-
     public function anmeldung_verifizieren(RequestData $request){
 
         $email = $_POST['email'];
         $kennwort = $_POST['kennwort'];
 
-
         $_SESSION['login_result_message'] = null;
 
         if(logincheck($email, $kennwort) == true){
             $_SESSION['login_ok'] = true;
-            return view('home', ['rd'=>$request]);
-        }else if(logincheck($email, $kennwort) == false){
+            header('Location: /');
+        }else{
             $_SESSION['login_result_message'] = 'Benutzer- oder Passwort falsch';
-            $msg = $_SESSION['login_result_message'] ?? null;
-            return view('anmeldung', ['rd' => $request, 'msg' => $msg]);
+            header('Location: /anmeldung');
         }
     }
 
