@@ -179,7 +179,19 @@ function view($viewname, $viewargs) {
     return $blade->run($viewname, $viewargs);
 }
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+$logger = null;
+
 function logger(){
 
+    global $logger;
+
+    if($logger == null){
+        $logger = new Logger('name');
+        $logger->pushHandler(new StreamHandler('../storage/logs/warning.log', Logger::WARNING));
+        $logger->pushHandler(new StreamHandler('../storage/logs/info.log', Logger::INFO));
+    }
+    return $logger;
 }
 

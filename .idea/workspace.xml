@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand />
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="M5.3.1 done (?)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emensa/public/besucherlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/public/besucherlog.txt" afterDir="false" />
+    <list default="true" id="c16da369-d19f-462e-84e6-011c2f2f13d5" name="Default Changelist" comment="M3">
+      <change afterPath="$PROJECT_DIR$/emensa/storage/logs/info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/config/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/storage/cache/home.bladec" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/storage/cache/home.bladec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emensa/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/emensa/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,13 +172,6 @@
       <workItem from="1609096312719" duration="33022000" />
       <workItem from="1609190145774" duration="9319000" />
       <workItem from="1609249029065" duration="11874000" />
-    </task>
-    <task id="LOCAL-00002" summary="Aktueller Stand: Aufgabe 4a">
-      <created>1602962282753</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1602962282753</updated>
     </task>
     <task id="LOCAL-00003" summary="Aktueller Stand: Aufgabe 4a">
       <created>1602962916852</created>
@@ -497,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609262176141</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="M3">
+      <created>1609363485119</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1609363485119</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +548,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Abschlusstest" />
     <MESSAGE value="FERTIG" />
     <MESSAGE value="Test" />
     <MESSAGE value="Meilenstein 2 fertig" />
@@ -554,7 +572,8 @@
     <MESSAGE value="M5.1.4 done" />
     <MESSAGE value="M5.2 done" />
     <MESSAGE value="M5.3.1 done (?)" />
-    <option name="LAST_COMMIT_MESSAGE" value="M5.3.1 done (?)" />
+    <MESSAGE value="M3" />
+    <option name="LAST_COMMIT_MESSAGE" value="M3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="244" y="157" width="824" height="683" key="#CLI_Interpreters" timestamp="1609189811312">
@@ -744,13 +763,13 @@
       <screen x="0" y="25" width="1920" height="973" />
     </state>
     <state x="737" y="429" key="VCS.ChangelistChooser/1920.205.1440.875/0.25.1920.973@0.25.1920.973" timestamp="1609165591302" />
-    <state x="300" y="157" key="Vcs.Push.Dialog.v2" timestamp="1609261625883">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="300" y="153" key="Vcs.Push.Dialog.v2" timestamp="1609363488859">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1620" y="-22" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1605721424880" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-593.1920.1080@0.0.1440.900" timestamp="1603293659494" />
     <state x="225" y="132" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603213566569" />
-    <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607109810408" />
+    <state x="300" y="153" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1609363488859" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.800/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1603008578944" />
     <state x="225" y="140" key="Vcs.Push.Dialog.v2/0.23.1440.800@0.23.1440.800" timestamp="1603033595794" />
     <state x="-1620" y="-2" key="Vcs.Push.Dialog.v2/0.23.1440.803/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1602973983700" />

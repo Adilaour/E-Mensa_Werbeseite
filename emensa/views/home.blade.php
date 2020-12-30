@@ -19,7 +19,7 @@
             <!--Datenbankenabfrage zur Darstellung von Gerichten-->
             <?php
             $gerichtanzahl = 0;
-            $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
+            $link = mysqli_connect("localhost", "root","DBwt","emensawerbeseite");
             // Überprüfung, ob Verbindung erfolgreich war
             if (!$link) {
                 echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();
@@ -53,7 +53,7 @@
             <h3>Legende der verwendeten Allergene</h3>
             <?php
             // Erneuter Verbindungsaufbau
-            $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");
+            $link = mysqli_connect("localhost", "root","DBwt","emensawerbeseite");
             // Prüfung des erfolgreichen Verbindungsaufbaus
             if (!$link) {
                 echo "Die Verbindung zur Datenbank ist fehlgeschlagen: ", mysqli_connect_error();

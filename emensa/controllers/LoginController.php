@@ -10,11 +10,12 @@ class LoginController
     }
     // M5.1.4
     public function anmeldung(RequestData $request) {
+        logger()->info('Anmeldung besucht');
         $msg = $_SESSION['login_result_message'] ?? null;
         return view('anmeldung', ['rd' => $request, 'msg' => $msg, 'title'=>'Anmeldung']);
+
     }
     public function anmeldung_verifizieren(RequestData $request){
-
         $email = $_POST['email'];
         $kennwort = $_POST['kennwort'];
         $name = explode('@', $email);
@@ -26,10 +27,12 @@ class LoginController
             $_SESSION['nutzer'] = $name[0];
             login_success($email);
             header('Location: /');
+            logger()->info('Anmeldung verifiziert');
         }else{
             $_SESSION['login_result_message'] = 'Benutzer- oder Passwort falsch';
             login_failed($email);
             header('Location: /anmeldung');
+            logger()->warning('Anmeldung fehlgeschlagen');
         }
     }
     // M5.1.8
@@ -43,6 +46,7 @@ class LoginController
         $_SESSION['nutzer'] = null;
         session_destroy();
         header('Location: /');
+        logger()->info('Abmeldung erfolgreich');
     }
 
 }
