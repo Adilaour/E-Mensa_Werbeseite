@@ -252,5 +252,30 @@ UPDATE gericht SET bildname ='20_suppe.jpg' WHERE id = 20;
 
 
 -- M5.4.1
+CREATE VIEW view_suppengerichte AS
+    SELECT * FROM gericht
+    WHERE name LIKE '%suppe%';
+-- M5.4.2
+CREATE VIEW view_anmeldungen AS
+    SELECT * FROM benutzer
+    ORDER BY anzahlanmeldungen DESC ;
+-- M5.4.3
+CREATE VIEW view_kategoriegerichte_vegetarisch AS
+    SELECT k.name AS Kategorie, g.name AS Gerichtname
+    FROM kategorie k
+    LEFT JOIN gericht_hat_kategorie ghk on k.id = ghk.kategorie_id
+    LEFT JOIN gericht g on ghk.gericht_id = g.id
+    WHERE g.vegetarisch = true;
 
--- M5.4.
+-- M5.3. Alternative
+SELECT k.name AS Kategorie, g.name AS Gerichtname
+FROM gericht g
+Left JOIN  gericht_hat_kategorie ghk on g.id = ghk.gericht_id
+LEFT join kategorie k ON k.id = ghk.kategorie_id
+WHERE vegetarisch = true;
+
+-- M5.5     | Stored Procedure für Anmeldecounter
+CREATE PROCEDURE anmeldecounter ( IN ID INTEGER )
+BEGIN
+    UPDATE benutzer SET anzahlanmeldungen = anzahlanmeldungen +1 WHERE id = ID;
+END;

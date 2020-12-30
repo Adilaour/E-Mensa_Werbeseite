@@ -14,3 +14,11 @@ CREATE VIEW view_kategoriegerichte_vegetarisch AS
     LEFT JOIN gericht g on ghk.gericht_id = g.id
     WHERE g.vegetarisch = true;
 -- M5.4.
+CREATE VIEW view_kategoriegerichte_vegetarisch AS
+SELECT DISTINCT k.name AS Kategorie,
+                CASE
+                    WHEN g.vegetarisch = true THEN g.name
+                    END AS Gerichtname
+FROM kategorie k
+         LEFT JOIN gericht_hat_kategorie ghk on k.id = ghk.kategorie_id
+         LEFT JOIN gericht g on ghk.gericht_id = g.id;
