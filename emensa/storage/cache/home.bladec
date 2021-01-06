@@ -39,7 +39,7 @@
  echo '<tr><td><img src="img/gerichte/00_image_missing.jpg" alt="Speisebild nicht gefunden" style="height:75px; width:75px;">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
  $gerichtanzahl++;
  }else{
- echo '<tr><td><img src="img/gerichte/' . $row['Gerichtbild']. '" alt="Speisebild nicht gefunden" style="height:75px; width:75px;">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
+ echo '<tr><td><img src="img/gerichte/' . $row['Gerichtbild']. '" alt="Bild der Speise" style="height:75px; width:75px;">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
  $gerichtanzahl++;
  }
 

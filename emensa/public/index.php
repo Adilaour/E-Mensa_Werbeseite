@@ -182,13 +182,10 @@ function view($viewname, $viewargs) {
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 $logger = null;
-
 function logger(){
-
     global $logger;
-
     if($logger == null){
-        $logger = new Logger('name');
+        $logger = new Logger('LOG');
         $logger->pushHandler(new StreamHandler('../storage/logs/warning.log', Logger::WARNING));
         $logger->pushHandler(new StreamHandler('../storage/logs/info.log', Logger::INFO));
     }

@@ -248,10 +248,10 @@ UPDATE gericht SET bildname ='15_pilze.jpg' WHERE id = 15;
 UPDATE gericht SET bildname ='17_broetchen.jpg' WHERE id = 17;
 UPDATE gericht SET bildname ='19_mousse.jpg' WHERE id = 19;
 UPDATE gericht SET bildname ='20_suppe.jpg' WHERE id = 20;
--- M5.2.4
+-- M5.2.4   | Platzhalterbild bei null-Wert
+-- in PHP gelöst --
 
-
--- M5.4.1
+-- M5.4.1   | Erstellen von Views
 CREATE VIEW view_suppengerichte AS
     SELECT * FROM gericht
     WHERE name LIKE '%suppe%';
@@ -261,18 +261,11 @@ CREATE VIEW view_anmeldungen AS
     ORDER BY anzahlanmeldungen DESC ;
 -- M5.4.3
 CREATE VIEW view_kategoriegerichte_vegetarisch AS
-    SELECT k.name AS Kategorie, g.name AS Gerichtname
-    FROM kategorie k
-    LEFT JOIN gericht_hat_kategorie ghk on k.id = ghk.kategorie_id
-    LEFT JOIN gericht g on ghk.gericht_id = g.id
-    WHERE g.vegetarisch = true;
-
--- M5.3. Alternative
-SELECT k.name AS Kategorie, g.name AS Gerichtname
-FROM gericht g
-Left JOIN  gericht_hat_kategorie ghk on g.id = ghk.gericht_id
-LEFT join kategorie k ON k.id = ghk.kategorie_id
-WHERE vegetarisch = true;
+SELECT kategorie.name AS Kategorie,  gericht.name AS Gericht
+FROM kategorie LEFT JOIN gericht INNER JOIN gericht_hat_kategorie
+                                            ON gericht.id = gericht_hat_kategorie.gericht_id
+                                            ON  kategorie.id = gericht_hat_kategorie.kategorie_id
+WHERE gericht.vegetarisch =1 OR kategorie_id IS null;
 
 -- M5.5     | Stored Procedure für Anmeldecounter
 CREATE PROCEDURE anmeldecounter ( IN ID INTEGER )

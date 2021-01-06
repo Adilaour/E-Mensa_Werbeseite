@@ -30,3 +30,7 @@
 [2020-12-31T12:16:18.692938+00:00] name.INFO: Anmeldung besucht [] []
 [2020-12-31T12:16:29.033980+00:00] name.INFO: Anmeldung verifiziert [] []
 [2020-12-31T12:16:31.244721+00:00] name.INFO: Abmeldung erfolgreich [] []
+[2021-01-06T14:08:28.248641+00:00] LOG.INFO: Home besucht [] []
+[2021-01-06T14:09:22.391411+00:00] LOG.INFO: Anmeldung besucht [] []
+[2021-01-06T14:09:28.255480+00:00] LOG.WARNING: Anmeldung fehlgeschlagen [] []
+[2021-01-06T14:09:28.268966+00:00] LOG.INFO: Anmeldung besucht [] []
