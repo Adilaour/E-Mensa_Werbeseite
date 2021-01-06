@@ -10,8 +10,6 @@ function login_success($user){
     mysqli_stmt_bind_result($idabfrage, $userid);
     mysqli_stmt_fetch($idabfrage);
     mysqli_stmt_close($idabfrage);
-
-
     $stmt = mysqli_prepare($link, 'CALL anmeldecounter(?);');
     mysqli_stmt_bind_param($stmt, 'i', $userid);
     mysqli_stmt_execute($stmt);

@@ -1,4 +1,4 @@
--- M5.4.1
+-- M5.4.1   | Erstellen von Views
 CREATE VIEW view_suppengerichte AS
     SELECT * FROM gericht
     WHERE name LIKE '%suppe%';
@@ -8,17 +8,8 @@ CREATE VIEW view_anmeldungen AS
     ORDER BY anzahlanmeldungen DESC ;
 -- M5.4.3
 CREATE VIEW view_kategoriegerichte_vegetarisch AS
-    SELECT k.name AS Kategorie, g.name AS Gerichtname
-    FROM kategorie k
-    LEFT JOIN gericht_hat_kategorie ghk on k.id = ghk.kategorie_id
-    LEFT JOIN gericht g on ghk.gericht_id = g.id
-    WHERE g.vegetarisch = true;
--- M5.4.
-CREATE VIEW view_kategoriegerichte_vegetarisch AS
-SELECT DISTINCT k.name AS Kategorie,
-                CASE
-                    WHEN g.vegetarisch = true THEN g.name
-                    END AS Gerichtname
-FROM kategorie k
-         LEFT JOIN gericht_hat_kategorie ghk on k.id = ghk.kategorie_id
-         LEFT JOIN gericht g on ghk.gericht_id = g.id;
+SELECT kategorie.name AS Kategorie,  gericht.name AS Gericht
+FROM kategorie LEFT JOIN gericht INNER JOIN gericht_hat_kategorie
+                                            ON gericht.id = gericht_hat_kategorie.gericht_id
+                                            ON  kategorie.id = gericht_hat_kategorie.kategorie_id
+WHERE gericht.vegetarisch =1 OR kategorie_id IS null;
