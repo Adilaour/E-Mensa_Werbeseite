@@ -23,5 +23,8 @@ return array(
     '/anmeldung' => 'LoginController@anmeldung',
     '/anmeldung_verifizieren' => 'LoginController@anmeldung_verifizieren',
     '/profil' => 'LoginController@profil',
-    '/abmeldung' => 'LoginController@abmeldung'
+    '/abmeldung' => 'LoginController@abmeldung',
+
+    // Meilenstein 6 | Bewertungen
+    '/bewertung' => 'BewertungsController@bewertung',
 );

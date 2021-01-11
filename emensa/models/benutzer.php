@@ -18,7 +18,6 @@ function login_success($user){
     mysqli_stmt_bind_param($stmt2, 's', $user);
     mysqli_stmt_execute($stmt2);
 
-
     mysqli_commit($link);
     mysqli_close($link);
 }
