@@ -1,5 +1,23 @@
 <?php
-function formcheck(){
-
-
+function bewertungen_eintragen(){
+    $link = connectdb();
+    // Werte vorbereiten & ggf. maskieren
+    $bemerkung = trim($_POST['bemerkung']);
+    $bemerkung = htmlspecialchars($bemerkung);
+    if(isset($_POST['wichtig'])){
+        $wichtig = 1;
+    }else{
+        $wichtig = 0;
+    }
+    $rating =  mysqli_real_escape_string($link, $bemerkung);
+    $userid = (int) $_SESSION['nutzerid'];
+    $mealid = (int) $_POST['gericht_id'];
+    // Statement vorbereiten und ausführen
+    $statement = mysqli_stmt_init($link);
+    mysqli_stmt_prepare($statement, "INSERT INTO bewertungen (wichtig, sterne, bemerkung, benutzer_id, gericht_id) VALUES (?,?,?,?,?)");
+    mysqli_stmt_bind_param($statement, 'iisii', $wichtig,$_POST['sterne'], $rating, $userid, $mealid);
+    mysqli_stmt_execute($statement);
+    mysqli_close($link);
+    // Erfolgsnachricht speichern
+    $_SESSION['bewertung_result_message'] = 'Ihre Bewertung wurde gespeichert.';
 }

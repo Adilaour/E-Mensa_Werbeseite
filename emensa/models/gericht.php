@@ -13,3 +13,11 @@ function db_gericht_select_all() {
     mysqli_close($link);
     return $data;
 }
+function gerichtname_by_id($gericht_id){
+    $link = connectdb();
+    $sql= "SELECT name AS Gerichtname, bildname AS Bildname FROM gericht WHERE id = "."$gericht_id";
+    $result = mysqli_query($link, $sql);
+    $data = mysqli_fetch_all($result, MYSQLI_BOTH);
+    mysqli_close($link);
+    return $data;
+}

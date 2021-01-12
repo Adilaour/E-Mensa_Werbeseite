@@ -13,7 +13,7 @@ function login_success($user){
     $stmt = mysqli_prepare($link, 'CALL anmeldecounter(?);');
     mysqli_stmt_bind_param($stmt, 'i', $userid);
     mysqli_stmt_execute($stmt);
-
+    $_SESSION['nutzerid'] = $userid;
     $stmt2 = mysqli_prepare($link, 'UPDATE benutzer SET letzteanmeldung = current_timestamp() WHERE email = ?');
     mysqli_stmt_bind_param($stmt2, 's', $user);
     mysqli_stmt_execute($stmt2);
@@ -71,10 +71,9 @@ function logincheck($user, $code){
             return $count > 0;
         }
         $stmt->close();
-
     }
-
     mysqli_close($link);
     return false;
 }
+
 
