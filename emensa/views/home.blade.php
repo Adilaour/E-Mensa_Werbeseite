@@ -35,8 +35,6 @@
             }
             // Ausgabe der abgefragten Daten
             if(isset($_SESSION['login_ok']) && isset($_SESSION['nutzer'])){
-
-
                 while($row = mysqli_fetch_assoc($result)) {
                     if($row['Gerichtbild'] == null){
                         echo '<tr><td><img src="img/gerichte/00_image_missing.jpg" alt="Speisebild nicht gefunden" style="height:75px; width:75px;">' . '</td><td class="alignleft">' . $row['Gerichtname'] . " <span style='font-size:0.75em'>" . $row['Allergen'] . '</span><a href="bewertung?gericht_id='.$row['Gerichtid'].'" style="font-size:0.75em;margin-left:10px;">bewerten</a></td><td>' . $row['preisintern'] . '</td><td>' . $row['preisextern'] . '</td></tr>';
@@ -48,10 +46,7 @@
 
                 }
 
-
-
             } else{
-
 
             while($row = mysqli_fetch_assoc($result)) {
                 if($row['Gerichtbild'] == null){

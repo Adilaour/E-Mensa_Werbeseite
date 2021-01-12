@@ -21,3 +21,21 @@ function bewertungen_eintragen(){
     // Erfolgsnachricht speichern
     $_SESSION['bewertung_result_message'] = 'Ihre Bewertung wurde gespeichert.';
 }
+
+function neuste_bewertungen_abfragen(){
+    $link = connectdb();
+    $sql= "SELECT gericht_id, sterne, bemerkung, benutzer_id, wichtig, bewertungszeitpunkt FROM bewertungen ORDER BY bewertungszeitpunkt DESC LIMIT 30";
+    $result = mysqli_query($link, $sql);
+    $data = mysqli_fetch_all($result, MYSQLI_BOTH);
+    mysqli_close($link);
+    return $data;
+}
+
+function meinebewertungen_abfragen(){
+    $link = connectdb();
+    $sql= "SELECT * FROM bewertungen WHERE benutzer_id = ".$_SESSION['nutzerid']." ORDER BY bewertungszeitpunkt DESC";
+    $result = mysqli_query($link, $sql);
+    $data = mysqli_fetch_all($result, MYSQLI_BOTH);
+    mysqli_close($link);
+    return $data;
+}

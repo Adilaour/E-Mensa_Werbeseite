@@ -44,6 +44,7 @@ class LoginController
     public function abmeldung(RequestData $request){
         $_SESSION['login_ok'] = false;
         $_SESSION['nutzer'] = null;
+        $_SESSION['nutzerid'] = null;
         session_destroy();
         header('Location: /');
         logger()->info('Abmeldung erfolgreich');
