@@ -43,13 +43,24 @@ class BewertungsController
     public function meinebewertungen(RequestData $request){
         if(isset($_SESSION['login_ok'])) {
             $bewertungen = meinebewertungen_abfragen();
+            if($_SESSION['bewertung_result_message'] != 'Ihre Bewertung wurde gelöscht.'){
+                $msg = null;
+            } else {
+                $msg = $_SESSION['bewertung_result_message'] ?? null;
+            }
+
             logger()->info('Meine Bewertungen besucht');
-            return view('meinebewertungen', ['rd' => $request, 'title' => 'Meine Bewertungen', 'bewertungen' => $bewertungen]);
+            return view('meinebewertungen', ['rd' => $request, 'title' => 'Meine Bewertungen', 'bewertungen' => $bewertungen, 'msg'=> $msg ]);
         } else{
             logger()->info('Meine Bewertungen besucht');
             return view('anmeldung', ['rd' => $request, 'title' => 'Anmeldung']);
         }
-
+    }
+    public function bewertung_loeschen(RequestData $request){
+        $delbewertung_id = (int) $_GET['delbewertung'];
+        delete_bewertung($delbewertung_id);
+        logger()->warning('Bewertung gelöscht');
+        header('Location: /meinebewertungen');
 
     }
 }

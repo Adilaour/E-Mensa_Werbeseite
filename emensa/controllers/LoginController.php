@@ -31,8 +31,8 @@ class LoginController
         }else{
             $_SESSION['login_result_message'] = 'Benutzer- oder Passwort falsch';
             login_failed($email);
-            header('Location: /anmeldung');
             logger()->warning('Anmeldung fehlgeschlagen');
+            header('Location: /anmeldung');
         }
     }
     // M5.1.8

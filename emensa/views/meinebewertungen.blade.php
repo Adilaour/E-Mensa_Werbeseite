@@ -18,9 +18,14 @@
 
                 <td>{{$bewertung[1]}}</td>
                 <td>{{$bewertung[2]}}</td>
-                <td><button>Bewertung löschen</button></td>
+                <td><a href="bewertung_loeschen?delbewertung={{$bewertung[0]}}">Bewertung löschen</a></td>
             </tr>
         @endforeach
     </table>
+    @if (isset($msg))
+        <p>{{$msg}}</p>
+    @else
+        <p></p>
+    @endif
 @endsection
 

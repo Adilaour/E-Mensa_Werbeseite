@@ -28,5 +28,6 @@ return array(
     // Meilenstein 6 | Bewertungen
     '/bewertung' => 'BewertungsController@bewertung',
     '/bewertungen' => 'BewertungsController@bewertungen',
-    '/meinebewertungen' => 'BewertungsController@meinebewertungen'
+    '/meinebewertungen' => 'BewertungsController@meinebewertungen',
+    '/bewertung_loeschen' => 'BewertungsController@bewertung_loeschen'
 );

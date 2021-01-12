@@ -21,7 +21,6 @@ function bewertungen_eintragen(){
     // Erfolgsnachricht speichern
     $_SESSION['bewertung_result_message'] = 'Ihre Bewertung wurde gespeichert.';
 }
-
 function neuste_bewertungen_abfragen(){
     $link = connectdb();
     $sql= "SELECT gericht_id, sterne, bemerkung, benutzer_id, wichtig, bewertungszeitpunkt FROM bewertungen ORDER BY bewertungszeitpunkt DESC LIMIT 30";
@@ -30,7 +29,6 @@ function neuste_bewertungen_abfragen(){
     mysqli_close($link);
     return $data;
 }
-
 function meinebewertungen_abfragen(){
     $link = connectdb();
     $sql= "SELECT * FROM bewertungen WHERE benutzer_id = ".$_SESSION['nutzerid']." ORDER BY bewertungszeitpunkt DESC";
@@ -38,4 +36,14 @@ function meinebewertungen_abfragen(){
     $data = mysqli_fetch_all($result, MYSQLI_BOTH);
     mysqli_close($link);
     return $data;
+}
+function delete_bewertung($delbewertung_id){
+    $link = connectdb();
+    $loeschung = mysqli_stmt_init($link);
+    $userid = (int) $_SESSION['nutzerid'];
+    mysqli_stmt_prepare($loeschung, "DELETE FROM bewertungen WHERE id = ? AND benutzer_id = ?");
+    mysqli_stmt_bind_param($loeschung, 'ii', $delbewertung_id, $userid);
+    mysqli_stmt_execute($loeschung);
+    mysqli_close($link);
+    $_SESSION['bewertung_result_message'] = 'Ihre Bewertung wurde gelöscht.';
 }
