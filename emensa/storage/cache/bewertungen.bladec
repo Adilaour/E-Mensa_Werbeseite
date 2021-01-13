@@ -8,32 +8,33 @@
  <th>Bemerkung</th>
  <th>Nutzer</th>
  <th>Wichtig</th>
- <th>Erstellungszeitpunkt</th>
+ <th>Bewertungszeitpunkt</th>
+ <th>Manuell hervorheben</th>
  </tr>
  <?php $__currentLoopData = $bewertungen; $this->addLoop($__currentLoopData);$this->getFirstLoop();
  foreach($__currentLoopData as $bewertung): $loop = $this->incrementLoopIndices();  ?>
  <tr>
+ <!-- Speise -->
  <td><?php echo \htmlentities($bewertung[0], ENT_QUOTES, 'UTF-8', false); ?></td>
+ <!-- Sterne -->
  <td><?php echo \htmlentities($bewertung[1], ENT_QUOTES, 'UTF-8', false); ?></td>
+ <!-- Bemerkung -->
  <td><?php echo \htmlentities($bewertung[2], ENT_QUOTES, 'UTF-8', false); ?></td>
+ <!-- Nutzer -->
  <td><?php echo \htmlentities($bewertung[3], ENT_QUOTES, 'UTF-8', false); ?></td>
-
-
-
- <!--1/0 true/false zu checked oder unchecked übersetzen-->
-
-
+ <!-- Wichtig -->
  <?php if($bewertung[4] == 1): ?>
  <td><input type="checkbox" name="hervorheben" id="hervorheben" checked disabled></td>
  <?php elseif($bewertung[4] == 0): ?>
  <td><input type="checkbox" name="hervorheben" id="hervorheben" disabled></td>
  <?php endif; ?>
-
-
-
-
-
+ <!-- Bewertungszeitpunkt -->
  <td><?php echo \htmlentities($bewertung[5], ENT_QUOTES, 'UTF-8', false); ?></td>
+ <!-- Manuell hervorheben -->
+ <td><a href="bewertung_manuell_hervorheben">Bewertunge hervorheben</a></td>
+
+
+
  </tr>
  <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
  </table>

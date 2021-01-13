@@ -13,6 +13,7 @@ function login_success($user){
     mysqli_stmt_bind_param($stmt, 'i', $userid);
     mysqli_stmt_execute($stmt);
     $_SESSION['nutzerid'] = $userid;
+    $_SESSION['bewertung_result_message'] = 'Anmeldung erfolgreich.';
     $stmt2 = mysqli_prepare($link, 'UPDATE benutzer SET letzteanmeldung = current_timestamp() WHERE email = ?');
     mysqli_stmt_bind_param($stmt2, 's', $user);
     mysqli_stmt_execute($stmt2);
@@ -88,7 +89,7 @@ function adminuser(){
     $data = $data[0];
     if($data[0]==1){
         $_SESSION['userisadmin'] = true;
-    }elseif ($data[0]==0){
+    }else{
         $_SESSION['userisadmin'] = false;
     }
 }
