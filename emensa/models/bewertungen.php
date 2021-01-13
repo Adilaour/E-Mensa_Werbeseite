@@ -25,7 +25,7 @@ function bewertungen_eintragen(){
 // M6.1.c.6
 function neuste_bewertungen_abfragen(){
     $link = connectdb();
-    $sql= "SELECT gericht_id, sterne, bemerkung, benutzer_id, wichtig, bewertungszeitpunkt FROM bewertungen ORDER BY bewertungszeitpunkt DESC LIMIT 30";
+    $sql= "SELECT * FROM bewertungen ORDER BY bewertungszeitpunkt DESC LIMIT 30";
     $result = mysqli_query($link, $sql);
     $data = mysqli_fetch_all($result, MYSQLI_BOTH);
     mysqli_close($link);
@@ -50,4 +50,26 @@ function delete_bewertung($delbewertung_id){
     mysqli_stmt_execute($loeschung);
     mysqli_close($link);
     $_SESSION['bewertung_result_message'] = 'Ihre Bewertung wurde gelöscht.';
+}
+// M6.2.1
+function bewertung_hervorheben(){
+    $idbewertung = (int) $_GET['bewertung'];
+    $link = connectdb();
+    $flagging = mysqli_stmt_init($link);
+    mysqli_stmt_prepare($flagging, "UPDATE bewertungen SET wichtig = 1 WHERE id = ?");
+    mysqli_stmt_bind_param($flagging, 'i',$idbewertung);
+    mysqli_stmt_execute($flagging);
+    mysqli_close($link);
+    $_SESSION['bewertung_result_message'] = 'Bewertung wurde hervorgehoben.';
+}
+// M6.2.2
+function bewertung_abwaehlen(){
+    $idbewertung = (int) $_GET['bewertung'];
+    $link = connectdb();
+    $flagging = mysqli_stmt_init($link);
+    mysqli_stmt_prepare($flagging, "UPDATE bewertungen SET wichtig = 0 WHERE id = ?");
+    mysqli_stmt_bind_param($flagging, 'i',$idbewertung);
+    mysqli_stmt_execute($flagging);
+    mysqli_close($link);
+    $_SESSION['bewertung_result_message'] = 'Bewertung wurde abgewählt.';
 }

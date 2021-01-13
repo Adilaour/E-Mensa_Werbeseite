@@ -33,9 +33,9 @@
  <li><a href="#news">Ankündigung</a></li>
  <li><a href="#meals">Speisen</a></li>
  <li><a href="#zahlen">Zahlen</a></li>
+ <li><a href="#reviews">Bewertungen</a></li>
  <li><a href="#contact">Kontakt</a></li>
  <li><a href="#wichtig">Wichtig für uns</a></li>
-
  </ul>
  </nav>
  <?php if(isset($_SESSION['login_ok']) && isset($_SESSION['nutzer'])): ?>

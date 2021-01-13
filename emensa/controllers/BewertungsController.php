@@ -69,12 +69,25 @@ class BewertungsController
         header('Location: /meinebewertungen');
 
     }
+
     public function bewertung_manuell_hervorheben(RequestData $request){
 
+        bewertung_hervorheben();
 
 
 
+        $bewertungen = neuste_bewertungen_abfragen();
+        $msg = $_SESSION['bewertung_result_message'] ?? 'Bewertung manuell hervorgehoben.';
         logger()->info('Bewertung manuell hervorgehoben');
+        return view('bewertungen', ['rd' => $request, 'title' => 'Übersicht Bewertungen12', 'msg'=> $msg, 'bewertungen' => $bewertungen]);
+    }
+    public function bewertung_manuell_abwaehlen(RequestData $request){
+
+        bewertung_abwaehlen();
+
+        $bewertungen = neuste_bewertungen_abfragen();
+        $msg = $_SESSION['bewertung_result_message'] ?? 'Bewertung manuell abgewählt.';
+        logger()->info('Bewertung manuell abgewählt');
         return view('bewertungen', ['rd' => $request, 'title' => 'Übersicht Bewertungen', 'msg'=> $msg, 'bewertungen' => $bewertungen]);
     }
 }

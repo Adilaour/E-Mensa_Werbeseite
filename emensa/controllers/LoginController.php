@@ -38,9 +38,10 @@ class LoginController
     }
     // M5.1.8
     public function profil(RequestData $request){
+        $data = adminuser();
 
 
-        return view('profil', ['rd' => $request, 'title'=>'Mein Profil']);
+        return view('profil', ['rd' => $request, 'title'=>'Mein Profil', 'data' => $data]);
 
     }
     // M5.1.10

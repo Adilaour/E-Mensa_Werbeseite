@@ -131,6 +131,22 @@
  </div>
  </div>
  </div>
+ <div class="mainitem" id="reviews">
+ <h2>Meinungen unserer Gäste</h2>
+ <table>
+ <tr>
+ <th>Speise</th>
+ <th>Sterne</th>
+ <th>Bemerkung</th>
+ </tr>
+
+
+
+
+
+
+ </table>
+ </div>
  <div class="mainitem" id="contact">
  <h2>Interesse geweckt? Wir informieren Sie!</h2>
  <form action="index.php" method="post" name="newsletteranmeldung_landingpage" class="newsletteranmeldung_landingpage">

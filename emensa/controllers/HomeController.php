@@ -5,6 +5,8 @@ require_once('../models/gericht.php');
 class HomeController
 {
     public function index(RequestData $request) {
+
+
         logger()->info('Home besucht');
         return view('home', ['rd' => $request, 'title' => 'Home' ]);
     }

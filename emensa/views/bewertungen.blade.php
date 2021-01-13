@@ -12,38 +12,48 @@
             <th>Manuell hervorheben</th>
         </tr>
         @foreach($bewertungen as $bewertung)
-            <tr>
-                <!-- Speise -->
-                <td>{{$bewertung[0]}}</td>
-                <!-- Sterne -->
-                <td>{{$bewertung[1]}}</td>
-                <!-- Bemerkung -->
-                <td>{{$bewertung[2]}}</td>
-                <!-- Nutzer -->
-                <td>{{$bewertung[3]}}</td>
-                <!-- Wichtig -->
-                @if($bewertung[4] == 1)
+            @if($bewertung[1] == 1)
+                <tr style=" color:red;" >
+                    <!-- Speise -->
+                    <td>{{$bewertung[6]}}</td>
+                    <!-- Sterne -->
+                    <td>{{$bewertung[3]}}</td>
+                    <!-- Bemerkung -->
+                    <td>{{$bewertung[4]}}</td>
+                    <!-- Nutzer -->
+                    <td>{{$bewertung[5]}}</td>
+                    <!-- Wichtig -->
                     <td><input type="checkbox" name="hervorheben" id="hervorheben" checked disabled></td>
-                @elseif($bewertung[4] == 0)
+                    <!-- Bewertungszeitpunkt -->
+                    <td>{{$bewertung[2]}}</td>
+                    <!-- Manuell hervorheben -->
+                    <td><a href="bewertung_manuell_abwaehlen?bewertung={{$bewertung[0]}}">Bewertung abwählen</a></td>
+                </tr>
+            @elseif($bewertung[1] == 0)
+                <tr>
+                    <!-- Speise -->
+                    <td>{{$bewertung[6]}}</td>
+                    <!-- Sterne -->
+                    <td>{{$bewertung[3]}}</td>
+                    <!-- Bemerkung -->
+                    <td>{{$bewertung[4]}}</td>
+                    <!-- Nutzer -->
+                    <td>{{$bewertung[5]}}</td>
+                    <!-- Wichtig -->
                     <td><input type="checkbox" name="hervorheben" id="hervorheben" disabled></td>
-                @endif
-                <!-- Bewertungszeitpunkt -->
-                <td>{{$bewertung[5]}}</td>
-                <!-- Manuell hervorheben -->
-                @if($bewertung[4] == 1)
-                    <td><a href="bewertung_manuell_abwaehlen">Bewertung abwählen</a></td>
-                @elseif($bewertung[4] == 0)
-                    <td><a href="bewertung_manuell_hervorheben">Bewertung hervorheben</a></td>
-                @endif
-
-
-
-
-            </tr>
+                    <!-- Bewertungszeitpunkt -->
+                    <td>{{$bewertung[2]}}</td>
+                    <!-- Manuell hervorheben -->
+                    <td><a href="bewertung_manuell_hervorheben?bewertung={{$bewertung[0]}}">Bewertung hervorheben</a></td>
+                </tr>
+            @endif
         @endforeach
     </table>
 
+
 @endsection
+
+
 
 
 
