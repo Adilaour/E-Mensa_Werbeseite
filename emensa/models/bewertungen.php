@@ -73,3 +73,27 @@ function bewertung_abwaehlen(){
     mysqli_close($link);
     $_SESSION['bewertung_result_message'] = 'Bewertung wurde abgewählt.';
 }
+// M6.2.3
+function bewertungen_startseite(){
+    $speisen = [];
+    $speisenamen = [];
+    $link = connectdb();
+    $sql= "SELECT * FROM bewertungen WHERE wichtig = 1 ORDER BY bewertungszeitpunkt DESC LIMIT 10";
+    $result = mysqli_query($link, $sql);
+    $data = mysqli_fetch_all($result, MYSQLI_BOTH);
+    mysqli_close($link);
+    foreach($data as $bewertung){
+        array_push($speisen, (int) $bewertung[6]);
+    }
+    foreach($speisen as $speiseid){
+        $link2 = connectdb();
+        $sql2 = "SELECT name FROM gericht WHERE id = "."$speiseid";
+        $result2 = mysqli_query($link2, $sql2);
+        $speisename = mysqli_fetch_all($result2, MYSQLI_BOTH);
+        array_push($speisenamen, $speisename[0][0]);
+    }
+    $ausgabe = [];
+    array_push($ausgabe, $data);
+    array_push($ausgabe, $speisenamen);
+    return $ausgabe;
+}

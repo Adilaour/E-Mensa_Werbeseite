@@ -139,12 +139,14 @@
                 <th>Sterne</th>
                 <th>Bemerkung</th>
             </tr>
+            @foreach($bewertungen as $bewertung)
+                <tr>
+                    <td>{{$speisenamen[$loop->index]}}</td>
+                    <td>{{$bewertung[3]}}</td>
+                    <td>{{$bewertung[4]}}</td>
+                </tr>
 
-
-
-
-
-
+            @endforeach
         </table>
     </div>
     <div class="mainitem" id="contact">
