@@ -3,7 +3,6 @@ function login_success($user){
     // Datenbankeinträge aktualisieren
     $link = connectdb();
     mysqli_begin_transaction($link, MYSQLI_TRANS_START_READ_WRITE);
-
     $idabfrage = mysqli_prepare($link, "SELECT id FROM benutzer WHERE email = ?");
     mysqli_stmt_bind_param($idabfrage, 's', $user);
     mysqli_stmt_execute($idabfrage);
@@ -74,6 +73,24 @@ function logincheck($user, $code){
     }
     mysqli_close($link);
     return false;
+}
+
+
+
+// MISC
+function adminuser(){
+    $link = connectdb();
+    $userid = (int) $_SESSION['nutzerid'];
+    $sql= "SELECT admin FROM benutzer WHERE id = ".$userid;
+    $result = mysqli_query($link, $sql);
+    $data = mysqli_fetch_all($result, MYSQLI_BOTH);
+    mysqli_close($link);
+    $data = $data[0];
+    if($data[0]==1){
+        $_SESSION['userisadmin'] = true;
+    }elseif ($data[0]==0){
+        $_SESSION['userisadmin'] = false;
+    }
 }
 
 

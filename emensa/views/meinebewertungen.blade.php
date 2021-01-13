@@ -15,7 +15,6 @@
                 <td>{{$bewertung[6]}}</td>
                 <td>{{$bewertung[3]}}</td>
                 <td>{{$bewertung[4]}}</td>
-
                 <td>{{$bewertung[1]}}</td>
                 <td>{{$bewertung[2]}}</td>
                 <td><a href="bewertung_loeschen?delbewertung={{$bewertung[0]}}">Bewertung löschen</a></td>

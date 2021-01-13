@@ -25,6 +25,7 @@ class LoginController
         if(logincheck($email, $kennwort) == true){
             $_SESSION['login_ok'] = true;
             $_SESSION['nutzer'] = $name[0];
+            adminuser();
             login_success($email);
             header('Location: /');
             logger()->info('Anmeldung verifiziert');
@@ -37,6 +38,7 @@ class LoginController
     }
     // M5.1.8
     public function profil(RequestData $request){
+
         return view('profil', ['rd' => $request, 'title'=>'Mein Profil']);
 
     }
@@ -45,6 +47,7 @@ class LoginController
         $_SESSION['login_ok'] = false;
         $_SESSION['nutzer'] = null;
         $_SESSION['nutzerid'] = null;
+        $_SESSION['userisadmin'] = null;
         session_destroy();
         header('Location: /');
         logger()->info('Abmeldung erfolgreich');

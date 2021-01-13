@@ -8,4 +8,8 @@ class HomeController
         logger()->info('Home besucht');
         return view('home', ['rd' => $request, 'title' => 'Home' ]);
     }
+    public function rechte_fehlen(RequestData $request){
+        logger()->warning('Es wurde versucht nicht vorhandene Rechte zu verwenden.');
+        return view('rechte_fehlen', ['rd' => $request, 'title' => 'Ihnen fehlen die erforderlichen Rechte' ]);
+    }
 }

@@ -29,5 +29,8 @@ return array(
     '/bewertung' => 'BewertungsController@bewertung',
     '/bewertungen' => 'BewertungsController@bewertungen',
     '/meinebewertungen' => 'BewertungsController@meinebewertungen',
-    '/bewertung_loeschen' => 'BewertungsController@bewertung_loeschen'
+    '/bewertung_loeschen' => 'BewertungsController@bewertung_loeschen',
+
+    // MISC
+    '/rechte_fehlen'=>'HomeController@rechte_fehlen'
 );

@@ -12,7 +12,6 @@ class BewertungsController
             } else{
                 $preset_mealid = null;
             }
-
             if($preset_mealid!= null){
                 $data = gerichtname_by_id($preset_mealid);
             }
@@ -22,7 +21,6 @@ class BewertungsController
                 // Formular hat Reload ausgelöst. Einträge anpassen und in DB eintragen
                 bewertungen_eintragen();
                 $msg = $_SESSION['bewertung_result_message'] ?? null;
-
                 return view('bewertung', ['rd' => $request, 'title' => 'Bewertungen', 'msg'=> $msg, 'gericht_id' => $preset_mealid, 'data'=>$data]);
             }else{
                 // Normaler Aufruf der Seite
@@ -35,11 +33,18 @@ class BewertungsController
             return view('anmeldung', ['rd' => $request, 'title' => 'Anmeldung' ] );
         }
     }
+    // M6.1.c.6
     public function bewertungen(RequestData $request){
-        $bewertungen = neuste_bewertungen_abfragen();
-        logger()->info('Bewertungen besucht');
-        return view('bewertungen', ['rd' => $request, 'title' => 'Übersicht Bewertungen', 'bewertungen' => $bewertungen ]);
+        if($_SESSION['userisadmin'] == 1){
+            $bewertungen = neuste_bewertungen_abfragen();
+            logger()->info('Bewertungen besucht');
+            return view('bewertungen', ['rd' => $request, 'title' => 'Übersicht Bewertungen', 'bewertungen' => $bewertungen ]);
+        } else {
+            header('Location: /rechte_fehlen');
+        }
+
     }
+    // M6.1.c.7
     public function meinebewertungen(RequestData $request){
         if(isset($_SESSION['login_ok'])) {
             $bewertungen = meinebewertungen_abfragen();
@@ -56,6 +61,7 @@ class BewertungsController
             return view('anmeldung', ['rd' => $request, 'title' => 'Anmeldung']);
         }
     }
+    // M6.1.c.8
     public function bewertung_loeschen(RequestData $request){
         $delbewertung_id = (int) $_GET['delbewertung'];
         delete_bewertung($delbewertung_id);

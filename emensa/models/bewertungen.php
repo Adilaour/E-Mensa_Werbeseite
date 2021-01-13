@@ -1,4 +1,5 @@
 <?php
+// M6.1.c.1
 function bewertungen_eintragen(){
     $link = connectdb();
     // Werte vorbereiten & ggf. maskieren
@@ -21,6 +22,7 @@ function bewertungen_eintragen(){
     // Erfolgsnachricht speichern
     $_SESSION['bewertung_result_message'] = 'Ihre Bewertung wurde gespeichert.';
 }
+// M6.1.c.6
 function neuste_bewertungen_abfragen(){
     $link = connectdb();
     $sql= "SELECT gericht_id, sterne, bemerkung, benutzer_id, wichtig, bewertungszeitpunkt FROM bewertungen ORDER BY bewertungszeitpunkt DESC LIMIT 30";
@@ -29,6 +31,7 @@ function neuste_bewertungen_abfragen(){
     mysqli_close($link);
     return $data;
 }
+// M6.1.c.7
 function meinebewertungen_abfragen(){
     $link = connectdb();
     $sql= "SELECT * FROM bewertungen WHERE benutzer_id = ".$_SESSION['nutzerid']." ORDER BY bewertungszeitpunkt DESC";
@@ -37,6 +40,7 @@ function meinebewertungen_abfragen(){
     mysqli_close($link);
     return $data;
 }
+// M6.1.c.8
 function delete_bewertung($delbewertung_id){
     $link = connectdb();
     $loeschung = mysqli_stmt_init($link);

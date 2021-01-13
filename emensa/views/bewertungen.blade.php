@@ -7,23 +7,33 @@
             <th>Sterne</th>
             <th>Bemerkung</th>
             <th>Nutzer</th>
-            <th>Hervorgehoben</th>
-            <th>Erstellungszeitpunkt</th>
+            <th>Wichtig</th>
+            <th>Bewertungszeitpunkt</th>
+            <th>Manuell hervorheben</th>
         </tr>
         @foreach($bewertungen as $bewertung)
             <tr>
+                <!-- Speise -->
                 <td>{{$bewertung[0]}}</td>
+                <!-- Sterne -->
                 <td>{{$bewertung[1]}}</td>
+                <!-- Bemerkung -->
                 <td>{{$bewertung[2]}}</td>
+                <!-- Nutzer -->
                 <td>{{$bewertung[3]}}</td>
-
-
-
-                <!--1/0 true/false zu checked oder unchecked übersetzen-->
-                <td>{{$bewertung[4]}}</td>
-
-
+                <!-- Wichtig -->
+                @if($bewertung[4] == 1)
+                    <td><input type="checkbox" name="hervorheben" id="hervorheben" checked disabled></td>
+                @elseif($bewertung[4] == 0)
+                    <td><input type="checkbox" name="hervorheben" id="hervorheben" disabled></td>
+                @endif
+                <!-- Bewertungszeitpunkt -->
                 <td>{{$bewertung[5]}}</td>
+                <!-- Manuell hervorheben -->
+                <td><a href="bewertung_manuell_hervorheben">Bewertunge hervorheben</a></td>
+
+
+
             </tr>
         @endforeach
     </table>
