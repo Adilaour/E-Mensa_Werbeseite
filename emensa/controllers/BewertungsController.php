@@ -69,4 +69,12 @@ class BewertungsController
         header('Location: /meinebewertungen');
 
     }
+    public function bewertung_manuell_hervorheben(RequestData $request){
+
+
+
+
+        logger()->info('Bewertung manuell hervorgehoben');
+        return view('bewertungen', ['rd' => $request, 'title' => 'Übersicht Bewertungen', 'msg'=> $msg, 'bewertungen' => $bewertungen]);
+    }
 }

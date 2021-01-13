@@ -10,6 +10,6 @@ class HomeController
     }
     public function rechte_fehlen(RequestData $request){
         logger()->warning('Es wurde versucht nicht vorhandene Rechte zu verwenden.');
-        return view('rechte_fehlen', ['rd' => $request, 'title' => 'Ihnen fehlen die erforderlichen Rechte' ]);
+        return view('rechte_fehlen', ['rd' => $request, 'title' => 'Ihnen fehlen die erforderlichen Rechte']);
     }
 }

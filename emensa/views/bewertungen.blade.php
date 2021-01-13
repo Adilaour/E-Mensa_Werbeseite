@@ -30,7 +30,12 @@
                 <!-- Bewertungszeitpunkt -->
                 <td>{{$bewertung[5]}}</td>
                 <!-- Manuell hervorheben -->
-                <td><a href="bewertung_manuell_hervorheben">Bewertunge hervorheben</a></td>
+                @if($bewertung[4] == 1)
+                    <td><a href="bewertung_manuell_abwaehlen">Bewertung abwählen</a></td>
+                @elseif($bewertung[4] == 0)
+                    <td><a href="bewertung_manuell_hervorheben">Bewertung hervorheben</a></td>
+                @endif
+
 
 
 
@@ -39,3 +44,10 @@
     </table>
 
 @endsection
+
+
+
+
+
+
+

@@ -39,6 +39,7 @@ class LoginController
     // M5.1.8
     public function profil(RequestData $request){
 
+
         return view('profil', ['rd' => $request, 'title'=>'Mein Profil']);
 
     }

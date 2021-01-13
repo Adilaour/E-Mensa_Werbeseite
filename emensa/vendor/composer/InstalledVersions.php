@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '37d460986958dc6b5645b4114f028d626ed13b37',
+    'reference' => 'e95848ec562682727045fef9395ee64bff62eda0',
     'name' => 'emensa/mvc',
   ),
   'versions' => 
@@ -49,7 +49,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '37d460986958dc6b5645b4114f028d626ed13b37',
+      'reference' => 'e95848ec562682727045fef9395ee64bff62eda0',
     ),
     'illuminate/collections' => 
     array (

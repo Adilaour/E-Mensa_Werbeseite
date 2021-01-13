@@ -261,7 +261,7 @@ CREATE VIEW view_anmeldungen AS
     ORDER BY anzahlanmeldungen DESC ;
 -- M5.4.3
 CREATE VIEW view_kategoriegerichte_vegetarisch AS
-SELECT kategorie.name AS Kategorie,  gericht.name AS Gericht
+SELECT kategorie.name AS Kategorie, gericht.name AS Gericht
 FROM kategorie LEFT JOIN gericht INNER JOIN gericht_hat_kategorie
                                             ON gericht.id = gericht_hat_kategorie.gericht_id
                                             ON  kategorie.id = gericht_hat_kategorie.kategorie_id
@@ -272,3 +272,25 @@ CREATE PROCEDURE anmeldecounter ( IN ID INTEGER )
 BEGIN
     UPDATE benutzer SET anzahlanmeldungen = anzahlanmeldungen +1 WHERE id = ID;
 END;
+
+-- M6.1.b   | Bewertungen in Datenbank implementieren
+DROP TABLE bewertungen;
+CREATE TABLE bewertungen(
+    id          INTEGER PRIMARY KEY AUTO_INCREMENT,
+    wichtig     BOOLEAN NOT NULL,
+    bewertungszeitpunkt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    sterne      INTEGER NOT NULL  DEFAULT 0,
+    bemerkung   VARCHAR(500) NOT NULL,
+    benutzer_id BIGINT NOT NULL,
+    gericht_id  INTEGER NOT NULL);
+ALTER TABLE bewertungen
+    ADD CONSTRAINT benutzer_id_fk FOREIGN KEY (benutzer_id) REFERENCES benutzer(id);
+ALTER TABLE bewertungen
+    ADD CONSTRAINT gericht_id_fk FOREIGN KEY (gericht_id) REFERENCES gericht(id);
+
+
+
+-- MISC
+CREATE TABLE trashmails(
+hoster      VARCHAR(50)
+);

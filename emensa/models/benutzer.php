@@ -92,6 +92,7 @@ function adminuser(){
     }else{
         $_SESSION['userisadmin'] = false;
     }
+
 }
 
 
