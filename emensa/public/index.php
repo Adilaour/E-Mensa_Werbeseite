@@ -4,6 +4,10 @@ const PUBLIC_DIRNAME = "public";
 const CONFIG_WEBROUTES = '../config/web.php';
 const CONFIG_DB = '../config/db.php';
 
+require_once "../vendor/autoload.php";
+require_once "../config/orm.php";
+
+
 require_once $_SERVER['DOCUMENT_ROOT']."/../vendor/autoload.php";
 use eftec\bladeone\BladeOne;
 
@@ -191,5 +195,3 @@ function logger(){
     }
     return $logger;
 }
-
-

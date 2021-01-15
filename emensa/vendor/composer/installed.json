@@ -100,17 +100,17 @@
         },
         {
             "name": "eftec/bladeone",
-            "version": "3.47.3",
-            "version_normalized": "3.47.3.0",
+            "version": "3.49.1",
+            "version_normalized": "3.49.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EFTEC/BladeOne.git",
-                "reference": "6829b328505bbb0ad4aad8b87b9eb12874e79697"
+                "reference": "b30021e41d0182e8bcce495484024643f18b9d2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EFTEC/BladeOne/zipball/6829b328505bbb0ad4aad8b87b9eb12874e79697",
-                "reference": "6829b328505bbb0ad4aad8b87b9eb12874e79697",
+                "url": "https://api.github.com/repos/EFTEC/BladeOne/zipball/b30021e41d0182e8bcce495484024643f18b9d2e",
+                "reference": "b30021e41d0182e8bcce495484024643f18b9d2e",
                 "shasum": ""
             },
             "require": {
@@ -126,7 +126,7 @@
                 "eftec/bladeonehtml": "Extension to create forms",
                 "ext-mbstring": "This extension is used if it's active"
             },
-            "time": "2020-10-16T22:36:05+00:00",
+            "time": "2021-01-14T12:14:45+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -155,14 +155,14 @@
             ],
             "support": {
                 "issues": "https://github.com/EFTEC/BladeOne/issues",
-                "source": "https://github.com/EFTEC/BladeOne/tree/3.47.3"
+                "source": "https://github.com/EFTEC/BladeOne/tree/3.49.1"
             },
             "install-path": "../eftec/bladeone"
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.22.0",
-            "version_normalized": "8.22.0.0",
+            "version": "v8.22.1",
+            "version_normalized": "8.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -218,8 +218,8 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v8.22.0",
-            "version_normalized": "8.22.0.0",
+            "version": "v8.22.1",
+            "version_normalized": "8.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -272,8 +272,8 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.22.0",
-            "version_normalized": "8.22.0.0",
+            "version": "v8.22.1",
+            "version_normalized": "8.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -323,17 +323,17 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v8.22.0",
-            "version_normalized": "8.22.0.0",
+            "version": "v8.22.1",
+            "version_normalized": "8.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "c6ad4bdfa94c259d5ece11c523172238f01dfa00"
+                "reference": "4a2040c25d28315be005784a9ea4c2efb2a95a27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/c6ad4bdfa94c259d5ece11c523172238f01dfa00",
-                "reference": "c6ad4bdfa94c259d5ece11c523172238f01dfa00",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/4a2040c25d28315be005784a9ea4c2efb2a95a27",
+                "reference": "4a2040c25d28315be005784a9ea4c2efb2a95a27",
                 "shasum": ""
             },
             "require": {
@@ -355,7 +355,7 @@
                 "illuminate/pagination": "Required to paginate the result set (^8.0).",
                 "symfony/finder": "Required to use Eloquent model factories (^5.1.4)."
             },
-            "time": "2021-01-12T15:30:54+00:00",
+            "time": "2021-01-13T13:37:56+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -394,8 +394,8 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.22.0",
-            "version_normalized": "8.22.0.0",
+            "version": "v8.22.1",
+            "version_normalized": "8.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -443,17 +443,17 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v8.22.0",
-            "version_normalized": "8.22.0.0",
+            "version": "v8.22.1",
+            "version_normalized": "8.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "880b330c516f3e5cd9a096b9f476e3c82db2eb93"
+                "reference": "6a516676a83d2a73c46eaf7907f730e86ef60da5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/880b330c516f3e5cd9a096b9f476e3c82db2eb93",
-                "reference": "880b330c516f3e5cd9a096b9f476e3c82db2eb93",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/6a516676a83d2a73c46eaf7907f730e86ef60da5",
+                "reference": "6a516676a83d2a73c46eaf7907f730e86ef60da5",
                 "shasum": ""
             },
             "require": {
@@ -477,7 +477,7 @@
                 "symfony/var-dumper": "Required to use the dd function (^5.1.4).",
                 "vlucas/phpdotenv": "Required to use the Env class and env helper (^5.2)."
             },
-            "time": "2021-01-12T15:30:54+00:00",
+            "time": "2021-01-13T13:37:56+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {

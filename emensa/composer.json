@@ -5,5 +5,10 @@
       "ext-mysqli": "*",
       "monolog/monolog": "*",
         "illuminate/database": "^8.22"
-    }
+    },
+  "autoload": {
+    "classmap": [
+      "models"
+    ]
+  }
 }

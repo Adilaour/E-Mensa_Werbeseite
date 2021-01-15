@@ -5,13 +5,14 @@ BladeOne is a standalone version of Blade Template Engine that uses a single PHP
 
 Бладеоне-это отдельная версия ядра Blade-шаблонов, которая использует один PHP-файл и может быть портирована и использована в различных проектах. Он позволяет использовать шаблон Blade за пределами laravel.    
 
-[![Build Status](https://travis-ci.org/EFTEC/BladeOne.svg?branch=master)](https://travis-ci.org/EFTEC/BladeOne)
+
 [![Packagist](https://img.shields.io/packagist/v/eftec/bladeone.svg)](https://packagist.org/packages/eftec/bladeone)
 [![Total Downloads](https://poser.pugx.org/eftec/bladeone/downloads)](https://packagist.org/packages/eftec/bladeone)
-[![Maintenance](https://img.shields.io/maintenance/yes/2020.svg)]()
+[![Maintenance](https://img.shields.io/maintenance/yes/2021.svg)]()
 [![composer](https://img.shields.io/badge/composer-%3E1.6-blue.svg)]()
 [![php](https://img.shields.io/badge/php->5.6-green.svg)]()
 [![php](https://img.shields.io/badge/php-7.x-green.svg)]()
+[![php](https://img.shields.io/badge/php-8.x-green.svg)]()
 [![CocoaPods](https://img.shields.io/badge/docs-70%25-yellow.svg)]()
 
 
@@ -74,7 +75,19 @@ I will try to answer all and every one of the question (in my limited time).
 * [Changes between 2.x and 3.0 and TODO](https://github.com/EFTEC/BladeOne/wiki/Changes-between-2.x-and-3.0-and-TODO)   
 * [Code Protection (Sourceguardian and similars)](https://github.com/EFTEC/BladeOne/wiki/Code-Protection-(Sourceguardian-and-similars))   
 
+## Why does it support PHP 5.x?
 
+As for today (January 2021), PHP 5.x is still strong even when it is discontinued, but my main problem is the performance.
+
+* PHP 7.x 60.2%
+* PHP 5.x 39.5%
+* PHP 8.x 00.1%
+
+* PHP 7.0 brings some new features and definitions. One is the use of type-hinting. While it could be useful, but it affects the performance
+so there is not reason to use it for this library (we use PHPDOC and it doesn't affect the performance).   
+* PHP 7.0 adds some new features such as is_countable(). However, it is slower than the method used here. 
+* We could also use Null Coalescing Operator, but it is not slower or faster than a ternary operator. 
+* PHP 8.0 also adds str_contains(), but it doesn't bring a sustancial performance but syntax sugar. 
 
 
 ## Laravel blade tutorial
@@ -467,6 +480,6 @@ You are welcome to use it, share it, ask for changes and whatever you want to. J
 
 ## License
 MIT License.
-BladeOne (c) 2016-2020 Jorge Patricio Castro Castillo
+BladeOne (c) 2016-2021 Jorge Patricio Castro Castillo
 Blade (c) 2012 Laravel Team (This code is based and inspired in the work of the team of Laravel, however BladeOne is mostly a original work)
 

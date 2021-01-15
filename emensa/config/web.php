@@ -32,7 +32,9 @@ return array(
     '/bewertung_loeschen' => 'BewertungsController@bewertung_loeschen',
     '/bewertung_manuell_hervorheben' => 'BewertungsController@bewertung_manuell_hervorheben',
     '/bewertung_manuell_abwaehlen' => 'BewertungsController@bewertung_manuell_abwaehlen',
+    '/gericht_hinzufuegen' => 'HomeController@gericht_hinzufuegen',
 
     // MISC
-    '/rechte_fehlen'=>'HomeController@rechte_fehlen'
+    '/rechte_fehlen'=>'HomeController@rechte_fehlen',
+    '/test' => 'BewertungsController@test'
 );

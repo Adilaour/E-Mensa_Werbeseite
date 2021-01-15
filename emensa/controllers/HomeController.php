@@ -19,4 +19,10 @@ class HomeController
         logger()->warning('Es wurde versucht nicht vorhandene Rechte zu verwenden.');
         return view('rechte_fehlen', ['rd' => $request, 'title' => 'Ihnen fehlen die erforderlichen Rechte']);
     }
+
+    public function gericht_hinzufuegen(RequestData $request){
+
+        return view('gericht_hinzufuegen', ['rd' => $request, 'title' => 'Gericht hinzufügen']);
+
+    }
 }

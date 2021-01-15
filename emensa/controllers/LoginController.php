@@ -1,5 +1,6 @@
 <?php
 require_once('../models/benutzer.php');
+require_once('../models/gericht.php');
 
 class LoginController
 {
@@ -39,10 +40,8 @@ class LoginController
     // M5.1.8
     public function profil(RequestData $request){
         $data = adminuser();
-
-
-        return view('profil', ['rd' => $request, 'title'=>'Mein Profil', 'data' => $data]);
-
+        $favmeal = lieblingsspeise();
+        return view('profil', ['rd' => $request, 'title'=>'Mein Profil', 'data' => $data, 'favmeal'=>$favmeal]);
     }
     // M5.1.10
     public function abmeldung(RequestData $request){

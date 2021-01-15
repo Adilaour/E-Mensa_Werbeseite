@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'e95848ec562682727045fef9395ee64bff62eda0',
+    'reference' => '60e15d50e732e62f4a7b628db402cfc5eeccbf57',
     'name' => 'emensa/mvc',
   ),
   'versions' => 
@@ -35,12 +35,12 @@ private static $installed = array (
     ),
     'eftec/bladeone' => 
     array (
-      'pretty_version' => '3.47.3',
-      'version' => '3.47.3.0',
+      'pretty_version' => '3.49.1',
+      'version' => '3.49.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6829b328505bbb0ad4aad8b87b9eb12874e79697',
+      'reference' => 'b30021e41d0182e8bcce495484024643f18b9d2e',
     ),
     'emensa/mvc' => 
     array (
@@ -49,12 +49,12 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'e95848ec562682727045fef9395ee64bff62eda0',
+      'reference' => '60e15d50e732e62f4a7b628db402cfc5eeccbf57',
     ),
     'illuminate/collections' => 
     array (
-      'pretty_version' => 'v8.22.0',
-      'version' => '8.22.0.0',
+      'pretty_version' => 'v8.22.1',
+      'version' => '8.22.1.0',
       'aliases' => 
       array (
       ),
@@ -62,8 +62,8 @@ private static $installed = array (
     ),
     'illuminate/container' => 
     array (
-      'pretty_version' => 'v8.22.0',
-      'version' => '8.22.0.0',
+      'pretty_version' => 'v8.22.1',
+      'version' => '8.22.1.0',
       'aliases' => 
       array (
       ),
@@ -71,8 +71,8 @@ private static $installed = array (
     ),
     'illuminate/contracts' => 
     array (
-      'pretty_version' => 'v8.22.0',
-      'version' => '8.22.0.0',
+      'pretty_version' => 'v8.22.1',
+      'version' => '8.22.1.0',
       'aliases' => 
       array (
       ),
@@ -80,17 +80,17 @@ private static $installed = array (
     ),
     'illuminate/database' => 
     array (
-      'pretty_version' => 'v8.22.0',
-      'version' => '8.22.0.0',
+      'pretty_version' => 'v8.22.1',
+      'version' => '8.22.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c6ad4bdfa94c259d5ece11c523172238f01dfa00',
+      'reference' => '4a2040c25d28315be005784a9ea4c2efb2a95a27',
     ),
     'illuminate/macroable' => 
     array (
-      'pretty_version' => 'v8.22.0',
-      'version' => '8.22.0.0',
+      'pretty_version' => 'v8.22.1',
+      'version' => '8.22.1.0',
       'aliases' => 
       array (
       ),
@@ -98,12 +98,12 @@ private static $installed = array (
     ),
     'illuminate/support' => 
     array (
-      'pretty_version' => 'v8.22.0',
-      'version' => '8.22.0.0',
+      'pretty_version' => 'v8.22.1',
+      'version' => '8.22.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '880b330c516f3e5cd9a096b9f476e3c82db2eb93',
+      'reference' => '6a516676a83d2a73c46eaf7907f730e86ef60da5',
     ),
     'monolog/monolog' => 
     array (

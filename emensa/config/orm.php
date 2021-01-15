@@ -5,9 +5,9 @@ $capsule = new Capsule;
 $capsule->addConnection([
     "driver" => "mysql",
     "host" => "localhost",
-    "database" => "<yourdatabasename>",
+    "database" => "emensawerbeseite",
     "username" => "root",
-    "password" => "<yourpassword>"
+    "password" => "abc123"
 ]);
 $capsule->setAsGlobal();
 $capsule->bootEloquent();

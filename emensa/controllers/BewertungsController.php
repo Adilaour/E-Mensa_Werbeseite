@@ -1,6 +1,8 @@
 <?php
+use \Illuminate\Database\Capsule\Manager as DB;
 require_once('../models/bewertungen.php');
 require_once('../models/gericht.php');
+
 
 class BewertungsController
 {
@@ -14,18 +16,20 @@ class BewertungsController
             }
             if($preset_mealid!= null){
                 $data = gerichtname_by_id($preset_mealid);
+                $result = gerichtname_by_id_ar($preset_mealid);
             }
             $data = $data[0] ?? null;
+            $result = $result ?? null;
             // Weiterleitung zu Bewertung-Seite, da Nutzer eingeloggt ist. Prüfung auf existierende Formulareingabe & FormularCheck
             if(isset($_POST['formabgeschickt'])){
                 // Formular hat Reload ausgelöst. Einträge anpassen und in DB eintragen
                 bewertungen_eintragen();
                 $msg = $_SESSION['bewertung_result_message'] ?? null;
-                return view('bewertung', ['rd' => $request, 'title' => 'Bewertungen', 'msg'=> $msg, 'gericht_id' => $preset_mealid, 'data'=>$data]);
+                return view('bewertung', ['rd' => $request, 'title' => 'Bewertungen', 'msg'=> $msg, 'gericht_id' => $preset_mealid, 'data'=>$data, 'result'=>$result]);
             }else{
                 // Normaler Aufruf der Seite
                 logger()->info('Bewertung besucht');
-                return view('bewertung', ['rd' => $request, 'title' => 'Bewertungen', 'gericht_id' => $preset_mealid, 'data' => $data  ]);
+                return view('bewertung', ['rd' => $request, 'title' => 'Bewertungen', 'gericht_id' => $preset_mealid, 'data' => $data, 'result'=>$result  ]);
             }
         } else {
             // Weiterleitung zur Anmeldung, wenn der Nutzer nicht eingeloggt ist
@@ -35,11 +39,11 @@ class BewertungsController
     }
     // M6.1.c.6
     public function bewertungen(RequestData $request){
-        if($_SESSION['userisadmin'] == 1){
+        if($_SESSION['userisadmin'] == '1'){
             $bewertungen = neuste_bewertungen_abfragen();
             logger()->info('Bewertungen besucht');
             return view('bewertungen', ['rd' => $request, 'title' => 'Übersicht Bewertungen', 'bewertungen' => $bewertungen ]);
-        } else {
+        } elseif($_SESSION['userisadmin'] == 0) {
             header('Location: /rechte_fehlen');
         }
 
@@ -64,22 +68,34 @@ class BewertungsController
     // M6.1.c.8
     public function bewertung_loeschen(RequestData $request){
         $delbewertung_id = (int) $_GET['delbewertung'];
-        delete_bewertung($delbewertung_id);
+        // delete_bewertung($delbewertung_id);
+        deleteBewerbung($delbewertung_id);
         logger()->warning('Bewertung gelöscht');
         header('Location: /meinebewertungen');
     }
     public function bewertung_manuell_hervorheben(RequestData $request){
-        bewertung_hervorheben();
+        // bewertung_hervorheben();
+        pinnedAR();
         $bewertungen = neuste_bewertungen_abfragen();
         $msg = $_SESSION['bewertung_result_message'] ?? 'Bewertung manuell hervorgehoben.';
         logger()->info('Bewertung manuell hervorgehoben');
         return view('bewertungen', ['rd' => $request, 'title' => 'Übersicht Bewertungen12', 'msg'=> $msg, 'bewertungen' => $bewertungen]);
     }
     public function bewertung_manuell_abwaehlen(RequestData $request){
-        bewertung_abwaehlen();
+        // bewertung_abwaehlen();
+        unpinnedAR();
         $bewertungen = neuste_bewertungen_abfragen();
         $msg = $_SESSION['bewertung_result_message'] ?? 'Bewertung manuell abgewählt.';
         logger()->info('Bewertung manuell abgewählt');
         return view('bewertungen', ['rd' => $request, 'title' => 'Übersicht Bewertungen', 'msg'=> $msg, 'bewertungen' => $bewertungen]);
+    }
+
+
+
+
+    // MISC
+    public function test(RequestData $request){
+
+        return view('test', ['rd' => $request, 'title' => 'Testseite']);
     }
 }

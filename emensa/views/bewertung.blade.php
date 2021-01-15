@@ -4,7 +4,7 @@
 
     @if (isset($data))
         <img src="img/gerichte/{{$data[1]}}" style="height: 100px; width:100px;">
-        <h2>Ihre ausgewählte Speise: {{$data[0]}}</h2>
+        <h2>Ihre ausgewählte Speise: {{$result["name"]}}</h2>
     @endif
 
     <form action="bewertung" method="post" autocomplete="on" id="bewertungsform" name="bewertungsform" class="loginformframe" style="margin-top:10px;">
@@ -29,6 +29,5 @@
     @else
         <p></p>
     @endif
-
 
 @endsection

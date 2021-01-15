@@ -97,3 +97,29 @@ function bewertungen_startseite(){
     array_push($ausgabe, $speisenamen);
     return $ausgabe;
 }
+
+
+// M6.3.
+
+class bewertungAR extends \Illuminate\Database\Eloquent\Model
+{
+    public $table ='bewertungen';
+    public $primaryKey = 'id';
+    public $timestamps = false;
+}
+function pinnedAR(){
+    $idbewertung = (int) $_GET['bewertung'];
+    $bewertungsresult = bewertungAR::query()->find($idbewertung);
+    $bewertungsresult->wichtig = 1;
+    $bewertungsresult->save();
+}
+function unpinnedAR(){
+    $idbewertung = (int) $_GET['bewertung'];
+    $bewertungsresult = bewertungAR::query()->find($idbewertung);
+    $bewertungsresult->wichtig = 0;
+    $bewertungsresult->save();
+}
+
+function deleteBewerbung($id){
+    bewertungAR::destroy($id);
+}
