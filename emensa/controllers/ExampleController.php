@@ -18,7 +18,7 @@ class ExampleController
         ]);
     }
     public function m4_6c_gerichte(RequestData $rd) {
-        $data = db_gericht_select_all();
+        $data = db_gericht_select_all_ar();
         return view('examples.m4_6c_gerichte', [
             'title' => 'Gerichte',
             'gerichte'=> $data
@@ -39,14 +39,14 @@ class ExampleController
         }
     }
     public function m4_6d_page_1(RequestData $rd) {
-        $data = db_gericht_select_all();
+        $data = db_gericht_select_all_ar();
         return view('examples.pages.m4_6d_page_1', [
             'title' => 'Gerichte',
             'gerichte'=> $data
         ]);
     }
     public function m4_6d_page_2(RequestData $rd) {
-        $data = db_gericht_select_all();
+        $data = db_gericht_select_all_ar();
         return view('examples.pages.m4_6d_page_2', [
             'title' => 'Gerichte',
             'gerichte'=> $data

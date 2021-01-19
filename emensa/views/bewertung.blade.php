@@ -3,14 +3,23 @@
     <h1>Speisen Bewertung</h1>
 
     @if (isset($data))
-        <img src="img/gerichte/{{$data[1]}}" style="height: 100px; width:100px;">
+        @if($result["bildname"]==null)
+            <img src="img/gerichte/00_image_missing.jpg" style="height: 100px; width:100px;">
+        @else
+            <img src="img/gerichte/{{$result["bildname"]}}" style="height: 100px; width:100px;">
+        @endif
         <h2>Ihre ausgewählte Speise: {{$result["name"]}}</h2>
     @endif
 
     <form action="bewertung" method="post" autocomplete="on" id="bewertungsform" name="bewertungsform" class="loginformframe" style="margin-top:10px;">
-        <label for="gericht_id">Gericht:
-            <input class="loginform" type="number" id="gericht_id" name="gericht_id" min="1" max="21" value="{{$gericht_id}}" required style="width:50px">
-        </label>
+        @if (isset($data))
+
+        @elseif(!isset($data))
+            <label for="gericht_id">Gericht:
+                <input class="loginform" type="number" id="gericht_id" name="gericht_id" min="1" max="21" value="{{$gericht_id}}" required style="width:50px">
+            </label>
+        @endif
+
         <label for="sterne">Sterne:
             <input class="loginform" type="number" min="0" max="5"  id="sterne" name="sterne" required>
         </label>

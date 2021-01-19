@@ -16,6 +16,8 @@
 @empty
         <li>Keine Daten vorhanden.</li>
 @endforelse
+
+        <pre>{{$data}}</pre>
     </ul>
 </article>
 </body>

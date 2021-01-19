@@ -99,7 +99,7 @@ function bewertungen_startseite(){
 }
 
 
-// M6.3.
+// M6.3.3
 
 class bewertungAR extends \Illuminate\Database\Eloquent\Model
 {

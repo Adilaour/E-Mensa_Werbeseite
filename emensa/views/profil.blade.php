@@ -6,6 +6,6 @@
     {{$_SESSION['userisadmin']}}
 
 
-    <h2>Heutige Speiseempfehlung (M6.3.4)</h2>
+    <h2>Heutige zufällige Speiseempfehlung (M6.3.4)</h2>
     <h3>{{$favmeal["name"]}}</h3>
 @endsection

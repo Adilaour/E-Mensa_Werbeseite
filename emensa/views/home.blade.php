@@ -68,6 +68,7 @@
         </table>
         <div>
             <h3>Legende der verwendeten Allergene</h3>
+
             <?php
             // Erneuter Verbindungsaufbau
             $link = mysqli_connect("localhost", "root","abc123","emensawerbeseite");

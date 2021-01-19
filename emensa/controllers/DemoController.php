@@ -5,7 +5,7 @@ require_once('../models/kategorie.php');
 class DemoController
 {
     public function dbconnect() {
-        $data = db_gericht_select_all();
+        $data = db_gericht_select_all_ar();
         // Frage Daten aus kategorie ab:
         // $data = db_kategorie_select_all();
         return view('demo.dbdata', ['data' => $data]);

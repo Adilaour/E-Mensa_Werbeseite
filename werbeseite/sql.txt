@@ -1,7 +1,4 @@
-CREATE SCHEMA emensawerbeseite
-CHARACTER SET UTF8mb4
-COLLATE utf8mb4_unicode_ci;
-USE emensawerbeseite;
+n
 
 -- MEILENSTEIN 3
 
@@ -290,6 +287,7 @@ ALTER TABLE bewertungen
 
 
 
+SELECT * FROM bewertungen WHERE wichtig = 1 ORDER BY bewertungszeitpunkt DESC LIMIT 10;
 -- MISC
 CREATE TABLE trashmails(
 hoster      VARCHAR(50)

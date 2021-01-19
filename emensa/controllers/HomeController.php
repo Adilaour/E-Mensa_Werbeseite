@@ -11,9 +11,8 @@ class HomeController
         $speisenamen = $ausgabe[1];
 
 
-
         logger()->info('Home besucht');
-        return view('home', ['rd' => $request, 'title' => 'Home', 'bewertungen' => $bewertungen, 'speisenamen'=>$speisenamen, 'i' => 0]);
+        return view('home', ['rd' => $request, 'title' => 'Home', 'bewertungen' => $bewertungen, 'speisenamen'=>$speisenamen, 'i' => 0 ]);
     }
     public function rechte_fehlen(RequestData $request){
         logger()->warning('Es wurde versucht nicht vorhandene Rechte zu verwenden.');
